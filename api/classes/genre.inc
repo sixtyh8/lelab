@@ -74,7 +74,7 @@ Class Genre {
 
 	// Create a json version of the genres DB
 	private function createJson($genres){
-		$jsonFilename = realpath(dirname(__FILE__))."/genres.json";
+		$jsonFilename = "genres.json";
 		$jsonData = array();
 
 		// Insert each in the array

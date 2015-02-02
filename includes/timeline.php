@@ -1,6 +1,6 @@
 <?php
 // Filename
-$file = $_SERVER['DOCUMENT_ROOT']."/api/classes/timeline.json";
+$file = $_SERVER['DOCUMENT_ROOT']."/api/timeline.json";
 		
 // Read JSON file
 $content = utf8_encode(file_get_contents($file, FILE_USE_INCLUDE_PATH));

@@ -25,8 +25,7 @@ Class Credit {
 			'".stripslashes(SQLite3::escapeString($creditObj->image_id))."',
 			'".stripslashes(SQLite3::escapeString($creditObj->engineer_id))."',
 			'".stripslashes(SQLite3::escapeString($creditObj->bandcamp_url))."',
-			'".stripslashes(SQLite3::escapeString($creditObj->homepage_flag))."'
-												)";
+			'".stripslashes(SQLite3::escapeString($creditObj->homepage_flag))."')";
 		$lab->execQuery($query);
 		$this->createJson($this->all());
 		$this->createTimeline();
@@ -67,7 +66,7 @@ Class Credit {
 	// Delete a credit
 	public function deleteCredit($creditID){
 		$lab = new lelabDB();
-		$query = "delete from $this->tableName where id='$creditID'";
+		$query = "delete from $this->tableName where id = '$creditID'";
 		$result = $lab->doDelete($query);
 		$this->createJson($this->all());
 		$this->createTimeline();
@@ -121,8 +120,7 @@ Class Credit {
 
 	public function createJson($credits){
 
-		//$jsonFilename = realpath(dirname(__FILE__))."/credits.json";
-		//$destinationFolder = chdir("../cdn/data/");
+		// JSON filename
 		$jsonFilename = "credits.json";
 		$dest = $jsonFilename;
 		$jsonData = array();
@@ -145,7 +143,6 @@ Class Credit {
 				'credit' => $credit['credit'],
 				'engineer' => "",
 				'bandcamp_url' => $credit['bandcamp_url']
-
 			);
 
 			if($currentEngineer){
@@ -157,7 +154,6 @@ Class Credit {
 			}
 
 		}
-
 
 		// Encode the array to json
 		$jsonData = json_encode($jsonData);
@@ -172,8 +168,6 @@ Class Credit {
 	public function createTimeline(){
 
 		// JSON filename
-		//$jsonFilename = realpath(dirname(__FILE__))."/timeline.json";
-		//$destinationFolder = chdir("../cdn/data/");
 		$jsonFilename = "timeline.json";
 		$dest = $jsonFilename;
 

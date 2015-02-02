@@ -1,7 +1,7 @@
 <script type="text/javascript">
 		<?php
 
-		$file = $_SERVER['DOCUMENT_ROOT']."/api/classes/credits.json";
+		$file = $_SERVER['DOCUMENT_ROOT']."/api/credits.json";
 
 		// Read JSON file
 		$string = utf8_encode(file_get_contents($file, FILE_USE_INCLUDE_PATH));

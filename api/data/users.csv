@@ -1,0 +1,6 @@
+id;username;password;admin;email;
+1;charbonneauster;bigpouch68;True;charbonneauster@gmail.com;
+2;marctheriault;nicole41;True;marctheriault@numaudio.com;
+3;test;test;True;test@test.ca;
+4;nonadmin;password;False;nonadmin@admin.com;
+14;sdfasdfsad;fsadfasdfasdfasd;False;rdsfgsdfgsdfgsdfg;

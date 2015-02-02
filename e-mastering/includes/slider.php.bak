@@ -1,0 +1,123 @@
+<script type="text/javascript">
+		<?php
+    	include 'covers.php';
+		?>
+	
+			$(document).ready(function(){
+				setTimeout(function() {
+					$.ajax({
+						url: '/includes/ajax_covers.php?anticache=<?php echo time(); ?>',
+						success: function(data) {
+							$('.loader').empty().html(data);
+							$('.loader').find('ul').each(function(){
+								if ($(this).find('li').length == 0) {
+									$(this).remove()
+								}
+							});
+							indexCount = 0;
+							setTimeout(function() {
+								$("img.pochette1,img.pochette2,img.pochette3").lazyload({ skip_invisible : false });
+									setTimeout(function() {
+												$('#slider-lists').append($('.loader').html());
+												$('#slider-lists').find('img.pochette1,img.pochette2,img.pochette3').each(function() {
+															src = $(this).attr("data-original");
+															$(this).attr("src",src).css("display",'inline');
+												});
+												$('#slider-lists').cycle({ 
+															fx:'fade',
+															speed:  1000,
+															timeout:6000,
+															next:   '#slider-next', 
+															prev:   '#slider-prev',
+															before:   onAfter
+												});
+												$('.loader').remove();
+												
+												
+												indexAfterBack = $('ul.list').length;
+												//console.log(indexAfterBack);
+												setInterval(function() {
+													$("img.pochette"+indexAfterBack).each(function() {
+														//console.log(indexAfterBack);
+														src = $(this).attr("data-original");
+														$(this).attr("src",src).css("display",'inline');
+													});
+													indexAfterBack--;
+													
+												},500);
+												
+												
+									},1);
+							},1);
+						}
+					});
+				},1);
+				
+				
+				
+				$('ul.list').live('mouseenter',function() {
+					$('#slider-lists').cycle('pause');
+				}).live('mouseleave',function() {
+					$('#slider-lists').cycle('resume');
+				});
+				
+				
+				
+			});
+			indexAfter = 0;
+			function onAfter() {
+				$("img.pochette"+indexAfter).each(function() {
+					src = $(this).attr("data-original");
+					$(this).attr("src",src).css("display",'inline');
+				});
+				indexAfter++;
+			}
+			
+			
+		</script>	
+
+<div class="containerSlider" style="height: 189px;width:916px;text-align:center;border: 2px solid #333;background-color: black;margin-bottom:22px;">
+<div id="slider" style="">
+    <div id="slider-lists">
+    <?php
+   
+		shuffle($covers);
+		$slide = 1;
+		$index = 1;
+		$var1 = count($covers)-1;
+		$var2 = $var1-4;
+		echo "<ul class='list'>";	
+		for($x = $var1; $x >= $var2; $x--) {
+			echo '<li class="cover"><span class="title">'.$covers[$x]['title'].'</span><img src="'.$_conf['path']['base_url'].'img/covers/'.$covers[$x]['img'].'"></li>';
+		}
+		echo "</ul>";
+		/*
+		foreach($covers as $cover){
+			if(isOpenTag($index)) echo '<ul id="s'.$slide.'" class="list">';
+			echo '<li class="cover"><span class="title">'.$cover['title'].'</span><img src="'.$_conf['path']['base_url'].'img/covers/'.$cover['img'].'"></li>';
+			
+			if(isEndTag($index)){
+				echo '</ul>';
+				$slide++;
+			}
+			$index++;
+		}
+		*/
+		
+		function isOpenTag($i){
+			if($i == 1 || ($i-1)%5 == 0) return true;
+			else return false;
+		}
+		
+		function isEndTag($i){
+			if($i%5 == 0) return true;
+			else return false;
+		}
+	?>
+    </div>
+    
+    <a href="#" id="slider-prev"><img src="<?php echo $_conf['path']['base_url']; ?>img/slider-prev.png" alt="" /></a>
+    <a href="#" id="slider-next"><img src="<?php echo $_conf['path']['base_url']; ?>img/slider-next.png" alt="" /></a>
+</div>
+</div>
+<script type="text/javascript">var maxSlide = <?php echo $slide-1; ?></script>

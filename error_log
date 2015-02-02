@@ -1,0 +1,6 @@
+[09-Mar-2011 21:33:19] PHP Warning:  require_once(/home/feni2292/public_html/unik-art/dev/lab-mastering/conf/config.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/feni2292/public_html/unik-art/dev/lab-mastering/includes/header.php on line 2
+[09-Mar-2011 21:33:19] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/home/feni2292/public_html/unik-art/dev/lab-mastering/conf/config.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/feni2292/public_html/unik-art/dev/lab-mastering/includes/header.php on line 2
+[22-Apr-2011 16:58:14] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/feni2292/public_html/unik-art/dev/lab-mastering/studio.php on line 54
+[22-Apr-2011 16:58:16] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/feni2292/public_html/unik-art/dev/lab-mastering/studio.php on line 54
+[22-Apr-2011 16:58:16] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/feni2292/public_html/unik-art/dev/lab-mastering/studio.php on line 54
+[22-Apr-2011 16:58:19] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/feni2292/public_html/unik-art/dev/lab-mastering/studio.php on line 54

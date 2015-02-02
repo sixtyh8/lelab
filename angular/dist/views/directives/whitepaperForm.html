@@ -1,0 +1,15 @@
+<form role="form">
+    <div class="form-group">
+        <label class="control-label" for="whitepaper-title">Title</label>
+        <input ng-model="whitepaper.title" type="text" class="form-control" name="whitepaper-title">
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="whitepaper-body">Text</label>
+        <div text-angular ng-model="whitepaper.body"></div>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="whitepaper-tags">Tags</label>
+        <bootstrap-tagsinput ng-model="whitepaper.tags" typeahead-source="tagsList" tagclass="label label-info">
+        </bootstrap-tagsinput>
+    </div>
+</form>

@@ -1,0 +1,81 @@
+<div ng-controller="UsersCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Users</h2>
+            <div cg-busy="usersPromise">
+                <table class="table table-striped" id="users-table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Role</th>
+                            <th style="min-width:120px"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="u in userList track by u.id">
+                            <td><span editable-text="u.username" e-name="username" e-form="rowform" e-required>{{ u.username }}</span></td>
+                            <td><span editable-text="u.email" e-name="email" e-form="rowform" e-required>{{ u.email }}</span></td>
+                            <td><span editable-text="u.password" e-name="password" e-form="rowform" e-required>********</span></td>
+                            <td>
+                                <span editable-select="u.admin" e-name="admin" e-form="rowform" e-ng-options="s.value as s.text for s in statuses">
+                                    {{ showStatus(u) }}
+                                </span>
+                            </td>
+                            <td>
+                                <!-- form -->
+                                <form editable-form name="rowform" onbeforesave="saveUser($data, u.id)" ng-show="rowform.$visible" class="form-buttons form-inline pull-right" shown="inserted == u">
+                                  <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+                                    save
+                                  </button>
+                                  <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+                                    cancel
+                                  </button>
+                                </form>
+
+                                <div class="buttons pull-right" ng-show="!rowform.$visible">
+                                  <button class="btn btn-default" ng-click="rowform.$show()">edit</button>
+                                  <button class="btn btn-danger" confirm-click="deleteUser(u.id, $index)" confirm-message="Are you sure?"><span class="glyphicon glyphicon-trash"></span> delete</button>
+                                </div>
+                        </td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <div class="well">
+                                    <h3 style="margin-top:0">Add User</h3>
+                                    <form class="form-inline" role="form" ng-submit="addUser()" autocomplete="off">
+                                        <div class="form-group" style="margin-right:20px">
+                                            <label class="sr-only" for="username">Username</label>
+                                            <input name="username" type="text" class="form-control" ng-model="newUser.username" placeholder="Username" autocomplete="off">
+                                        </div>
+                                        <div class="form-group" style="margin-right:20px">
+                                            <label class="sr-only" for="password">Password</label>
+                                            <input name="password" type="password" class="form-control" ng-model="newUser.password" placeholder="Password" autocomplete="off">
+                                        </div>
+
+                                        <div class="form-group" style="margin-right:20px">
+                                            <label class="sr-only" for="email">Email</label>
+                                            <input name="email" type="text" class="form-control" ng-model="newUser.email" placeholder="Email" autocomplete="off">
+                                        </div>
+
+                                        <div class="form-group" style="margin-right:20px">
+                                            <select name="role" class="form-control" ng-model="newUser.admin">
+                                                <option value="placeholder" selected="selected" disabled="disabled">Role</option>
+                                                <option value="Y">Admin</option>
+                                                <option value="N">Editor</option>
+                                            </select>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

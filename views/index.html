@@ -1,0 +1,42 @@
+<div>
+	<ul class="list-inline">
+		<li ng-repeat="t in tags">
+			<span class="label label-default">{{ t.name }}</span>
+		</li>
+	</ul>
+</div>
+
+
+<div class="container">
+	<div class="row" ng-repeat="w in whitepapers">
+		<div class="col-md-12">
+			<div id="postlist">
+				<div class="panel">
+	                <div class="panel-heading">
+	                    <div class="text-center">
+	                        <div class="row">
+	                            <div class="col-sm-9">
+	                                <h3 class="pull-left"><a href="#" ui-sref="whitepaper({ whitepaperId: w.id })">{{ w.title }}</a></h3>
+	                            </div>
+	                            <div class="col-sm-3">
+	                                <h4 class="pull-right">
+	                                <small><em>{{ w.created_at }}</em></small>
+	                                </h4>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+
+	                
+	            <div class="panel-body">
+	                <div ng-bind-html="w.body"></div>
+	            </div>
+	            
+	            <div class="panel-footer">
+	                <span class="label label-default" ng-repeat="tag in w.tags">{{ tag[0].name }}</span>
+	            </div>
+
+	        </div>
+	    </div>
+	</div>
+</div>

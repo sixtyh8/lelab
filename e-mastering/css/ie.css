@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{
+    font-family:"Big Noodle Titling";
+	src: url(../font/big_noodle_titling.eot);
+}
+@font-face {
+    font-family:"Big Noodle Titling Oblique";
+    src: url(../font/big_noodle_titling_oblique.eot);
+}
+
+#login-bar-content .submit, #stay-connected .submit{font-size:0;}

@@ -1,0 +1,420 @@
+/* Admin Styles */
+body{
+	background-color: #000;
+	background-image: none;
+	padding-top:40px;
+}
+.hidden{
+  display:none;
+}
+#wraper{
+	width:1000px;
+}
+#admin-menu .navbar-inner{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#admin-menu p{
+	padding:0;
+}
+#admin-menu div{
+	border-radius:0;
+}
+.admin-content{
+	margin:40px 0 20px;
+	padding:20px;
+	border-radius: 5px;
+	background-color: #fff;
+    overflow:hidden;
+}
+.delete-credit{
+    margin-left:10px;
+}
+.form-signin{
+	width:300px;
+}
+
+form button{
+	margin:0 auto;
+}
+
+/* Tabs */
+.nav-tabs li.section-title{
+    padding:8px 12px;
+    line-height: 20px;
+    color:#555555;
+    margin-right: 2px;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.tab-content{
+	overflow:visible;
+	float:left;
+    width:100%;
+}
+
+.tab-content form, .modal form fieldset{
+	float:left;
+}
+
+.tab-content form span.help-inline{
+	display:none;
+}
+
+.modal-credit{
+	width:800px;
+	margin-left:-400px;
+}
+
+.modal form span.help-inline{
+	display:none;
+}
+
+.modal form{
+	margin-bottom:0;
+}
+.modal .modal-dynamic-body{
+	overflow:hidden;
+}
+.modal-credit .modal-body{
+	float:left;
+	overflow:visible;
+	min-height:450px;
+}
+.modal .modal-body .btn{
+	margin:0 0 0 10px;
+}
+
+h1{
+	position: fixed;
+	display:none;
+	top: 40px;
+	left: 30px;
+}
+
+
+/* Upload */
+div.upload-module{
+	position:relative;
+	float:left;
+	margin:15px 30px 30px 30px;
+}
+form.upload {
+	width:150px;
+}
+div.upload-module button{
+	margin:10px 0 0 1px;
+    width:100%;
+}
+div.upload-module button.change-file{
+    display:none;
+}
+.progressbox {
+	display:none;
+	position:absolute;
+	top:70px;
+	left:10px;
+	z-index:20;
+    width:132px;
+}
+.upload-file{
+	position: absolute;
+    left: -9999px;
+}
+.output div{
+	height:150px;
+	width:150px;
+	line-height:150px;
+	text-align: center;
+	background-color: #999;
+	border:1px solid #777;
+	color:#212121;
+}
+.output img{
+	border:1px solid #777;
+}
+
+#file-name p{
+    width:150px;
+    margin:0;
+    padding:0;
+}
+
+span.help-inline{
+	position:absolute;
+	top:0;
+	left:215px;
+	width:200px;
+	font-size:12px;
+	color:white !important;
+	font-weight:bold;
+	background:#b94a48;
+	border:1px solid #b94a48;
+	border-left:none;
+	padding:3px 10px;
+	height: 20px;
+	line-height:20px;
+	padding: 4px 6px;
+	border-radius:0 4px 4px 0;
+	z-index:100;
+}
+
+/* Alerts */
+/*
+div.alert{
+	position:fixed;
+	right:10px;
+    bottom:10px;
+    width:200px;
+}
+*/
+.alertify-logs{
+    top:40px;
+    bottom:auto;
+}
+
+/* Typeahead Styles */
+.typeahead,
+.tt-query,
+.tt-hint {
+  padding: 8px 12px;
+  font-size: 12px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #ccc
+}
+
+.tt-dropdown-menu {
+  margin-top: 2px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 10px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  background-color: #0097cf;
+}
+
+.tt-suggestion p {
+  margin: 0;
+  padding: 0;
+  color: #777;
+}
+
+.tt-suggestion.tt-is-under-cursor p{
+  color: #fff;
+}
+
+/* Genres page */
+span#add-genre, span#add-engineer{display:none;}
+
+/* Notes */
+div.notes{
+    float:right;
+    width:25%;
+    padding:0 10px 10px 10px;
+    background:#f9f9f9;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+div.notes p{
+    margin:0 0 10px 0;
+}
+
+div.list{
+    width:70%;
+    float:left;
+}
+
+/* DataTable */
+table {
+  font-size:0.9em;
+}
+table th.cover-th{
+    width:80px;
+    text-align:left;
+}
+table th.album-th{
+    width:200px;
+}
+table th.actions-th{
+    width:50px;
+    text-align:right;
+}
+table .credit-id{
+  text-align: center;
+}
+
+div.dataTables_length{
+  padding-top:5px;
+}
+div.dataTables_length label {
+  float: left;
+  text-align: left;
+}
+
+div.dataTables_length select {
+  width: 75px;
+}
+
+div.dataTables_filter label {
+  float: right;
+}
+
+div.dataTables_info {
+  padding-top: 8px;
+}
+
+div.dataTables_paginate {
+  float: right;
+  margin: 0;
+}
+
+table.table {
+  clear: both;
+  margin-bottom: 6px !important;
+  max-width: none !important;
+}
+ 
+table {
+    margin-bottom: 6px !important;
+    clear: both;
+}
+
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+    cursor: pointer;
+    *cursor: hand;
+}
+ 
+table.table thead .sorting { background: url('/admin/img/sort_both.png') no-repeat center right; }
+table.table thead .sorting_asc { background: url('/admin/img/sort_asc.png') no-repeat center right; }
+table.table thead .sorting_desc { background: url('/admin/img/sort_desc.png') no-repeat center right; }
+ 
+table.table thead .sorting_asc_disabled { background: url('/admin/img/sort_asc_disabled.png') no-repeat center right; }
+table.table thead .sorting_desc_disabled { background: url('/admin/img/sort_desc_disabled.png') no-repeat center right; }
+
+table#credits-table .btn{
+  width:50px;
+  margin:none;
+  clear:both;
+}
+table#credits-table .delete-credit{
+  margin-top:10px;
+}
+table#credits-table tr td{
+	position:relative;
+}
+table#credits-table div.homepage-off-message {
+	position:absolute;
+	left:-20px;
+	top:50%;
+	margin:-7px 0 0 0;
+}
+table#credits-table tr.homepage-off td{
+	background: rgb(252,255,244); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(252,255,244,1) 63%, rgba(233,233,206,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(63%,rgba(252,255,244,1)), color-stop(100%,rgba(233,233,206,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(252,255,244,1) 63%,rgba(233,233,206,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(252,255,244,1) 63%,rgba(233,233,206,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(252,255,244,1) 63%,rgba(233,233,206,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(252,255,244,1) 63%,rgba(233,233,206,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#e9e9ce',GradientType=0 ); /* IE6-9 */
+}
+
+/* Scrollbars */
+/** initial setup **/
+.nano {
+  position : relative;
+  width    : 400px;
+  height   : 400px;
+  overflow : hidden;
+}
+.nano .content {
+  position      : absolute;
+  overflow      : scroll;
+  overflow-x    : hidden;
+  top           : 0;
+  right         : 0;
+  bottom        : 0;
+  left          : 0;
+}
+.nano .content:focus {
+  outline: thin dotted;
+}
+.nano .content::-webkit-scrollbar {
+  visibility: hidden;
+}
+.has-scrollbar .content::-webkit-scrollbar {
+  visibility: visible;
+}
+.nano > .pane {
+  background : rgba(0,0,0,.25);
+  position   : absolute;
+  width      : 10px;
+  right      : 0;
+  top        : 0;
+  bottom     : 0;
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : .01; 
+  -webkit-transition    : .2s;
+  -moz-transition       : .2s;
+  -o-transition         : .2s;
+  transition            : .2s;
+  -moz-border-radius    : 5px;
+  -webkit-border-radius : 5px;  
+  border-radius         : 5px;
+}
+.nano > .pane > .slider {
+  background: #444;
+  background: rgba(0,0,0,.5);
+  position              : relative;
+  margin                : 0 1px;
+  -moz-border-radius    : 3px;
+  -webkit-border-radius : 3px;  
+  border-radius         : 3px;
+}
+.nano:hover > .pane, .pane.active, .pane.flashed {
+  visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : 0.99;
+}
+
+.nano .pane   { background: #888; }
+.nano .slider { background: #111; }

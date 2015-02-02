@@ -1,0 +1,55 @@
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-sm-4 control-label" for="album-name">Album Name</label>
+        <div class="col-sm-8">
+            <input ng-model="credit.album_name" type="text" class="form-control" name="album-name" id="album-name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label" for="artist-name">Artist Name</label>
+        <div class="col-sm-8">
+            <input ng-model="credit.artist_name" type="text" class="form-control" name="artist-name" id="artist-name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label" for="bandcamp-url">Bandcamp Link</label>
+        <div class="col-sm-8">
+            <input ng-model="credit.bandcamp_url" type="text" class="form-control" name="bandcamp-url" id="bandcamp-url">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label" for="genre">Genre</label>
+        <div class="col-sm-8">
+            <input ng-model="credit.genreName[0].name" type="text" class="form-control" name="genre" id="genre" typeahead="genre as genre.name for genre in genres | filter:$viewValue" autocomplete="off">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label" for="year">Year</label>
+        <div class="col-sm-8">
+            <input ng-model="credit.year" type="text" class="form-control" name="year" id="year">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label" for="engineer-id">Engineer</label>
+        <div class="col-sm-8">
+            <!-- Engineer select -->
+            <select ng-model="credit.engineer_id" ng-options="engi.id as engi.name for engi in engineers" class="form-control"></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-4 control-label" for="credit">Credit</label>
+        <div class="col-sm-8">
+            <input ng-model="credit.credit" type="text" class="form-control" name="credit" id="credit" value="Mastering">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-8">
+            <div class="checkbox">
+                <label for="homepage-flag">
+                    <input ng-model="credit.homepage_flag" type="checkbox" checked="checked" name="homepage-flag" id="homepage-flag" value="1">
+                    Show in homepage carousel.
+                </label>
+            </div>
+        </div>
+    </div>
+</form>

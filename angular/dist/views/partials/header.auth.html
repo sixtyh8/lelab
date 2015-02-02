@@ -1,0 +1,62 @@
+<!--start: Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="HeaderCtrl">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand">Le Lab Mastering - Admin</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li ng-class="{active: $state.includes('credits')}"><a href="#" ui-sref="credits"><span class="glyphicon glyphicon-music"></span> Credits</a></li>
+                <li ng-class="{active: $state.includes('whitepapers')}"><a href="#" ui-sref="whitepapers"><span class="glyphicon glyphicon-file"></span> Whitepapers</a></li>
+                <li ng-if="admin === true" ng-class="{active: $state.includes('users')}"><a href="#" ui-sref="users"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> Tools <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: $state.includes('genres')}"><a href="#" ui-sref="genres">Manage Genres</a></li>
+                        <li ng-class="{active: $state.includes('engineers')}"><a href="#" ui-sref="engineers">Manage Engineers</a></li>
+                        <li ng-class="{active: $state.includes('tags')}"><a href="#" ui-sref="tags">Manage Tags</a></li>
+                    </ul>
+                </li>
+			</ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account
+                    <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="navbar-content">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img src="http://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/twDq00QDud4/s120-c/photo.jpg" alt="Alternate Text" class="img-responsive">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <span>{{ user.username }}</span>
+                                        <p ng-if="user.admin" class="text-muted small"> Administrator </p>
+                                        <p ng-if="!user.admin" class="text-muted small"> Editor </p>
+                                        <p ng-if="user.email" class="text-muted small">{{ user.email }}</p>
+                                        <div class="divider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar-footer">
+                                <div class="navbar-footer-content">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="#" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span> Change Passowrd</a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#" ng-click="logout()" class="btn btn-default btn-sm pull-right"><span class="glyphicon glyphicon-off"></span> Sign Out</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
+		</div>
+	</div>
+</nav>
+<!--end: Navbar -->

@@ -1,0 +1,25 @@
+{
+  "name": "lelab",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sixtyh8/lelab",
+  "authors": [
+    "sixtyh8 <charbonneauster@gmail.com>"
+  ],
+  "main": "whitepapers.php",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.20",
+    "jquery": "~2.1.1",
+    "angular-resource": "~1.2.20",
+    "angular-sanitize": "~1.2.20",
+    "angular-route": "~1.2.20",
+    "angular-animate": "~1.2.20"
+  }
+}

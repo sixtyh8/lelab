@@ -1,0 +1,476 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"request",
+				"http.request(options, cb);"
+			],
+			[
+				"utf8",
+				"utf8_encode"
+			],
+			[
+				"html",
+				"htmlentities"
+			],
+			[
+				"utf",
+				"utf8_encode"
+			],
+			[
+				"I",
+				"ImageType"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"engin",
+				"engineerID"
+			],
+			[
+				"en",
+				"engineer-id"
+			],
+			[
+				"engi",
+				"engiID"
+			],
+			[
+				"fil",
+				"filename"
+			],
+			[
+				"img",
+				"imgObj"
+			],
+			[
+				"e",
+				"ethis	<?php echo $this->… ?>"
+			],
+			[
+				"genre",
+				"genreID"
+			],
+			[
+				"Smal",
+				"SmallThumbSize"
+			],
+			[
+				"New",
+				"NewImageName"
+			],
+			[
+				"Small",
+				"SmallPrefix"
+			],
+			[
+				"image",
+				"imageID"
+			],
+			[
+				"creat",
+				"createJson"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"strt",
+				"strtoupper"
+			],
+			[
+				"uplo",
+				"upload-module"
+			],
+			[
+				"credit",
+				"creditObj"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"php",
+				"phpinfo"
+			],
+			[
+				"exec",
+				"execQuery"
+			],
+			[
+				"list",
+				"listCredits"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"db",
+				"dbname"
+			],
+			[
+				"ca",
+				"categoryID"
+			],
+			[
+				"add-cate",
+				"add-category-form"
+			],
+			[
+				"categ",
+				"categoryParent"
+			],
+			[
+				"cat",
+				"categoryParent"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"current",
+				"currentPage"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"first",
+				"first-of-type"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/guillaume/Documents/WebDev/node-blog/routes/index.js",
+		"/Users/guillaume/Documents/WebDev/node-blog/views/credits.jade",
+		"/Users/guillaume/Documents/WebDev/node-blog/app.js",
+		"/Users/guillaume/Documents/WebDev/node-blog/routes/credits.js",
+		"/Users/guillaume/Documents/WebDev/node-blog/package.json",
+		"/Users/guillaume/Documents/WebDev/node-blog/views/index.jade",
+		"/Users/guillaume/Documents/WebDev/node-blog/routes/user.js",
+		"/Users/guillaume/Documents/WebDev/node-blog/public/stylesheets/style.css",
+		"/Users/guillaume/Documents/WebDev/node-blog/routes/credit.js",
+		"/Users/guillaume/Documents/WebDev/node-blog/node_modules/express/lib/router/route.js",
+		"/Users/guillaume/Documents/WebDev/node-blog/routes/getCredits.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/node-blog.sublime-project",
+		"/Users/guillaume/Documents/WebDev/blog/app.js",
+		"/Users/guillaume/Documents/WebDev/blog/package.json",
+		"/Users/guillaume/Documents/WebDev/blog/public/stylesheets/style.styl",
+		"/Users/guillaume/Documents/WebDev/blog/views/index.jade",
+		"/Users/guillaume/Documents/WebDev/blog/articleprovider-memory.js",
+		"/Users/guillaume/Documents/WebDev/blog/views/layout.jade",
+		"/Users/guillaume/Documents/WebDev/blog/routes/index.js",
+		"/Users/guillaume/Documents/WebDev/blog/node_modules/express/index.js",
+		"/Users/guillaume/Documents/WebDev/blog/node_modules/.bin/express",
+		"/Users/guillaume/Documents/WebDev/blog/public/stylesheets/style.css",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/list-credit.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/js/admin.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/header.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/css/admin.css",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/js/credits.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/js/jquery.dataTables.bootstrap.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/edit-credits.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/add-credits.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/add-credit.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/edit-credit.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/import-images.php",
+		"/Users/guillaume/Documents/WebDev/lelab/includes/covers-import.php",
+		"/Users/guillaume/Documents/WebDev/lelab/404.shtml",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/classes/credit.inc",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/classes/genre.inc",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/classes/db.inc",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/upload.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/upload-import.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/data/test.json",
+		"/Users/guillaume/Documents/WebDev/lelab/includes/header.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/upload-image.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/footer.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/list-engineers.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/list-genres.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/js/genres.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/js/engineers.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/list-genres.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/genres.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/engineers.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/list-credits.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/credits.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/list-engineers.php",
+		"/Users/guillaume/Documents/WebDev/lelab/album-credits.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/js/jquery.form.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/data/genres.json",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/js/bootbox.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/whitepapers.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/users.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/trophies.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/login.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/index.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/categories.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/js/users.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/add-users.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/list-users.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/add-categories.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/list-categories.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/list-category.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/engineer-select.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/classes/engineer.inc",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/edit-engineer.php",
+		"/Users/guillaume/Documents/WebDev/lelab/css/main.css",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/delete-engineer.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/classes/classes.inc",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/add-engineer.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/login.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/classes/session.inc",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/classes/user.inc",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/list-users.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/session.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/get-image-name.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/add-genre.php",
+		"/Users/guillaume/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/add-genre.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/classes/image.inc",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/js/bootstrap-editable.min.js",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/delete-genre.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/edit-genre.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/blocks/edit-genres.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/search-genre.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/json-genre.php",
+		"/opt/local/apache2/conf/extra/httpd-vhosts.conf",
+		"/Users/guillaume/Documents/WebDev/lelab/img/credits/01-annie-brocoli---le-brocoshow-2-4102023211.jpg",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/phpinfo.php",
+		"/Users/guillaume/Documents/WebDev/lelab/img/covers/03-16 wishes.jpg",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/add-category.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/dbinfo.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/logout.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/dologout.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/actions/loader.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/delete-credit.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/edit-credit.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/add-credit.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/list-credit.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/add-category.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/test.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/dbinfo.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/delete-category.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/list-category.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/loader.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/dbadmin.php",
+		"/Users/guillaume/Documents/WebDev/lelab/includes/footer.php",
+		"/opt/local/etc/php.ini",
+		"/Users/guillaume/Documents/WebDev/lelab/css/reveal.css",
+		"/opt/local/apache2/conf/httpd.conf",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/category.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/dologout.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/session.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/dologin.php",
+		"/Users/guillaume/Documents/WebDev/lelab/admin/modules/dbadmin.php",
+		"/Users/guillaume/Documents/WebDev/lelab/actions/sendBooking.php",
+		"/Users/guillaume/Documents/WebDev/lelab/conf/config.php",
+		"/Volumes/Share/Documents/WebDev/gdressources/admin/login.php",
+		"/Volumes/Share/Documents/WebDev/gdressources/admin/admin_check.php",
+		"/Users/guillaume/Documents/WebDev/lelab/test.php",
+		"/Users/guillaume/Documents/WebDev/lelab/includes/ajax_covers.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"images",
+			"class=\"required\"",
+			"&&",
+			"’",
+			"/U+2019",
+			"\\U+2019",
+			"U+2019",
+			"'",
+			"']",
+			"['",
+			"album",
+			"\\'",
+			"= '",
+			"\\",
+			"arbre",
+			"$filename",
+			"$_FILES['ImageFile']",
+			"$covers[]",
+			"</span><br/>",
+			"<span class=\"artist\">",
+			"tab-content",
+			".modal ",
+			"a user",
+			"id",
+			"user",
+			"User",
+			"class=\"alert",
+			"<?php echo $_conf['path']['base_url']; ?>",
+			"</p>",
+			"<p>",
+			"</td>",
+			"<td>",
+			"reload",
+			"creditObj",
+			"returnData",
+			"lelab",
+			"creditObj",
+			".modal",
+			"<tr>",
+			"</tr>",
+			"</td>",
+			"<td>",
+			"imagecreatefromjpeg",
+			"modules",
+			"',",
+			"'$",
+			"$_POST[\"album-name\"];",
+			"<label",
+			"credit",
+			"album-name",
+			"\"data/\".",
+			"Whitepapers",
+			"</h3>",
+			"<h3 class=\\\"first\\\">",
+			"../data/",
+			"see savings"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 168.0,
+	"status_bar_visible": true
+}

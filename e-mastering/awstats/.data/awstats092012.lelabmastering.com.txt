@@ -1,0 +1,2595 @@
+AWSTATS DATA FILE 6.95 (build 1.943)
+# If you remove this file, all statistics for date 201209 will be lost/reset.
+# Last config file used to build this data file was /home/lelab/domains/lelabmastering.com/awstats/.data/awstats.lelabmastering.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2004                
+POS_TIME 2690                
+POS_VISITOR 46354               
+POS_DAY 89752               
+POS_DOMAIN 3686                
+POS_LOGIN 3923                
+POS_ROBOT 4078                
+POS_WORMS 5300                
+POS_EMAILSENDER 5431                
+POS_EMAILRECEIVER 5574                
+POS_SESSION 90708               
+POS_SIDER 90922               
+POS_FILETYPES 5709                
+POS_OS 5973                
+POS_BROWSER 6275                
+POS_SCREENSIZE 7963                
+POS_UNKNOWNREFERER 8037                
+POS_UNKNOWNREFERERBROWSER 8647                
+POS_ORIGIN 8970                
+POS_SEREFERRALS 9122                
+POS_PAGEREFS 9406                
+POS_SEARCHWORDS 13727               
+POS_KEYWORDS 18028               
+POS_MISC 2354                
+POS_ERRORS 20736               
+POS_CLUSTER 3779                
+POS_SIDER_404 20862               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20121001001046 2656 682279 13974657185334
+FirstTime 20120901004012
+LastTime 20120930230251
+LastUpdate 20121001020102 2656 0 2655 0 0
+TotalVisits 1122                
+TotalUnique 765                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 1225                
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 118 2045 44316751 67 663 11355038
+1 126 3025 64127587 73 1079 20686055
+2 100 1521 28476968 88 392 6980139
+3 95 1418 31288211 88 154 1842097
+4 173 2609 58454512 83 659 7792739
+5 107 2468 52912138 81 132 1075374
+6 93 1676 36359800 69 378 5937930
+7 145 3287 69977216 70 235 1140281
+8 233 6393 134116328 69 242 1440856
+9 215 5241 113010522 55 185 1399960
+10 230 5173 115996361 75 454 6584991
+11 299 7240 154548884 92 356 2516605
+12 300 7499 160198417 92 669 8798932
+13 234 5089 109002218 98 393 5147215
+14 232 7237 157569041 77 481 6504677
+15 239 5001 110760611 62 605 9959075
+16 250 6649 145641531 54 179 1369911
+17 286 7210 125856224 55 166 1266314
+18 216 4819 104161043 84 557 7816750
+19 148 3945 80122311 85 1078 19467752
+20 180 3737 75978195 83 489 8432503
+21 152 4550 100937608 82 196 1987972
+22 148 3392 74732488 55 124 1461325
+23 100 2972 51772538 98 428 6676237
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 4419 104196 2200317503
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 30
+bot[\s_+:,\.\;\/\\-] 3510 70068470 20120930234732 0
+facebook 1609 33919501 20120930183548 0
+yandex 1028 18713584 20120930235002 0
+googlebot 450 4382406 20120930223554 0
+fido 305 6161162 20120912131310 0
+slurp 282 5799619 20120917002428 0
+baiduspider 119 1341301 20120930194404 0
+msnbot\-media 92 1695992 20120930234511 0
+crawl 79 1281455 20120930002639 0
+sogou 50 506536 20120930160445 0
+no_user_agent 9 165260 20120924150544 0
+exabot 16 126588 20120930164647 0
+ia_archiver 7 132155 20120927000455 0
+spider 36 156980 20120928210731 0
+seznambot 22 77945 20120928214759 0
+[\s_+:,\.\;\/\\-]bot 46 790809 20120930222306 0
+findlinks 3 137746 20120927043644 0
+msnbot 16 80079 20120915183212 0
+mail\.ru 9 278848 20120926145523 0
+robot 29 283186 20120930204908 0
+python 3 92989 20120919224631 0
+surveybot 3 29561 20120927154343 0
+favicon 1 9712 20120901201707 0
+webfilter 10 73960 20120927031439 0
+cfnetwork 5 124266 20120929224255 0
+turnitinbot 1 2478 20120913041937 0
+mj12bot 1 9963 20120925235029 0
+docomo 2 90171 20120906025113 0
+nutch 1 9705 20120908145622 0
+voila 33 143808 20120930202226 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 10
+eot 268 3565883 0 0
+css 2378 2684578 0 0
+png 7507 202292715 0 0
+ttf 1375 18765098 0 0
+htm 1 14132 0 0
+php 1608 42107857 0 0
+js 2085 50916551 0 0
+jpg 86619 1874947442 0 0
+Unknown 1167 4461851 0 0
+gif 1188 561396 0 0
+END_FILETYPES
+
+# OS ID - Hits
+BEGIN_OS 22
+linuxsuse 1
+blackberry 604
+linuxandroid 6478
+winxp 18748
+winlong 5676
+win2000 10
+linuxfedora 10
+winvista 667
+linuxgentoo 243
+win95 2
+winunknown 3
+win2003 59
+iphone 1
+winnt 4
+win98 3
+linuxubuntu 27
+linux 327
+winme 4
+win16 2
+macosx 37084
+Unknown 331
+win2008 33912
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 98
+msie6.0 469
+firefox3.6 288
+sonyericsson 248
+firefox4.0 2
+safari4.0.5 249
+msie4.01 2
+safari5.0.6 701
+firefox3.6.26 494
+safari5.0.2 390
+msie8.0 9029
+netscape3.0 2
+msie7.0 1453
+firefox9.0.1 255
+safari7.1.0.398 357
+opera9.0 4
+chrome4.0.223.16 140
+safari6.0.0.668 148
+chrome21.0.1180.60 34
+chrome10.0.626.0 1
+lg\- 661
+safari6.0 4091
+opera9.01 2
+safari6.0.0.570 56
+firefox7.0.1 171
+firefox3.6.4 240
+firefox12.0 256
+msie5.00 1
+mozilla 875
+safari5.0.4 784
+netscape5.0 57
+chrome16.0.912.77 30
+firefox14.0.1 2828
+chrome17.0.963.84 2
+firefox3.6.3 29
+safari7.0.0.400 6
+chrome21.0.1180.82 273
+firefox8.0.1 90
+safari 399
+firefox15.0.1 10502
+chrome21.0.1180.89 16173
+firefox15.0 5244
+chrome21.0.1180.90 38
+firefox4.0.1 665
+safari4.1.3 364
+android 5233
+firefox7.0 251
+chrome12.0.742.91 1
+chrome22.0.1229.79 2538
+firefox8.0 1
+safari6.0.0.448 35
+firefox3.5.3 10
+opera9.80 275
+safari6.0.1 2410
+chrome19.0.1084.56 242
+iphone 1378
+firefox13.0.1 836
+firefox6.0.2 264
+chrome13.0.782.112 4
+chrome20.0.1132.47 1
+netscape0.91 2
+chrome21.0.1180.79 345
+safari5.1.5 287
+firefox16.0 167
+msie2.0 2
+chrome21.0.1180.83 1507
+firefox3.6.9 1
+msie5.0 2
+firefox3.6.10 247
+msie9.0 13361
+chrome18.0.1025.1634 1
+Unknown 13
+opera9.53 1
+firefox11.0 127
+safari5.0.5 583
+firefox3.6.14 21
+blackberry 1
+chrome17.0.963.56 253
+chrome22.0.1216.0 104
+safari6.0.0.344 1
+chrome23.0.1266.0 249
+samsung 336
+firefox3.6.17 438
+msie5.5 4
+chrome20.0.1132.57 1
+chrome12.0.742.122 1
+safari5.1.7 4739
+firefox3.0.3 1
+chrome18.0.966.0 263
+safari4.0 146
+safari5.1.2 588
+firefox3.6.28 193
+firefox3.6.18 1
+safari4.0.4 21
+firefox6.0 4
+safari5.1 8324
+chrome19.0.1084.36 2
+firefox3.6.8 243
+firefox3.6.13 34
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 9
+YahooCacheSystem 20120925100408
+Mozilla/5.0_(000000000;_00000_000_00_0_000000)_DDDDDDDDDDDDDDDDDD_DDDDDDD_DDDD_DDDDDD_DDDDDDDDDDD_DDDDDDDDDDDDD 20120913065221
+IE_5.5_Compatible_Browser 20120924105319
+Mozilla/4.0_(compatible;_ICS) 20120920103156
+PopScreenBot 20120927085240
+Mozilla/5.0_(compatible;_Seznam_screenshot-generator_2.0;__http://fulltext.sblog.cz/screenshot/) 20120923235057
+Mozilla/5.0_(compatible;_Add_Catalog/2.1;) 20120917105944
+Mozilla/4.0_(compatible;_Blog_Search;) 20120917152822
+dBpoweramp 20120916084752
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 5
+YahooCacheSystem 20120925100408
+IE_5.5_Compatible_Browser 20120924105319
+GoogleEarth/6.2.2.6613(Windows;Microsoft_Windows_(6.0.6002.2);fr;kml:2.2;client:Free;type:default) 20120908161715
+PopScreenBot 20120927085240
+dBpoweramp 20120916084752
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 1023 1449
+From1 0 0
+From2 397 442
+From3 415 421
+From4 2584 101884
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 11
+google 313 350
+search 28 28
+bing 7 10
+metacrawler 0 1
+ask 39 39
+dogpile 2 2
+mywebsearch 4 4
+live 1 1
+google_image 1 1
+yandex 0 1
+yahoo 2 5
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 103
+http://googleads.g.doubleclick.net/pagead/ads 140 140
+http://fr.search-results.com/web 37 37
+http://www.facebook.com/l.php 13 13
+http://www.facebook.com 11 11
+http://www.giftsburg.ru 10 10
+http://erotika-foto.com 8 8
+http://www.infoextendedautowarranty.com 8 8
+http://www.search-results.com/web 7 7
+http://lafasof.com 6 6
+http://www.supersait.biz 6 6
+http://ca.linkedin.com/pub/marc-theriault/4/234/676 1 1
+http://megaslot24.com 2 2
+http://robot-forex.biz 2 2
+http://www.rospromtest.ru/questions.php 2 2
+http://gazoprovod-moskva.ru 2 2
+http://digital.uwants.com/viewthread.php 0 1
+http://ww25.sonyplugins.com/s/ 1 1
+http://www.lapresse.ca/actualites/201209/30/01-4578984-omar-khadr-demande-un-crayon-et-du-papier-pour-ses-devoirs.php 1 1
+http://delayreferat.ru/news.php 2 2
+http://xn----7sbhagdbck2epbabs6b.xn--p1ai 2 2
+http://vestnikonline.6bb.ru 2 2
+http://mostfind.com 4 4
+http://images.devilfinder.com/go.php 0 1
+http://www.cafr.ebay.ca/sch/i.html 3 3
+http://www.gearslutz.com/board/members/16717-e-are/ 1 1
+http://youbeauti.com 4 4
+http://www.smallmasteringstudio.com/en/blog/derni-re-acquisition 1 1
+http://oboifon.ru 2 2
+http://www.gearslutz.com/board/members/190621-mobmastering/ 1 1
+http://ezinearticles.com 1 1
+http://www.amazon.fr/s/ref=nb_sb_ss_i_3_17/278-0440765-7012566 1 1
+http://www.prixmoinscher.com/search__keyword--hd+sound.html 1 1
+http://www.cafr.ebay.ca/sch/Televiseurs-/11071/i.html 1 1
+http://buduar.info 2 2
+http://serials-onlines.ru 2 2
+http://psvita.ru 2 2
+https://www.facebook.com 1 1
+http://www.shopzilla.fr/eaw/sh 1 1
+http://www.kjaerhusaudio.com/indexa.php 1 1
+http://poisk-zakona.ru 2 2
+http://funny-clips-online.de 2 2
+http://www.amazon.fr/s/ref=nb_sb_ss_i_1_6 1 1
+http://mp3skull.net/s/ 1 1
+http://photo-lol.com 2 2
+http://www.sibavtotrak.ru 2 2
+http://www.softpedia.com/get/Multimedia/Audio/Audio-Plugins/WideBug.shtml 1 1
+http://www.fixya.com/support/t2509113-id_code_panasonic_cq_vd5505w 1 1
+http://www.url.org 5 5
+http://cuantarazon.es 1 1
+http://wcrus.ws 2 2
+http://instrumenty-online.ru 2 2
+http://rosinvest.com 6 6
+http://albumcredits.com/marc.theriault 2 2
+http://www.fotolink.su 2 2
+http://ca.indeed.com/jobs 1 1
+http://www.geekyarcade.com/game/27266/Homeade_Pizza_Cooking/ 1 1
+http://petrushki.net 2 2
+http://naukasmi.1bb.ru 2 2
+http://specural.com 2 2
+http://www.cafr.ebay.ca/sch/Cellulaires-accessoires-/15032/i.html 1 1
+http://newstalk.webtalk.ru 2 2
+http://apple-iphone.net.ru 4 4
+http://worldmonitoring.ru 2 2
+http://bimatoprost-careprost.ru 2 2
+http://www.ourapk.com/ring/ringtone/Pop/index1.html 1 1
+https://www.facebook.com 2 2
+http://softkatalog.ru 4 4
+http://duster.ru 4 4
+http://lampokrat.ws 4 4
+http://www.quebecaudio.com/actualite/rencontre-le-studio-m1207-le-lab/ 1 1
+http://www.adagio-hifi.com/search.php 1 1
+http://www.numaudio.com/bio.php 1 1
+http://www.pic2fly.com/Julie+Marie+Mahler.html 0 2
+http://www.soundsector.net 1 1
+http://www.youtube.com/watch 3 3
+http://www.makeuseof.com/tag/easy-listening-pleasures-10-websites-free-audio-book-downloads/ 1 1
+http://www.sterlingmodular.com/whos-who.asp 1 1
+http://www.prixmoinscher.com/pda_ordinateurs_poche/products__keyword--audio+francais.html 1 1
+http://www.orangeask.com 3 3
+http://www.priceminister.com/offer/buy/156664664/technisat-digidish-45.html 1 1
+http://numaudio.com/resume.php 1 1
+http://evoque.ru 2 2
+http://montreal.kijiji.ca/f-acheter-et-vendre-instruments-de-musique-materiel-audio-pro-W0QQCatIdZ615QQPageZ16 1 1
+http://solo-project.com 6 6
+http://pubads.g.doubleclick.net/gampad/ads 2 2
+http://afora.ru 4 4
+http://www.digitalsoundplanet.fr 1 1
+http://onlinebay.ru 2 2
+http://mixonline.com/recording/mastering/le_lab_masters_celine_dion/ 1 1
+http://ugabuga.ru 4 4
+http://go.mail.ru/search_images 0 1
+http://www.ebay.com/sch/i.html 1 1
+http://eminem50cent.ru 2 2
+http://www.fastbrowsersearch.com/results/results.aspx 1 1
+http://www.songspk.com/search.php 1 1
+http://srv.kwzf.net/image/ 0 1
+http://ca.mg6.mail.yahoo.com/neo/launch 1 1
+http://shop.ebay.fr/i.html 4 4
+http://www.getthatsound.net 1 1
+http://mamapluspapa.com 2 2
+http://www.discogs.com/artist/Marc+Th%C3%A9riault 1 1
+http://mamki.de 4 4
+http://www.magesy.ca/Descargar/download.htm 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 160
+le+lab+mastering 20
+lab+mastering 20
+mastering 12
+mastering+montreal 11
+musica+gratis+para+escuchar 9
+le+lab+mastering+montreal 7
+mastering+en+ligne 4
+www.audio+on+pracefmonline.com 4
+sennheiser+orpheus 4
+le+lab+montreal 4
+studio+d+enregistrement+montreal 1
+nareuto+shippuden+streaming 1
+patrick+norman+et+famille 1
+le+lab+studio+montreal 1
+marc-olivier+bouchard 2
+labmasteringlab.com 1
+studio+d+enregistrement+a+montreal 2
+freecorder+audio 1
+image+%26+son+aodio+video 1
+mastering+standard 1
+mastering+techno+pas+chere 1
+focal+sub+utopia 2
+patrick+normand+youtube 1
+mastering+studio+montreal 1
+enceinte+mastering 1
+le+lab+mastering+studio 2
+mp3+listen+free 1
+%e6%a4%9c%e7%b4%a2 1
+mastering+le+lab 1
+studio+lab+mtl 2
+mastering+lab+on+saint-andre+artists 1
+marabu+figurines 1
+studio-lab 1
+marc+th%c3%a9riault 1
+marc+theriault 1
+http+%2f%2flelabmastering.com 1
+cd+%2f+musique+ideal+j 1
+mastering+lab 1
+instruments+de+musique+audio+valley+610+occasion 1
+youtube+mix 1
+grado+lab 1
+le+palais+de+audio 1
+lelab+studio 2
+nawak+sound+system 1
+focal+sm8 1
+le+lab+mastering+facebook 2
+histoires+de+filles+et+de+gar%c3%a7ons 1
+mastering+en+ligne+s%c3%a9rieux 1
+montr%c3%a9al 1
+image+%26+son+compaq 1
+adiu+mademais%c3%a8la 1
+the+lab+mastering 2
+materiel+mastering 2
+musique+youtube 1
+math+lab+mastering 1
+mark+theriot+mastering 1
+le+lab+montr%c3%a9al 1
+rechercher+audio+fanzine 1
+mp3+music 3
+lelabmastering.com 3
+www.mylabmastering 1
+best+mastering+engineers+in+montreal 1
+carl+talbot+le+lab+mastering 1
+le+studio+le+lab 1
+don+grossinger+mastering 1
+catherine+durand+murs+blancs+rar 1
+http+//www.lelabmastering.com/ 2
+mastering+lab+on+saint-andre+drake 1
+musique+youtube+com 3
+respect+des+parent+en+islame+en+audio 1
+dany+placard+d%c3%a9mon+vert+rar 1
+audio+sv811-10 1
+betac 1
+studio+mastering 1
+souldia+saye+double+tranchant 2
+image+%26+son+hp+emplifi%c3%a9s 1
+mastering+studio 1
+mastering+30e 1
+music+shukv+aviva 2
+your+tube+music 1
+orange+orange+tropical+passion+rar 1
+mastering+studios+in+montreal 1
+sonido.com 1
+metal+mastering+montreal 1
+labmastering 2
+carl+s+studio+montreal 1
+esl+listen+and+repeat+machine 1
+cfweb%2f.www.audio-lingua.eu%2fspip.php 1
+studio+labmastering 1
+montreal+audio+mastering 1
+studio+lab+mastering 3
+marc+theriault+music 2
+lab-mastering.com 1
+studio+realisation+audio 2
+professional+mastering+montreal 2
+lelabmasterizing 1
+diane+dufresne+2012 1
+marc+th%c3%a9riault+mastering 1
+marcus+paquin+and+montreal 1
+ce+soir+on+danse+volume+1 2
+lab+france+mastering 1
+le+lab 2
+puneet+rajkumar+audio+songs 1
+lab+mastering+montreal 1
+vincent+valli%c3%a8res 1
+carl+talbot+producer 1
+marcus+paquin 1
+carl+talbot 3
+web 2
+du+plaisir+et+des+bombes 1
+cursuri+de+franceza+audio 1
+michel+louvain+je+n+ai+pas+chang%c3%a9 1
+studio+le+lab 2
+image+mastering+api 1
+key+west 1
+mastering+musique+classique+montr%c3%a9al 1
+site+de+mastering 2
+mastering+engineering+montreal 1
+mastering+montr%c3%a9al 3
+bomaye+music 1
+logiciel+de+mastering 1
+montreal+mastering+studio 1
+www.choso+hasni+libini+w+binek+rah+audio+lamor+sayi+sifini.com 1
+escuchar+musica 1
+pashto+audio+songs+2012 2
+hdaudio%5cfunc_01%26ven_10ec%26dev_0885%26subsys_1458a002%26rev_1001 1
+carl+talbot+engineer 1
+louisiana+single+women 1
+le+labmastering+room 1
+www.lelabmastering.com 2
+pilote+hdaudio%5cfunc_01%26ven_10ec%26dev_0660%26subsys_10430000%26rev_1000 1
+image+%26+son+medion 1
+le+som 1
+setting+up+4+-channel+audio 1
+converting+24+bits+to+cd+format+audio+mastering+downsampling 1
+mastering+engineer+electric+music 1
+revendeur+mastering 1
+sous+et+p%c3%a9riph%c3%a9rques+audio 1
+le+lab+mastering+montr%c3%a9al 1
+masteringlab 1
+www+youtube+music 3
+senn+hd+1000 3
+coral+egan+the+year+he+drove+me+crazy 2
+streaming 4
+renan+luce+bande+son+les+voisins+et+voisine 1
+le+mix 3
+cd+%2f+musique+donneyy 1
+daniel+lavoie+j+%c3%a9coute+la+radio 1
+coral+egan+year+he+drove+me+crazy 1
+lelab+mastering 4
+sophie+vaillancourt+histoires+de+filles+et+de+gar%c3%a7ons 2
+mastering+lab+on+saint-andre 1
+mastering+online+new+york 1
+audio+mastering+montreal 1
+lab+mastering+studio+montreal 1
+marc+th%c3%a9riault+mastering+marc%40 1
+chan+son+sur+paris 1
+artkundo+mastering 1
+afghanistan+music 1
+fo%40lelabmastering.com 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 259
+mastering 134
+lab 81
+le 52
+montreal 40
+studio 25
+audio 18
+music 14
+de 12
+musica 10
+escuchar 10
+diane 1
+techno 1
+bande 1
+para 9
+hasni 1
+marc 6
+saye 2
+labmasteringlab.com 1
+marabu 1
+louisiana 1
+drove 3
+hd 3
+orange 2
+revendeur 1
+senn 3
+valli%c3%a8res 1
+system 1
+%e6%a4%9c%e7%b4%a2 1
+danse 2
+vaillancourt 2
+rar 3
+www.choso 1
+sayi 1
+binek 1
+placard 1
+image 5
+nareuto 1
+ai 1
+histoires 3
+com 3
+les 1
+son 6
+aodio 1
+a 2
+bombes 1
+theriault 3
+france 1
+nawak 1
+montr%c3%a9al 7
+http 3
+in 2
+patrick 2
+parent 1
+valley 1
+me 3
+setting 1
+bouchard 2
+emplifi%c3%a9s 1
+%c3%a9coute 1
+24 1
+materiel 2
+des 2
+www 3
+women 1
+sennheiser 4
+p%c3%a9riph%c3%a9rques 1
+hdaudio%5cfunc_01%26ven_10ec%26dev_0660%26subsys_10430000%26rev_1000 1
+s%c3%a9rieux 1
+downsampling 1
+shukv 2
+cd 3
+don 1
+theriot 1
+voisine 1
+famille 1
+1000 3
+labmastering 4
+du 1
+d 3
+on 9
+renan 1
+utopia 2
+engineering 1
+video 1
+esl 1
+musique 8
+puneet 1
+murs 1
+voisins 1
+engineer 2
+30e 1
+repeat 1
+-channel 1
+normand 1
+franceza 1
+professional 2
+occasion 1
+soir 2
+norman 1
+figurines 1
+math 1
+west 1
+single 1
+dany 1
+pilote 1
+focal 3
+j 2
+%2f 2
+1 2
+realisation 2
+new 1
+www.lelabmastering.com 2
+et 7
+carl 7
+en 7
+york 1
+coral 3
+vert 1
+grado 1
+egan 3
+best 1
+pas 2
+louvain 1
+songs 3
+masteringlab 1
+up 1
+machine 1
+sv811-10 1
+n 1
+volume 2
+he 3
+pashto 2
+mix 4
+youtube 9
+format 1
+souldia 2
+fo%40lelabmastering.com 1
+vincent 1
+som 1
+luce 1
+sophie 2
+%26 4
+key 1
+saint-andre 3
+converting 1
+facebook 2
+sound 1
+2012 3
+libini 1
+your 1
+tube 1
+engineers 1
+and 2
+artkundo 1
+w 1
+grossinger 1
+marcus 2
+paquin 2
+la 1
+studio-lab 1
+sous 1
+hp 1
+logiciel 1
+marc-olivier 2
+online 1
+durand 1
+metal 1
+rajkumar 1
+electric 1
+d%c3%a9mon 1
+tropical 1
+shippuden 1
+th%c3%a9riault 3
+passion 1
+instruments 1
+bomaye 1
+bits 1
+donneyy 1
+studios 1
+mp3 4
+enregistrement 3
+palais 1
+s 1
+lelabmastering.com 3
+www.mylabmastering 1
+www.audio 4
+lavoie 1
+crazy 3
+free 1
+blancs 1
+betac 1
+sifini.com 1
+rechercher 1
+compaq 1
+pracefmonline.com 4
+sonido.com 1
+classique 1
+%2f%2flelabmastering.com 1
+filles 3
+gratis 9
+chere 1
+enceinte 1
+cfweb%2f.www.audio-lingua.eu%2fspip.php 1
+plaisir 1
+double 2
+mark 1
+mademais%c3%a8la 1
+artists 1
+listen 2
+producer 1
+lab-mastering.com 1
+talbot 6
+lelabmasterizing 1
+marc%40 1
+fanzine 1
+chang%c3%a9 1
+rah 1
+catherine 1
+//www.lelabmastering.com/ 2
+gar%c3%a7ons 3
+web 2
+to 1
+610 1
+daniel 1
+ligne 5
+radio 1
+tranchant 2
+respect 1
+site 2
+freecorder 1
+year 3
+the 4
+standard 1
+je 1
+michel 1
+hdaudio%5cfunc_01%26ven_10ec%26dev_0885%26subsys_1458a002%26rev_1001 1
+lelab 6
+paris 1
+mtl 2
+islame 1
+sur 1
+lamor 1
+medion 1
+adiu 1
+dufresne 1
+afghanistan 1
+room 1
+streaming 5
+ce 2
+api 1
+cursuri 1
+aviva 2
+orpheus 4
+4 1
+sub 2
+chan 1
+sm8 1
+drake 1
+ideal 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 4
+403 7 2999
+302 72 216120
+301 1 538
+404 1301 734836
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 387
+/img/covers/124-Nicole+Martin+-+Joyeux+Noel.jpg 1 http://pic.sogou.com
+/img/covers/123-Alain%2520Lefevre%2520-%2520Petit%2520Noel.jpg 4 -
+/img/covers/64-The+Lost+Fingers+-+Gypsy+Kameleon.jpg 1 http://pic.sogou.com
+/img/covers/199-Louis-Jean+Cormier+-+L'ascenseur+(single).jpg 1 http://pic.sogou.com
+/news/news 2 -
+/img/covers/09-Boogie+Wonderband+-+Supercool.jpg 1 http://pic.sogou.com
+/img/covers/28-Jason+Lang+-+Boomerang.jpg 1 http://pic.sogou.com
+/img/covers/166-Dumas+-+L'heure+et+l'endroit.jpg 1 http://pic.sogou.com
+/img/covers/72-Soulkast+-+Honoris+Causa.jpg 1 http://pic.sogou.com
+/News_files/image023.jpg 2 -
+/img/covers/141-Renee+Martel+-+Une+femme+libre.jpg 1 http://pic.sogou.com
+/News_files/image002.gif 2 -
+/img/covers/62-Matt%2520Herskowitz%2520-%2520Jerusalem%2520Trilogy.jpg 1 -
+/img/covers/128-Eric%2520Goulet%2520-%2520Volume%25201.jpg 1 -
+/img/covers/192-Karkwa+-+Karkwa+Live.jpg 1 http://pic.sogou.com
+/img/covers/68-Philippe+B+-+Variations+fantomes.jpg 1 http://pic.sogou.com
+/img/covers/17-Christian%2520Marc%2520-%2520Christian%2520Marc%2520.jpg 4 -
+/img/covers/102-Seven%2520Sound%2520-%2520Owls%2520and%2520Swans.jpg 3 -
+/img/covers/173-Sadam+Huss+-+Juste+fais-le.jpg 1 http://pic.sogou.com
+/img/covers/201-Pascal+Lejeune+-+Le+bruit+des+machines.jpg 1 http://pic.sogou.com
+/img/covers/08-Ariane%2520Brunet%2520-%2520Le%2520pied%2520dans%2520ma%2520bulle.jpg 1 -
+/img/covers/123-Alain+Lefevre+-+Petit+Noel.jpg 1 http://pic.sogou.com
+/img/covers/91-Vincent%2520Vallieres%2520-%2520Et%2520cest%2520un%2520depart.jpg 1 http://images.google.ca/imgres
+/img/covers/05-Surface+of+Atalntic+-+A+frame+Per+Season.jpg 1 http://pic.sogou.com
+/News_files/image038.jpg 2 -
+/News_files/image009.jpg 2 -
+/img/covers/05-Surface%2520of%2520Atalntic%2520-%2520A%2520frame%2520Per%2520Season.jpg 3 -
+/img/covers/49-Pierre+Lapointe+-+Seul+au+piano.jpg 1 http://pic.sogou.com
+/img/covers/63-Nicole+Martin+-+Coktail+de+douceur.jpg 1 http://pic.sogou.com
+/img/covers/01-Annie%2520Brocoli%2520-%2520Le%2520Brocoshow%25202.jpg 1 -
+/img/covers/194-Genevieve+Paris+-+7.jpg 1 http://pic.sogou.com
+/img/covers/168-Michel+Fugain+-+Bon+an+mal+an.jpg 2 http://pic.sogou.com
+/img/covers/174-Alain+Lefevre,+Kent+Nagano+-++Rachmaninov,+Scriabin.jpg 1 http://pic.sogou.com
+/img/covers/11-Buckaloose+-+The+270+Sessions.jpg 1 http://pic.sogou.com
+/main.aspx 1 -
+/img/covers/22-Jeanne+Rochette+-+Elle+sort.jpg 1 http://pic.sogou.com
+/img/covers/179-Artistes+varies+-+Elles+chantent+Cabrel.jpg 4 http://pic.sogou.com
+/img/covers/156-Sophie%2520Beaudet%2520-%2520Garconne.jpg 1 -
+/img/covers/30-Michel+Louvain+-+je+nai+pas+change.jpg 1 http://pic.sogou.com
+/img/covers/67-Patrice+Michaud+-+Les+triangle+des+Bermudes.jpg 1 http://pic.sogou.com
+/img/covers/130-Francois%20Perusse%20-%20L%5C 1 -
+/img/covers/116-Isabelle%2520Boulay%2520-%2520Les%2520grands%2520espaces.jpg 7 -
+/img/covers/196-Coral%2520Egan%2520-%2520The%2520year%2520he%2520drove%2520me%2520crazy.jpg 6 -
+//wp-login.php 1 -
+/img/covers/217-Marabu+-+Figurines.jpg 1 http://pic.sogou.com
+/img/covers/221-Baxter+Dexter+-SMS.jpg 1 http://pic.sogou.com
+/img/covers/01-Annie+Brocoli+-+Le+Brocoshow+2.jpg 5 http://pic.sogou.com
+/News_files/image028.jpg 2 -
+/pub/grace-chen 1 -
+/img/covers/206-Yann+Perreau+-+Vertigo+de+toi+(single).jpg 3 http://faxian.sogou.com
+/img/covers/31-Alexandre%2520Poulin%2520-%2520Une%2520lumiere%2520allumee.jpg 2 http://www.google.ca/search
+/img/covers/176-Amylie%2520-%2520Le%2520royaume.jpg 10 -
+/News_files/image027.jpg 2 -
+/img/covers/03-16+wishes.jpg 1 http://pic.sogou.com
+/img/covers/125-Thierry+Bruyere+-+Le+sommeil+en+continu.jpg 1 http://pic.sogou.com
+/img/covers/136-Vivaldi%2520-%2520The%2520Return%2520Of%2520The%2520Angels.jpg 1 -
+/News_files/image019.jpg 2 -
+/img/covers/76-Billy+Nova+-+Ma+realite.jpg 1 http://pic.sogou.com
+/img/covers/106-Marc%2520Dery%2520-%2520Numero%25204.jpg 2 -
+/img/covers/219-Keith+Kouna+-+Du+plaisir+et+des+bombes.jpg 1 http://pic.sogou.com
+/News_files/image012.jpg 2 -
+/img/covers/43-Keravel%2520-%2520Must.jpg 1 -
+/News_files/image039.jpg 2 -
+/fr 3 -
+/img/covers/16-Alecka+-+Alecka.jpg 2 http://pic.sogou.com
+/img/covers/129-Daniel%2520Lavoie%2520-%2520J%27ecoute%2520la%2520radio.jpg 1 -
+/img/covers/13-Ce+soir+on+danse+-+Vol.+2.jpg 1 http://pic.sogou.com
+/img/covers/34-Buddy%2520McNeil%2520-%2520Introducing%2520Once%2520Again.jpg 4 -
+/img/covers/88-Miles%2520Espanol.jpg 2 -
+/img/covers/207-Phil%2520Latuner%2520-%2520Tidal%2520Temporal.jpg 2 -
+/img/covers/07-Dominica%2520Merola%2520-%2520Appassioanata.jpg 4 -
+/img/covers/213-Maxime+McGraw+-+Maxime+McGraw.jpg 1 http://pic.sogou.com
+/img/covers/97-Angele%20Dubeau%20%20La%20Pieta%20-%20John%20Adams%20Protrait.jpg 2 http://www.lelabmastering.com/
+/img/covers/33-Duo+Ferland.jpg 6 http://pic.sogou.com
+/img/covers/100-Salsa+Baroque+-+Ensemble+Caprice.jpg 1 http://pic.sogou.com
+/img/covers/122-Onze%2520-%2520De%2520Vinci.jpg 6 -
+/img/covers/174-Alain%2520Lefevre,%2520Kent%2520Nagano%2520-%2520%2520Rachmaninov,%2520Scriabin.jpg 3 http://www.google.fr/search
+/img/covers/103-Ulric+-+L'aube.jpg 1 http://pic.sogou.com
+/img/covers/214-Sophie%2520Vaillancourt%2520-%2520Histoires%2520de%2520filles%2520et%2520de%2520garcons.jpg 7 -
+/News_files/image011.jpg 2 -
+/img/covers/137-Old+Friends+Simon-Garfunkel-A-Classical-Tribute.jpg 1 http://pic.sogou.com
+/wp-trackback.php 1 -
+/News_files/image034.jpg 2 -
+/img/covers/34-Buddy+McNeil+-+Introducing+Once+Again.jpg 1 http://pic.sogou.com
+/test.htm 1 -
+/img/covers/18-Les%2520Colocs%2520-%2520La%2520comete%2520%28single%29.jpg 2 -
+/img/covers/110-Martine+St-Clair+-+Martine+fait+son+cinema.jpg 1 http://pic.sogou.com
+/main.htm 1 -
+/img/covers/84-Joseph+Rouleau+-+Hommage.jpg 1 http://pic.sogou.com
+/img/covers/210-Maia+Leai+-+Compte+a+rebours.jpg 1 http://pic.sogou.com
+/News_files/image041.jpg 2 -
+/img/covers/122-Onze+-+De+Vinci.jpg 1 http://pic.sogou.com
+/News_files/image007.jpg 2 -
+/img/covers/132-Taktika+-+A+bout+portant.jpg 1 http://pic.sogou.com
+/img/covers/178-Pascale+Picard+-+Trauma+3+(deluxe).jpg 1 http://pic.sogou.com
+/img/covers/193-Maxime+Desbiens+Tremblay+-+Sarah+(avec+un+h).jpg 1 http://pic.sogou.com
+/img/covers/126-Maxime+Landry+-+L'avenir+entre+nous.jpg 1 http://pic.sogou.com
+/img/covers/23-Eric%2520Belanger%2520-%2520A%252035mm%2520du%2520bonheur.jpg 1 -
+/img/covers/41-Julie%2520Belanger%2520-%2520Sil%2520ny%2520avait%2520pas%2520toi.jpg 1 -
+/img/covers/159-I.NO%2520-%2520Haunted%2520Hearts.jpg 2 -
+/img/covers/17-Christian+Marc+-+Christian+Marc+.jpg 1 http://pic.sogou.com
+/img/covers/120-Mauves%2520-%2520Cinema%2520Plymouth.jpg 2 -
+/robots.txt 666 -
+/img/covers/223-Nicole+Martin+-+Cocktail+Lounge.jpg 1 http://pic.sogou.com
+/News_files/image010.jpg 2 -
+/main.php 1 -
+/News_files/image003.jpg 2 -
+/img/covers/146-Frank+Fuller+-+The+great+morning+disaster.jpg 1 http://pic.sogou.com
+/img/covers/202-Catherine+Durand+-+Les+murs+blancs+du+Nord.jpg 1 http://pic.sogou.com
+/img/covers/65-Marie+Denise+Pelletier.jpg 1 http://pic.sogou.com
+/img/covers/39-France+Damour+-+Bubble+bath+and+champagne.jpg 1 http://pic.sogou.com
+/news.htm 2 -
+/img/covers/43-Keravel+-+Must.jpg 1 http://pic.sogou.com
+/img/covers/41-Julie+Belanger+-+Sil+ny+avait+pas+toi.jpg 1 http://pic.sogou.com
+/img/covers/115-Koriass+-+Petites+victoires.jpg 1 http://pic.sogou.com
+/img/covers/139-Marc%2520Drouin%2520-%2520Pied%2520de%2520poule.jpg 1 -
+/img/covers/91-Vincent+Vallieres+-+Et+cest+un+depart.jpg 1 http://pic.sogou.com
+/img/covers/40-Joce+Menard+-+Ya+des+jours.jpg 1 http://pic.sogou.com
+/img/covers/175-Marie-Chantal+Toupin+-+A+ma+maniere.jpg 1 http://pic.sogou.com
+/img/covers/203-Maneli%2520Jamal%2520-%2520The%2520Lamaj%2520Movement.jpg 1 -
+/img/covers/208-Bernard+Adamus+-+No+2.jpg 1 http://pic.sogou.com
+/img/covers/194-Genevieve%2520Paris%2520-%25207.jpg 2 -
+/img/covers/214-Sophie+Vaillancourt+-+Histoires+de+filles+et+de+garcons.jpg 1 http://pic.sogou.com
+/img/covers/210-Maia%2520Leai%2520-%2520Compte%2520a%2520rebours.jpg 2 -
+/News_files/image021.jpg 2 -
+/news/news.mht 1 -
+/Test.htm 1 -
+/img/covers/147-Julie%2520Lamontagne%2520-%2520Opus%2520Jazz.jpg 1 -
+/img/covers/60-Yves+Savard+-+Je+mattendaias+pas+a+toi.jpg 1 http://pic.sogou.com
+/img/covers/46-Lulu+Hughes+-+Lulu+Hughes+and+the+Montreal+all+city+big+band.jpg 1 http://pic.sogou.com
+/img/covers/159-I.NO+-+Haunted+Hearts.jpg 1 http://pic.sogou.com
+/img/covers/55-Richard+Seguin+-+Appalaches.jpg 1 http://pic.sogou.com
+/img/covers/89-Patrick+Norman+-+Lamour+na+pas+dadresse.jpg 1 http://pic.sogou.com
+/img/covers/105-Coeur%2520de%2520Pirate%2520-%2520Blonde.jpg 1 -
+/img/covers/128-Eric+Goulet+-+Volume+1.jpg 1 http://pic.sogou.com
+/img/covers/45-Les+chiens+-+La+nuit+derobee.jpg 1 http://pic.sogou.com
+/img/covers/184-Claude+Marc+Bourget+-+Noviaus+Tanz.jpg 1 http://pic.sogou.com
+/img/covers/124-Nicole%2520Martin%2520-%2520Joyeux%2520Noel.jpg 1 http://www.google.fr/search
+/News_files/image020.jpg 2 -
+/img/covers/110-Martine%2520St-Clair%2520-%2520Martine%2520fait%2520son%2520cinema.jpg 3 http://www.google.ca/search
+/img/covers/150-Marjorie+Fiset+-+Janvier+acheve.jpg 1 http://pic.sogou.com
+/img/covers/118-Les+Cowboys+Fringants+-+Que+du+vent.jpg 1 http://pic.sogou.com
+/img/covers/27-Isabeau+et+les+chercheurs+dor+-+Isabeau+et+les+chercheurs+dor.jpg 5 http://pic.sogou.com
+/img/covers/212-NOEM+-+Petites+apocalypses.jpg 1 http://pic.sogou.com
+/img/covers/187-Le%2520vent%2520du%2520Nord%2520-%2520Tromper%2520le%2520temps.jpg 1 -
+/img/covers/190-Trio%2520Sylvain%2520Picard%2520-%2520Airs%2520a%2520faire%2520frire.jpg 1 -
+/contact.html 1 -
+/img/covers/36-Randy%2520Raymond%2520-%2520R.jpg 2 -
+/img/covers/14-Ce+soir+on+danse+-+Vol.+3.jpg 1 http://pic.sogou.com
+/img/covers/166-Dumas%2520-%2520L%27heure%2520et%2520l%27endroit.jpg 1 -
+/img/covers/50-Samuel+Blais+-+New+Angle.jpg 1 http://pic.sogou.com
+/img/covers/20-Philippe+Leduc+-+Diginada.jpg 1 http://pic.sogou.com
+/img/covers/152-Ariane+Moffatt+-+MA.jpg 1 http://pic.sogou.com
+/img/covers/160-Mes%2520Aieux%2520-%2520A%2520l%27aube%2520du%2520printemps.jpg 1 -
+/img/covers/44-La+volee+de+castors+-+Le+retour.jpg 1 http://pic.sogou.com
+/News_files/image036.jpg 2 -
+/News_files/image022.jpg 2 -
+/img/covers/207-Phil+Latuner+-+Tidal+Temporal.jpg 1 http://pic.sogou.com
+/img/covers/23-Eric+Belanger+-+A+35mm+du+bonheur.jpg 1 http://pic.sogou.com
+/img/covers/222-Klo+Pelgag.jpg 1 http://pic.sogou.com
+/img/covers/151-Dunny+Braz+-+An+OG's+dream.jpg 1 http://pic.sogou.com
+/img/covers/118-Les%2520Cowboys%2520Fringants%2520-%2520Que%2520du%2520vent.jpg 2 -
+/img/covers/186-David%2520Bontemps%2520-%2520Vibrations.jpg 3 -
+/img/covers/82-Pascale+Picard+-+Trauma+3.jpg 1 http://pic.sogou.com
+/img/covers/38-Ingrid+Stpierre+-+Ma+petite+mam+zelle+de+chemin.jpg 1 http://pic.sogou.com
+/img/covers/90-Lynda%2520Lemay%2520-%2520Best%2520of.jpg 1 -
+/img/covers/101-Alexandre%2520Tharaud%2520-%2520J.S.%2520Bach.jpg 5 -
+/img/covers/25-Le+husky+-+La+fuite.jpg 1 http://pic.sogou.com
+/img/covers/82-Pascale%2520Picard%2520-%2520Trauma%25203.jpg 3 -
+/img/covers/114-Chambre+22.jpg 1 http://pic.sogou.com
+/img/covers/48-Patrick+Norman+-+Where+I+come+from.jpg 1 http://pic.sogou.com
+/img/covers/26-Nicole+martin+-+Il+etait+une+fois+nicole.jpg 1 http://pic.sogou.com
+/img/covers/06-Alexandre+Belliard+-+Des+Fantomes+Des+Etoiles.jpg 1 http://pic.sogou.com
+/img/covers/03-16%2520wishes.jpg 1 -
+/img/covers/120-Mauves+-+Cinema+Plymouth.jpg 1 http://pic.sogou.com
+/img/covers/172-Louis+Bernier+-+Seul+au+Piano.jpg 1 http://pic.sogou.com
+/News_files/image026.jpg 2 -
+/img/covers/157-Dorothee+Berryman.jpg 1 http://pic.sogou.com
+/img/covers/224-Alexandre+Belliard+-+Legendes+d'un+peuple+-+Tome+1.jpg 1 http://pic.sogou.com
+/img/covers/105-Coeur+de+Pirate+-+Blonde.jpg 1 http://pic.sogou.com
+/img/covers/06-Alexandre%2520Belliard%2520-%2520Des%2520Fantomes%2520Des%2520Etoiles.jpg 2 http://www.google.fr/search
+/en 5 -
+/img/covers/169-Michel+Rivard+-+Un+trou+dans+les+nuages.jpg 1 http://pic.sogou.com
+/img/covers/12-Ce%2520soir%2520on%2520danse%2520-%2520Vol.%25201.jpg 2 -
+/img/covers/185-Jean-Pierre+Chasse+-+Pilgrim+of+the+Strings.jpg 1 http://pic.sogou.com
+/img/covers/148-Julien+Sagot+-+Piano+mal.jpg 1 http://pic.sogou.com
+/apple-touch-icon-precomposed.png 2 -
+/img/covers/04-Douze+hommes+-rapailles+-+vol.+2.jpg 1 http://pic.sogou.com
+/News_files/image035.jpg 2 -
+/img/covers/131-Sylvain+Lelievre+-+Au+milieu+de+nous.jpg 1 http://pic.sogou.com
+/test 1 -
+/img/covers/58-Sir%2520Pathetik%2520-%252010e%2520round.jpg 3 -
+/img/covers/108-Sir+Pathetik+-+Soldat+de+la+musique.jpg 1 http://pic.sogou.com
+/img/covers/94-Constantinople+-+Premiers+songes+-+Early+Dreams.jpg 1 http://pic.sogou.com
+/img/covers/44-La%2520volee%2520de%2520castors%2520-%2520Le%2520retour.jpg 1 -
+/News_files/image014.jpg 2 -
+/img/covers/02-Chris%2520Giannini%2520-%2520if%2520its%2520me.jpg 3 -
+/img/covers/08-Ariane+Brunet+-+Le+pied+dans+ma+bulle.jpg 1 http://pic.sogou.com
+/News_files/image024.jpg 2 -
+/img/covers/104-Gregory%2520Charles%2520-%2520Quand%2520j%27ai%2520dit%2520%28single%29.jpg 1 -
+/News_files/image029.jpg 2 -
+/img/covers/92-OSM%20-%20Beethoven%20Symphonies%20Nos%206%20%208.jpg 2 http://www.lelabmastering.com/
+/img/covers/142-David+Giguere+-+Hisser+haut.jpg 1 http://pic.sogou.com
+/News_files/image004.jpg 2 -
+/img/covers/211-Madmoizel+Giraf+-+Capharnaum.jpg 6 http://pic.sogou.com
+/img/covers/140-Marie-Pierre+Arthur+-+Aux+alentours.jpg 1 http://pic.sogou.com
+/img/covers/183-Marilou+-+Wake+me+Up+on+Friday.jpg 1 http://pic.sogou.com
+/img/covers/200-+Genius+Fouliam.jpg 1 http://pic.sogou.com
+/News_files/image025.jpg 2 -
+/img/covers/167-Jerome+Beaulieu+-+L'homme+sur+la+lune.jpg 1 http://pic.sogou.com
+/img/covers/29-Jazzlab+-+Octo+portraits.jpg 1 http://pic.sogou.com
+/img/covers/49-Pierre%2520Lapointe%2520-%2520Seul%2520au%2520piano.jpg 1 -
+/News_files/image005.jpg 2 -
+/img/covers/191-Eli+et+Papillon.jpg 1 http://pic.sogou.com
+/img/covers/70-Richard+Desjardins+-+Lexistoire.jpg 1 http://pic.sogou.com
+/img/covers/102-Seven+Sound+-+Owls+and+Swans.jpg 1 http://pic.sogou.com
+/img/covers/61-Malajube+-+La+caverne.jpg 1 http://pic.sogou.com
+/img/covers/52-Philippe+Leduc+-+Slendeur+Misere.jpg 1 http://pic.sogou.com
+/contact.htm 1 -
+/img/covers/163-Gaith+Boucher+-+Route+116.jpg 2 http://pic.sogou.com
+/img/covers/218-Georgia+Fumanti+-+Collection.jpg 2 http://pic.sogou.com
+/img/covers/209-Sebastien+Lacombe+-+Territoires.jpg 1 http://pic.sogou.com
+/img/covers/117-Alain%2520Francois%2520-%2520La%2520trousse%2520du%2520temps%2520des%2520fetes.jpg 1 http://www.google.fr/search
+/img/covers/153-Lisa+Leblanc.jpg 1 http://pic.sogou.com
+/img/covers/69-Raby+-+Un+matin+sans+bruit.jpg 1 http://pic.sogou.com
+/img/covers/111-Delta20+-+Delta20.jpg 1 http://pic.sogou.com
+/img/covers/81-Benoit%2520Rocheleau.jpg 3 -
+/img/covers/24-Giorgia+Fumanti+-+Magnificat.jpg 1 http://pic.sogou.com
+/img/covers/188-Micoe%2520-%2520A%2520retardement.jpg 4 -
+/img/covers/158-Face-T+-+Tuff+Like+Stone.jpg 1 http://pic.sogou.com
+/img/covers/180-Les+duos+improbables.jpg 1 http://pic.sogou.com
+/img/covers/42-Karkwa+-+Les+chemins+de+verre.jpg 1 http://pic.sogou.com
+/img/covers/113-Two%2520Green%2520Cats%2520-%2520Ink%2520for%2520a%2520Queen.jpg 1 -
+/img/covers/19-Diane+Dufresne+-+Les+Grands+Succes.jpg 1 http://pic.sogou.com
+/img/covers/97-Angele+Dubeau+&+La+Pieta+-+John+Adams+Protrait.jpg 1 http://pic.sogou.com
+/img/covers/96-Angele+Dubeau+-+Arvo+Part+Portrait.jpg 2 http://pic.sogou.com
+/img/covers/31-Alexandre+Poulin+-+Une+lumiere+allumee.jpg 6 http://pic.sogou.com
+/News_files/image032.jpg 2 -
+/img/covers/150-Marjorie%2520Fiset%2520-%2520Janvier%2520acheve.jpg 1 -
+/img/covers/35-Caroline+Dete+-+Comme+un+arbre.jpg 1 http://pic.sogou.com
+/img/covers/54-Richard+Desjardins+-+Symphonique.jpg 1 http://pic.sogou.com
+/img/covers/92-OSM+-+Beethoven+Symphonies+Nos+6+&+8.jpg 2 http://pic.sogou.com
+/img/covers/119-Pamela+L+-+Gauche+droite.jpg 1 http://pic.sogou.com
+/img/covers/191-Eli%2520et%2520Papillon.jpg 1 -
+/img/covers/130-Francois+Perusse+-+L'album+du+peuple+-+Tome+8.jpg 1 http://pic.sogou.com
+/img/covers/155-Fanny+Bloom+-+Apprentie+guerriere.jpg 1 http://pic.sogou.com
+/img/covers/93-Anodajay+-+ET7ERA.jpg 1 http://pic.sogou.com
+/img/covers/181-Plaster+-+Let+it+All+Out.jpg 1 http://pic.sogou.com
+/img/covers/196-Coral+Egan+-+The+year+he+drove+me+crazy.jpg 1 http://pic.sogou.com
+/img/covers/206-Yann+Perreau+-+A+genoux+dans+le+desir.jpg 1 http://pic.sogou.com
+/img/covers/140-Marie-Pierre%2520Arthur%2520-%2520Aux%2520alentours.jpg 2 -
+/img/covers/18-Les+Colocs+-+La+comete+(single).jpg 1 http://pic.sogou.com
+/img/covers/09-Boogie%2520Wonderband%2520-%2520Supercool.jpg 8 -
+/img/covers/20-Philippe%2520Leduc%2520-%2520Diginada.jpg 2 -
+/img/covers/176-Amylie+-+Le+royaume.jpg 1 http://pic.sogou.com
+/img/covers/195-Isabella+-+12.jpg 1 http://pic.sogou.com
+/img/covers/113-Two+Green+Cats+-+Ink+for+a+Queen.jpg 1 http://pic.sogou.com
+/img/covers/190-Trio+Sylvain+Picard+-+Airs+a+faire+frire.jpg 1 http://pic.sogou.com
+/img/covers/141-Renee%2520Martel%2520-%2520Une%2520femme%2520libre.jpg 3 -
+/img/covers/62-Matt+Herskowitz+-+Jerusalem+Trilogy.jpg 1 http://pic.sogou.com
+/img/covers/37-Daniel+Casavant+-+Nine+at+the+time.jpg 1 http://pic.sogou.com
+/img/covers/95-Alain+Lefevre+-+Jardin+DImages.jpg 2 http://pic.sogou.com
+/img/covers/170-Black+Divas.jpg 1 http://pic.sogou.com
+/img/covers/188-Micoe+-+A+retardement.jpg 1 http://pic.sogou.com
+/News_files/image015.jpg 2 -
+/img/covers/175-Marie-Chantal%2520Toupin%2520-%2520A%2520ma%2520maniere.jpg 1 -
+/crossdomain.xml 10 http://s.nsdsvc.com/App/DddWrapper.swf
+/main.html 1 -
+/img/covers/197-Ranee+Lee+-+A+Tribute+To+Billie+Holiday.jpg 1 http://pic.sogou.com
+/img/covers/86-Corneille+-+Les+inseparables.jpg 1 http://pic.sogou.com
+/img/covers/79-OSM+-+Gustav+Mahler.jpg 1 http://pic.sogou.com
+/News_files/image006.jpg 2 -
+/contact.aspx 1 -
+/img/covers/189-Petula+Clark+-+Petula.jpg 1 http://pic.sogou.com
+/News_files/image016.jpg 2 -
+/img/covers/85-LMC+rar+-+La+guerre+des+machines.jpg 1 http://pic.sogou.com
+/administrator/index.php 1 -
+/img/covers/95-Alain%2520Lefevre%2520-%2520Jardin%2520DImages.jpg 4 -
+/main.asp 1 -
+/News_files/image013.jpg 2 -
+/img/covers/57-Sens+-+Karma.jpg 1 http://pic.sogou.com
+/img/covers/181-Plaster%2520-%2520Let%2520it%2520All%2520Out.jpg 3 -
+/img/covers/02-Chris+Giannini+-+if+its+me.jpg 1 http://pic.sogou.com
+/img/covers/35-Caroline%2520Dete%2520-%2520Comme%2520un%2520arbre.jpg 4 -
+/news/test.mht 2 -
+/img/covers/127-Sandra+Dorion+-+Telle+Quelle.jpg 1 http://pic.sogou.com
+/News_files/image030.jpg 2 -
+/img/covers/61-Malajube%2520-%2520La%2520caverne.jpg 1 -
+/img/covers/129-Daniel+Lavoie+-+J'ecoute+la+radio.jpg 1 http://pic.sogou.com
+/img/covers/74-The+Ultragirls+-+Girls+will+be+girls.jpg 5 http://pic.sogou.com
+/news/wp-trackback.php 1 -
+/img/covers/199-The+Beatdown+-+Walkin'proud.jpg 1 http://pic.sogou.com
+/img/covers/121-Ale%2520Dee%2520-%25204%2520minutes%2520de%2520gloire.jpg 1 -
+/img/covers/77-Kim+Richardson+-+Mes+amours.jpg 1 http://pic.sogou.com
+/img/covers/10-Bran+Van+3000+-+TheGarden.jpg 1 http://pic.sogou.com
+/img/covers/154-Coeur+de+Pirate+-+Blonde+(deluxe).jpg 1 http://pic.sogou.com
+/img/covers/164-Les+Ambianceurs+-+Qu'est-ce+que+tu+veux.jpg 1 http://pic.sogou.com
+/img/covers/19-Diane%2520Dufresne%2520-%2520Les%2520Grands%2520Succes.jpg 6 -
+/img/covers/73-Blue+Seed+-+Belt+of+Venus.jpg 1 http://pic.sogou.com
+/News_files/image001.jpg 2 -
+/img/covers/135-Beethoven+-+9th-Symphony.jpg 1 http://pic.sogou.com
+/img/covers/36-Randy+Raymond+-+R.jpg 1 http://pic.sogou.com
+/img/covers/78-OSM+-+Beethoven.jpg 1 http://pic.sogou.com
+/blog/wp-trackback.php 1 -
+/img/covers/89-Patrick%2520Norman%2520-%2520Lamour%2520na%2520pas%2520dadresse.jpg 3 -
+/img/covers/83-Autodidacts+-+Dans+le+voisinage.jpg 1 http://pic.sogou.com
+/img/covers/106-Marc+Dery+-+Numero+4.jpg 1 http://pic.sogou.com
+/img/covers/59-Tricot+Machine+-+La+prochaine+etape.jpg 1 http://pic.sogou.com
+/img/covers/139-Marc+Drouin+-+Pied+de+poule.jpg 1 http://pic.sogou.com
+/img/covers/203-Maneli+Jamal+-+The+Lamaj+Movement.jpg 1 http://pic.sogou.com
+/News_files/image031.jpg 2 -
+/News_files/image018.jpg 2 -
+/img/covers/24-Giorgia%2520Fumanti%2520-%2520Magnificat.jpg 2 -
+/img/covers/55-Richard%2520Seguin%2520-%2520Appalaches.jpg 1 -
+/cache/936be5ef536db03d6158b8b4c7adb11b 1 http://www.lelabmastering.com/
+/img/covers/63-Nicole%2520Martin%2520-%2520Coktail%2520de%2520douceur.jpg 4 http://www.google.fr/search
+/img/covers/80-Celine+Dion+-+Taking+Chances+-+World+Tour+2008.png 1 http://pic.sogou.com
+/img/covers/70-Richard%2520Desjardins%2520-%2520Lexistoire.jpg 1 -
+/img/covers/47-Lynda+Lemay+-+Blessee.jpg 1 http://pic.sogou.com
+/img/covers/182-Natasha+St-Pier+-+Bonne+Nouvelle.jpg 1 http://pic.sogou.com
+/img/covers/117-Alain+Francois+-+La+trousse+du+temps+des+fetes.jpg 2 http://pic.sogou.com
+/img/covers/149-Radio+Rebel.jpg 1 http://pic.sogou.com
+/img/covers/171-Qualite+Motel+-+Motel+Californa.jpg 1 http://pic.sogou.com
+/img/covers/163-Gaith%2520Boucher%2520-%2520Route%2520116.jpg 4 -
+/img/covers/148-Julien%2520Sagot%2520-%2520Piano%2520mal.jpg 2 -
+/img/covers/136-Vivaldi+-+The+Return+Of+The+Angels.jpg 1 http://pic.sogou.com
+/img/covers/60-Yves%2520Savard%2520-%2520Je%2520mattendaias%2520pas%2520a%2520toi.jpg 1 -
+/img/covers/186-David+Bontemps+-+Vibrations.jpg 2 http://pic.sogou.com
+/img/covers/75-Adam+Karch+-+Cottonfields.jpg 1 http://pic.sogou.com
+/img/covers/215-Zachary+Richard+-+Le+fou.jpg 1 http://pic.sogou.com
+/img/covers/39-France%2520Damour%2520-%2520Bubble%2520bath%2520and%2520champagne.jpg 6 -
+/img/covers/109-Thus+Owls+-+Harbour.jpg 1 http://pic.sogou.com
+/img/covers/145-Angele+Dubeau+-+Silence+on+joue+-+A+time+for+us.jpg 1 http://pic.sogou.com
+/img/covers/204-Dany+Placard+-+Demon+vert.jpg 1 http://pic.sogou.com
+/News_files/image008.jpg 2 -
+/img/covers/98-Gryphon+Trio+-+Beethoven.jpg 1 http://pic.sogou.com
+/img/covers/88-Miles+Espanol.jpg 1 http://pic.sogou.com
+/img/covers/205-DJ+mini+-+Espace-temps.jpg 1 http://pic.sogou.com
+/img/covers/147-Julie+Lamontagne+-+Opus+Jazz.jpg 2 http://pic.sogou.com
+/img/covers/107-Orange%2520Orange%2520-%2520Tropical%2520Passion.jpg 2 -
+/main.jsp 1 -
+/img/covers/51-Martin+Leon+-+Les+atomes.jpg 1 http://pic.sogou.com
+/img/covers/71-Saye+-+Contreband.jpg 1 http://pic.sogou.com
+/img/covers/112-Saye+et+Souldia+-+Double+tranchant.jpg 1 http://pic.sogou.com
+/News_files/image017.jpg 2 -
+/img/covers/182-Natasha%2520St-Pier%2520-%2520Bonne%2520Nouvelle.jpg 2 -
+/News_files/image037.jpg 2 -
+/contact.asp 1 -
+/img/covers/134-The+Last+Assassins+-+The+Last+Assassins.jpg 1 http://pic.sogou.com
+/img/covers/160-Mes+Aieux+-+A+l'aube+du+printemps.jpg 1 http://pic.sogou.com
+/img/covers/53-Marie-Chantal+Toupin+-+Premier+baiser.jpg 1 http://pic.sogou.com
+/img/covers/99-Le+choeur+des+moines+de+l'Abbaye+Val+Notre-Dame+-+Hymnes,+psaumes+et+cantiques+pour+le+temsp+de+l'Avent.jpg 1 http://pic.sogou.com
+/img/covers/98-Gryphon%2520Trio%2520-%2520Beethoven.jpg 4 -
+/img/covers/198-Amelie+Veille+-+Mon+coeur+pour+te+garder.jpg 1 http://pic.sogou.com
+/img/covers/143-Echo+Kalypso+-+Les+Fauves.jpg 1 http://pic.sogou.com
+/img/covers/165-Steve+Provost+-+Au+fil+du+temps.jpg 1 http://pic.sogou.com
+/img/covers/104-Gregory+Charles+-+Quand+j'ai+dit+(single).jpg 8 http://pic.sogou.com
+/img/covers/179-Artistes%2520varies%2520-%2520Elles%2520chantent%2520Cabrel.jpg 1 -
+/img/covers/107-Orange+Orange+-+Tropical+Passion.jpg 1 http://pic.sogou.com
+/img/covers/32-Les+filles+de+Caleb.jpg 1 http://pic.sogou.com
+/img/covers/169-Michel%2520Rivard%2520-%2520Un%2520trou%2520dans%2520les%2520nuages.jpg 2 -
+/img/covers/15-Celine+Dion+-+Taking+Chances+World+Tour+LE+SPECTACLE.png 6 http://pic.sogou.com
+/News_files/image040.jpg 2 -
+/img/covers/101-Alexandre+Tharaud+-+J.S.+Bach.jpg 1 http://pic.sogou.com
+/img/covers/12-Ce+soir+on+danse+-+Vol.+1.jpg 1 http://pic.sogou.com
+/img/covers/133-Andre+Gagnon+-+Dans+le+silence+de+la+nuit.jpg 1 http://pic.sogou.com
+/img/covers/121-Ale+Dee+-+4+minutes+de+gloire.jpg 2 http://pic.sogou.com
+/img/covers/46-Lulu%2520Hughes%2520-%2520Lulu%2520Hughes%2520and%2520the%2520Montreal%2520all%2520city%2520big%2520band.jpg 1 -
+/img/covers/72-Soulkast%2520-%2520Honoris%2520Causa.jpg 1 -
+/News_files/image033.jpg 2 -
+/img/covers/21-Le+Dixieband+-+The+270+Sessions.jpg 1 http://pic.sogou.com
+/img/covers/47-Lynda%2520Lemay%2520-%2520Blessee.jpg 1 -
+/img/covers/58-Sir+Pathetik+-+10e+round.jpg 1 http://pic.sogou.com
+/img/covers/162-Emilie+Levesque+-+Le+gout+du+bonheur.jpg 1 http://pic.sogou.com
+/wordpress/wp-trackback.php 1 -
+/img/covers/187-Le+vent+du+Nord+-+Tromper+le+temps.jpg 1 http://pic.sogou.com
+/news.html 1 -
+/img/covers/131-Sylvain%2520Lelievre%2520-%2520Au%2520milieu%2520de%2520nous.jpg 2 -
+/wp/wp-trackback.php 1 -
+/favicon.png 1 -
+/img/covers/68-Philippe%2520B%2520-%2520Variations%2520fantomes.jpg 1 -
+/img/covers/156-Sophie+Beaudet+-+Garconne.jpg 6 http://pic.sogou.com
+/img/covers/81-Benoit+Rocheleau.jpg 1 http://pic.sogou.com
+/img/covers/177-Daniel+Belanger+-+Je+poursuis+mon+bonheur.jpg 1 http://pic.sogou.com
+/img/covers/116-Isabelle+Boulay+-+Les+grands+espaces.jpg 1 http://pic.sogou.com
+/img/covers/90-Lynda+Lemay+-+Best+of.jpg 1 http://pic.sogou.com
+/img/covers/161-Star+Academie+2012.jpg 1 http://pic.sogou.com
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 1225
+69.50.234.130 196 196 8972626 20120930115309
+69.50.234.129 178 178 8153614 20120930165643
+67.207.207.140 165 165 7547310 20120929201805
+67.207.207.142 115 115 5262799 20120926134030
+184.160.143.7 67 2999 28989355 20120928084626
+24.203.0.71 36 833 16370820 20120930180040
+74.57.229.14 33 745 16378765 20120925091837
+69.70.23.178 32 351 7570775 20120925164049
+24.201.8.162 31 1223 26750866 20120930191808
+69.196.173.211 27 72 40122 20120914171523
+166.181.3.86 0 1 38598 
+68.67.54.138 6 35 1478211 20120913123735
+174.141.208.106 0 21 406543 
+174.138.194.129 5 253 5676328 20120915131915
+66.25.152.151 7 249 5603552 20120904231237
+65.52.0.53 1 1 10009 20120914111000
+80.214.0.86 0 1 16124 
+69.112.33.121 3 79 1783626 20120911130433
+68.41.147.83 1 6 56887 20120920155212
+166.248.78.98 1 21 377349 20120916185922
+166.181.3.148 0 1 12547 
+87.90.40.195 3 22 540980 20120908123123
+23.20.164.94 0 9 186318 
+24.37.49.50 3 24 876561 20120920152213
+54.245.0.225 1 1 44831 20120901233135
+207.107.246.140 1 1 2478 20120911163917
+86.72.204.32 8 99 2299566 20120915082436
+80.214.0.74 0 1 29182 
+37.8.169.189 3 84 1660087 20120921161145
+166.181.3.129 0 2 67051 
+24.200.200.77 0 1 16923 
+157.56.93.231 1 3 254691 20120929160824
+96.20.246.95 5 241 5030093 20120901014054
+173.194.99.18 0 32 680565 
+79.84.198.122 4 115 2564991 20120928131353
+75.152.83.104 5 246 5107232 20120918130344
+193.106.136.49 4 4 28015 20120912220415
+74.125.186.36 0 9 208079 
+74.125.187.19 0 2 56688 
+88.177.200.146 1 1 9861 20120916142145
+216.218.29.212 5 245 5082196 20120914141304
+98.139.241.241 0 2 59895 
+82.64.76.176 1 1 9889 20120921172930
+174.141.208.96 0 22 367152 
+174.141.208.99 0 23 416321 
+90.12.188.161 1 69 1473202 20120902035823
+193.252.40.69 3 85 1770738 20120926115628
+80.214.0.13 0 1 40489 
+24.230.201.126 0 2 81956 
+135.19.241.219 13 42 1499473 20120912210126
+207.253.3.66 5 246 5107238 20120921093452
+80.214.0.31 0 1 22066 
+96.21.101.238 9 251 5609345 20120919192231
+94.153.65.173 2 2 13948 20120918224209
+216.55.186.180 5 246 5107234 20120918133151
+195.68.223.198 8 8 58641 20120917153653
+166.181.3.96 0 1 35861 
+166.181.3.108 0 1 12361 
+80.214.0.113 0 2 38089 
+78.250.168.233 10 127 2714433 20120913111923
+174.92.218.137 1 11 10003 20120930183504
+174.228.68.47 1 18 337874 20120918160015
+206.248.160.83 3 8 4458 20120919204952
+74.125.183.29 0 1 3479 
+166.181.3.43 0 1 11382 
+74.125.183.26 2 6 88412 20120915014304
+209.131.39.60 0 1 25748 
+82.243.144.24 3 90 1785853 20120920173411
+193.52.102.11 7 252 5192898 20120917072202
+74.12.204.63 8 261 6214332 20120924113548
+80.214.0.214 0 3 42697 
+68.194.234.234 3 247 5155811 20120928231051
+80.214.0.62 0 1 489370 
+109.16.222.243 10 271 6377071 20120906175158
+74.125.186.33 0 8 100616 
+86.69.35.15 3 106 2126304 20120903122507
+80.214.0.70 0 3 63146 
+86.71.241.76 3 57 1252682 20120907123051
+166.181.3.113 0 1 16365 
+166.181.3.236 0 3 56985 
+216.98.57.38 9 495 10717622 20120921110506
+209.190.38.162 1 1 46425 20120926043657
+77.193.120.25 1 5 39228 20120917053915
+24.122.110.76 7 249 5140247 20120909153706
+80.214.0.224 0 2 43079 
+206.248.178.215 3 8 4458 20120909112550
+216.248.212.135 5 96 2033277 20120925143416
+173.52.218.62 3 179 3827834 20120907171224
+82.80.249.139 9 9 46408 20120902073424
+166.181.3.184 0 3 60801 
+86.214.95.201 3 83 1765680 20120918173926
+184.160.17.9 0 1 9956 
+166.181.3.121 0 1 14134 
+89.90.149.205 3 77 1729805 20120928111113
+209.5.7.6 9 66 1642342 20120926120831
+80.214.0.219 0 2 59176 
+178.137.128.77 4 4 28081 20120920040813
+92.129.82.54 5 253 5676328 20120921052517
+97.103.17.174 3 153 3428080 20120926182840
+174.141.208.114 0 27 594361 
+82.247.169.68 5 46 1300256 20120902095750
+74.125.187.30 0 2 75249 
+62.150.123.98 1 12 142478 20120921094656
+67.68.74.98 11 61 1011178 20120908123237
+80.214.0.124 1 2 20338 20120925104241
+90.59.230.229 1 115 2563704 20120911140528
+37.160.29.87 3 98 2062589 20120922054106
+80.214.0.198 0 2 15546 
+66.87.127.169 2 22 355947 20120904121212
+82.127.117.247 3 55 1144663 20120913065215
+65.52.108.55 1 7 73281 20120919173531
+78.241.173.214 3 243 5077167 20120922055325
+190.57.114.39 4 244 5556935 20120913141104
+80.214.0.88 0 1 23177 
+166.216.226.65 1 6 306521 20120917235138
+66.87.131.101 5 241 5025840 20120906030451
+166.181.3.196 0 2 17682 
+166.181.3.74 0 2 31288 
+2.14.63.61 3 247 5155807 20120926131732
+80.214.0.191 0 3 64305 
+88.136.176.210 4 212 4497301 20120915143417
+166.181.3.161 0 2 21302 
+88.175.200.55 2 24 348270 20120922055408
+209.195.104.196 3 130 2683024 20120905014514
+129.171.233.75 3 34 829941 20120905171330
+37.60.211.185 11 263 5769672 20120928163929
+86.217.38.243 3 77 1638472 20120905063144
+24.200.218.18 5 246 5552569 20120907163104
+166.181.3.79 0 1 26958 
+74.125.186.17 0 9 408296 
+200.104.233.52 4 86 1705447 20120927084129
+184.160.136.138 6 33 982265 20120919124132
+109.120.157.179 10 10 71415 20120917105944
+96.20.237.32 16 516 12338334 20120918214033
+166.181.3.177 0 2 46710 
+80.214.0.85 0 1 28146 
+82.250.228.193 3 243 5077195 20120919083640
+174.91.251.83 3 243 5077133 20120914204026
+80.214.0.212 0 1 0 
+24.41.93.9 5 32 981674 20120919221617
+85.192.218.65 1 59 1211478 20120905171253
+166.181.3.215 0 3 72522 
+74.125.187.32 0 1 44988 
+166.181.3.46 0 1 16344 
+109.12.0.226 1 1 9852 20120912140140
+80.214.0.41 0 1 18007 
+174.141.213.42 0 1 22952 
+109.13.45.231 3 21 841593 20120924172259
+135.19.16.88 3 243 5077311 20120922211734
+69.196.161.19 9 24 13374 20120903201835
+193.106.136.40 4 4 23954 20120908161552
+208.54.35.236 3 216 4606131 20120913111340
+166.181.3.50 0 1 14953 
+41.201.74.184 3 62 1200984 20120918154017
+80.214.0.7 0 1 14017 
+77.206.88.91 5 45 917039 20120905130235
+166.181.3.18 0 1 19145 
+174.93.129.208 3 129 2590662 20120913230959
+24.226.215.151 19 718 16127271 20120917151112
+174.27.9.152 3 28 405826 20120919001802
+80.214.0.132 0 4 68048 
+80.214.0.15 0 2 19651 
+108.161.118.202 10 348 5356946 20120906125327
+66.131.231.194 18 317 6324891 20120926122512
+77.204.61.150 8 101 2235690 20120921103839
+91.88.14.224 3 58 1210182 20120902044622
+166.181.3.9 0 2 59936 
+159.33.10.155 5 248 5161835 20120926164948
+46.105.239.137 2 2 19703 20120918113244
+80.214.0.44 0 1 29564 
+82.122.174.17 5 225 5054974 20120916173822
+24.48.82.27 6 30 950147 20120904164407
+64.229.103.53 3 194 4164435 20120921111644
+92.156.178.8 13 100 2196535 20120911082651
+166.181.3.146 0 1 27517 
+82.216.160.16 3 39 889609 20120911085214
+67.22.236.140 26 231 6043911 20120911133343
+87.74.79.91 7 100 2369290 20120904130204
+217.69.135.91 0 1 13400 
+174.141.213.27 0 1 27186 
+69.70.118.170 5 244 5079184 20120913144054
+74.125.186.28 0 5 63022 
+69.196.167.205 0 1 489370 
+109.9.152.159 2 102 2069987 20120921122952
+82.240.69.63 3 144 3161596 20120902054157
+80.214.0.23 0 1 32208 
+68.171.231.84 0 55 1241333 
+166.181.3.94 0 1 16840 
+166.181.3.239 0 1 30650 
+166.181.3.192 0 2 55179 
+184.162.211.108 6 174 3551663 20120908140226
+173.177.187.79 8 275 6059120 20120923095825
+76.64.84.41 8 197 4076353 20120923140252
+94.153.64.85 4 4 28007 20120909164049
+80.214.0.149 0 1 396 
+78.46.47.49 1 1 46216 20120923203444
+98.139.241.245 0 2 56185 
+166.181.3.124 0 2 30578 
+74.125.186.31 0 7 161049 
+166.181.3.117 0 1 24302 
+109.12.11.131 5 37 755832 20120923042327
+107.51.189.116 1 95 1934690 20120911084759
+157.55.112.220 1 7 72976 20120920075848
+70.55.161.74 12 280 6355810 20120914084407
+80.214.0.19 0 2 45874 
+75.119.255.163 3 8 4458 20120910001036
+69.165.138.215 3 8 4458 20120901004015
+80.214.0.179 0 4 45465 
+80.214.0.50 0 2 41410 
+199.19.249.196 14 14 325736 20120927105453
+80.214.0.115 0 1 37732 
+173.194.99.22 0 28 549495 
+76.68.144.168 5 28 567088 20120914184510
+77.75.76.115 3 243 5325013 20120923235044
+173.194.99.21 0 25 441660 
+166.181.3.48 0 1 15884 
+74.125.186.45 0 4 66611 
+2.4.131.74 5 76 1569321 20120915034545
+88.168.98.37 3 56 1194944 20120916131508
+184.145.182.85 0 10 213168 
+166.181.3.84 0 1 13465 
+74.125.183.24 0 1 998 
+193.253.141.80 1 1 9818 20120915071816
+184.163.149.151 3 219 4539540 20120921182052
+86.73.94.199 3 33 797993 20120905121311
+193.106.136.38 4 4 27969 20120927163427
+82.238.200.200 3 238 5000041 20120905122402
+80.214.0.164 0 1 19634 
+81.50.245.158 3 61 1392337 20120925150453
+184.175.3.181 3 24 280290 20120902174352
+82.248.19.173 3 119 2357541 20120926155348
+67.70.114.160 5 250 5185867 20120925080131
+74.125.187.28 0 1 27005 
+166.181.3.127 0 1 17354 
+184.161.146.229 5 246 5107353 20120914110740
+70.52.57.153 7 36 1480506 20120910095420
+86.73.47.236 1 16 255235 20120929163609
+69.156.65.170 6 96 2318663 20120924094244
+87.156.249.108 4 37 1049688 20120914202532
+80.214.0.196 0 2 16344 
+207.219.69.212 6 40 1187692 20120910231238
+174.91.194.213 0 1 489370 
+174.141.213.37 0 1 32208 
+24.50.81.216 23 286 6148252 20120930103738
+80.214.0.91 0 2 55364 
+184.144.174.177 0 148 3004384 
+166.181.3.16 0 2 49388 
+76.29.160.48 1 101 2076951 20120926015843
+219.250.178.100 0 1 28146 
+80.214.0.106 0 1 46643 
+89.94.44.234 1 94 1782395 20120908064528
+166.249.201.231 3 35 767223 20120920091249
+74.210.160.226 8 201 4087623 20120909201830
+166.181.3.234 0 1 14943 
+24.122.199.38 4 251 5179586 20120927214920
+93.0.121.131 7 51 876118 20120911012630
+86.71.160.117 2 2 4956 20120909080129
+68.171.231.82 1 77 1604833 20120918194304
+50.21.130.179 7 259 5759766 20120930190643
+80.214.0.96 0 1 28003 
+82.242.48.114 9 36 957697 20120927140525
+199.187.122.91 2 2 90124 20120907050047
+80.214.0.162 0 2 45128 
+166.181.3.223 0 2 32419 
+71.228.168.73 6 28 470628 20120929212923
+107.22.61.7 3 9 110325 20120911171114
+77.242.201.53 7 244 5052491 20120911080216
+92.90.16.25 3 111 2221783 20120924105543
+206.108.210.76 1 19 392901 20120918230423
+90.2.152.132 6 212 4689985 20120913081416
+108.85.217.16 3 66 1118234 20120914062950
+70.83.239.53 0 5 106584 
+98.139.241.243 0 3 70726 
+24.245.38.157 3 242 5059096 20120913091118
+166.181.3.208 0 4 66977 
+166.181.3.56 0 1 17860 
+24.122.69.47 3 114 2114644 20120918015447
+70.81.15.62 6 476 10000222 20120902212920
+80.214.0.200 0 1 9644 
+184.151.114.44 2 123 2775100 20120929225935
+80.214.0.236 0 1 7207 
+88.179.106.40 4 55 1121342 20120914145152
+74.125.187.39 0 2 32642 
+77.198.136.250 3 243 5077181 20120922164928
+23.20.117.232 0 4 84043 
+23.22.48.157 0 8 146390 
+166.181.3.22 0 1 31787 
+69.70.189.166 13 284 6521948 20120928115610
+208.111.64.248 3 25 444283 20120911184244
+166.181.3.64 0 1 22952 
+166.249.197.75 3 62 1350822 20120914230358
+82.244.223.127 2 104 2055515 20120904145723
+74.125.186.26 0 11 214323 
+62.35.146.14 3 89 1973487 20120929083656
+95.174.164.153 3 175 3712047 20120907102830
+174.141.213.32 0 1 12547 
+80.214.0.27 0 1 26653 
+174.138.202.24 7 243 5251467 20120912083509
+166.181.3.218 0 1 413 
+216.98.57.37 6 252 5640443 20120919165627
+100.43.109.136 1 1 9828 20120921023925
+70.83.36.22 7 253 5564407 20120910204506
+70.29.153.182 22 570 12747777 20120919192657
+174.231.152.179 11 493 5617621 20120920024615
+90.59.173.116 5 190 4194945 20120922054652
+80.214.0.156 0 1 9459 
+174.253.226.24 1 6 80010 20120901225943
+31.35.27.234 7 246 5533761 20120901112415
+82.243.160.218 1 1 9723 20120910114144
+166.181.3.138 0 2 37851 
+166.181.3.101 0 4 51188 
+24.201.55.63 3 148 3273104 20120924211732
+90.16.166.154 5 99 1984164 20120906135226
+184.146.232.177 1 1 2475 20120901155551
+166.181.3.155 0 1 9431 
+220.181.51.75 1 1 9840 20120920025432
+70.26.246.174 0 1 14943 
+80.214.0.226 0 1 22092 
+69.70.120.210 6 34 1007557 20120919114314
+80.214.0.6 0 1 16095 
+66.131.68.112 5 240 5019602 20120902194819
+24.157.201.76 8 265 6293164 20120930014639
+96.21.21.51 0 1 15702 
+216.218.29.153 4 39 633260 20120919170016
+178.20.247.139 4 243 5086606 20120922053624
+86.67.72.209 3 84 1784633 20120917010116
+80.214.0.189 1 1 0 20120925104244
+80.214.0.37 1 1 14280 20120925104104
+93.186.23.86 1 1 9982 20120928034010
+74.125.183.30 0 1 4074 
+176.63.154.220 4 22 844071 20120919151105
+86.199.35.216 3 84 1758125 20120917122204
+109.13.133.217 3 56 850510 20120917181830
+74.125.186.34 0 2 72764 
+67.230.146.28 21 614 13772145 20120930070014
+166.181.3.99 0 1 26131 
+166.181.3.58 0 1 32232 
+80.214.0.248 0 2 18458 
+80.214.0.217 0 1 33885 
+66.87.108.68 3 239 5009640 20120907190934
+78.239.225.5 8 237 4791616 20120929040440
+23.20.207.189 0 7 260472 
+65.52.111.239 1 7 72912 20120919180929
+173.176.72.105 3 144 2943947 20120923114655
+87.65.134.207 6 185 4250116 20120905040851
+173.176.26.37 1 120 2442937 20120907232503
+80.214.0.58 0 2 17646 
+85.11.171.163 0 1 28941 
+166.181.3.200 0 1 18520 
+82.65.46.61 3 105 2135066 20120918023025
+109.62.67.178 0 10 122537 
+82.230.97.160 3 40 688439 20120927164144
+80.214.0.228 0 2 16585 
+174.141.208.119 1 21 353937 20120928011432
+173.179.249.188 16 273 6372349 20120911131102
+80.214.0.241 0 2 47886 
+80.214.0.231 0 2 31940 
+213.246.61.58 2 2 91196 20120913070159
+80.214.0.174 0 2 33238 
+173.178.239.201 0 5 106584 
+74.125.183.20 0 1 3434 
+166.181.3.38 0 1 11565 
+107.21.132.191 0 9 169934 
+109.21.164.26 3 243 5077177 20120914172716
+80.214.0.184 0 2 66091 
+50.100.37.197 14 535 10915193 20120929201455
+174.141.208.112 0 21 353197 
+173.179.193.11 3 26 450676 20120923222350
+79.83.100.8 10 255 5589460 20120913081846
+166.181.3.76 0 1 356 
+23.22.65.61 0 4 72398 
+80.214.0.170 0 2 37946 
+80.214.0.107 0 1 14666 
+80.214.0.10 0 1 16612 
+166.181.3.210 0 2 50965 
+24.38.48.86 3 78 1392519 20120923025746
+68.171.231.86 0 2 32510 
+206.162.176.154 20 388 8912320 20120925112139
+79.111.192.208 8 249 5528166 20120908213234
+166.181.3.219 0 2 29652 
+86.1.233.48 3 243 5077161 20120924035143
+166.181.3.21 0 1 15273 
+80.214.0.73 0 1 30281 
+74.82.68.144 1 6 79996 20120903212236
+80.214.0.153 0 1 17775 
+78.112.231.109 1 96 1976924 20120930160631
+82.232.224.41 1 30 560818 20120905125402
+88.178.104.167 7 250 5577688 20120905082202
+174.141.213.47 0 1 9431 
+82.125.205.211 11 45 1350455 20120919171743
+198.228.201.153 3 92 1913342 20120925171039
+74.198.165.37 8 202 5007690 20120915101453
+192.197.69.29 3 25 444283 20120907111642
+91.121.75.33 1 1 45641 20120913074842
+70.82.95.109 3 247 5155975 20120930224509
+163.142.207.235 6 6 162789 20120927120541
+71.202.216.88 7 120 2701511 20120914002726
+166.181.3.104 0 1 18911 
+74.125.187.20 0 2 28484 
+173.179.235.253 5 246 5558121 20120907123237
+69.157.152.199 6 35 1479354 20120927092626
+70.72.140.38 3 243 5077148 20120918215308
+78.241.28.90 3 91 1797893 20120917095616
+79.86.102.237 3 107 2207244 20120930091721
+31.38.173.64 3 96 1913050 20120915073201
+82.231.163.176 1 137 3074459 20120925100637
+174.141.208.103 0 19 447757 
+24.201.113.167 3 243 5077171 20120919184105
+74.125.187.35 0 2 38932 
+166.181.3.250 0 3 84965 
+174.141.213.24 0 1 14943 
+161.45.204.55 3 25 444283 20120928151622
+69.165.148.174 6 16 8916 20120911020227
+212.195.86.129 4 128 2942012 20120910120934
+131.228.167.11 3 3 16609 20120913143257
+166.181.3.33 0 1 14705 
+74.125.183.16 0 2 229853 
+174.141.208.110 1 22 457407 20120905185801
+70.30.172.189 9 217 5168895 20120917213545
+81.249.226.144 4 247 5107233 20120919155504
+166.181.3.62 0 1 9644 
+80.214.0.221 0 3 57828 
+80.214.0.17 0 1 13801 
+76.10.137.158 6 16 8916 20120915131256
+166.147.72.148 3 52 1073500 20120920182138
+80.214.0.190 0 1 11565 
+23.20.57.38 1 1 9975 20120914111158
+74.125.186.42 0 3 84884 
+166.181.3.125 0 1 16331 
+23.22.101.115 0 7 150713 
+96.22.230.131 5 246 5107230 20120924123946
+74.125.186.40 0 4 77457 
+174.227.130.233 3 34 647009 20120920180218
+68.171.231.80 1 77 1673147 20120918194257
+65.52.111.246 1 7 80630 20120912015629
+69.165.144.163 3 8 4458 20120905133134
+193.106.136.52 2 2 14034 20120918160403
+66.158.134.82 3 239 5009655 20120911150234
+74.58.109.121 5 235 4869216 20120916184328
+184.105.246.222 4 4 182668 20120924195900
+89.3.198.191 3 172 3634548 20120908014514
+77.200.197.121 15 393 8847649 20120906010219
+71.2.73.27 4 63 1195971 20120924181320
+107.22.76.215 0 6 154495 
+85.230.183.6 3 25 444283 20120913130305
+92.161.104.141 3 91 1857678 20120913123610
+74.125.183.25 0 1 5969 
+50.16.168.38 0 3 54858 
+78.226.48.126 3 115 2342907 20120908082113
+92.149.73.168 13 224 5208438 20120909043517
+173.178.16.117 9 258 6149237 20120909145114
+166.181.3.181 0 2 76005 
+76.10.151.141 6 16 8916 20120908161737
+209.85.224.110 0 1 16923 
+80.214.0.194 0 2 31080 
+77.84.153.51 3 89 1628761 20120921151111
+85.68.20.68 5 241 5512112 20120904125346
+98.139.241.246 1 1 45760 20120919113950
+76.126.46.22 1 137 2701166 20120917020834
+74.125.186.24 0 9 211893 
+208.54.94.20 1 129 2514958 20120913074804
+168.91.255.100 1 76 1481997 20120920132725
+88.161.78.190 5 246 5086237 20120909160559
+31.11.220.94 1 1 45764 20120921163224
+166.181.3.201 0 1 42367 
+76.69.172.167 3 242 5059121 20120913203433
+82.244.5.107 3 239 4995417 20120905015905
+93.41.238.196 8 26 854799 20120925041023
+166.181.3.152 0 1 15693 
+88.121.57.154 1 1 9996 20120926125253
+173.178.46.211 6 49 1320844 20120910115828
+83.195.40.187 3 88 1882859 20120906111627
+208.102.144.206 3 71 1413424 20120916221612
+213.41.157.85 3 173 3674128 20120914022501
+67.68.144.63 10 154 3836950 20120913102449
+166.137.100.24 1 13 227589 20120916185043
+80.214.0.127 0 1 13590 
+24.201.12.205 3 25 444283 20120906173515
+86.69.132.84 1 1 9680 20120905135048
+80.214.0.81 0 1 15702 
+80.214.0.202 0 1 31677 
+109.15.193.121 3 90 2001063 20120922155424
+96.22.113.139 0 1 13906 
+173.194.99.17 0 36 710625 
+75.145.172.129 1 6 80253 20120926185541
+67.71.71.139 23 291 6366758 20120913004306
+80.214.0.134 1 5 67347 20120925104048
+166.181.3.134 0 3 64636 
+107.22.73.224 0 13 278464 
+166.181.3.133 0 3 64078 
+24.122.223.203 1 1 9742 20120904233901
+150.70.97.42 2 3 282882 20120918131216
+80.214.0.155 0 1 15884 
+174.227.129.243 2 23 327391 20120927170519
+67.70.132.44 3 73 1514137 20120922002653
+92.134.101.45 3 131 2885673 20120908193135
+71.2.74.248 10 255 6059287 20120902161300
+108.204.147.8 5 12 149924 20120910182750
+80.214.0.141 0 1 38032 
+81.253.53.64 3 127 2657033 20120910112313
+174.141.213.12 0 1 16939 
+204.92.16.3 11 250 5927364 20120925153210
+174.141.213.56 0 1 12858 
+74.57.187.82 9 33 956704 20120917115220
+70.250.229.78 3 147 3162765 20120907134947
+70.82.156.118 0 1 16864 
+2.10.110.17 5 156 3269629 20120905121017
+174.141.208.117 0 19 483534 
+80.214.0.187 0 2 35136 
+83.197.116.9 1 75 1461904 20120924115624
+70.29.253.233 8 349 7527786 20120910000211
+174.254.114.189 3 21 342199 20120917132353
+80.214.0.64 0 2 53320 
+80.214.0.175 0 1 3527 
+98.139.241.248 0 3 47293 
+174.141.208.105 0 31 601360 
+184.73.79.54 0 11 260353 
+188.40.42.204 1 1 45067 20120911023829
+174.141.213.14 0 1 16124 
+24.108.146.214 4 26 447030 20120906015554
+207.134.235.191 11 368 7943934 20120914144713
+142.162.230.190 5 232 5281428 20120909175956
+79.93.237.162 3 24 876602 20120917134411
+166.181.3.156 0 5 328401 
+80.214.0.89 0 2 52699 
+50.17.34.126 0 9 180026 
+208.80.194.140 1 1 45408 20120918120710
+78.124.157.153 1 28 527076 20120924183152
+96.21.117.84 5 26 883844 20120903162958
+173.97.19.211 3 232 4923588 20120908002642
+70.83.245.2 1 78 1509081 20120909224902
+62.23.102.40 6 257 6197201 20120927105454
+93.186.16.245 0 2 20670 
+72.78.234.19 1 136 2439332 20120917074301
+74.15.182.119 16 269 6253347 20120919105721
+93.3.126.112 3 8 107913 20120904100934
+82.229.161.113 9 244 5849498 20120917145403
+166.181.3.60 0 1 16150 
+80.214.0.233 0 4 90847 
+71.127.128.17 3 53 863842 20120913195152
+74.125.187.24 1 2 17043 20120912023356
+64.254.253.205 3 45 1019336 20120922034753
+64.229.102.33 4 31 977492 20120902143820
+80.214.0.242 0 1 0 
+83.156.252.155 5 242 5032732 20120906050503
+80.214.0.238 0 1 14943 
+174.49.103.47 10 660 5946317 20120905233657
+83.114.38.241 3 87 1871277 20120928075825
+8.28.16.254 4 4 104227 20120906044619
+166.181.3.174 0 1 13778 
+77.201.25.46 5 239 5082272 20120924053103
+213.55.32.199 3 111 2353430 20120908081442
+74.125.186.39 0 5 117930 
+80.214.0.182 0 1 13985 
+199.202.146.99 4 253 5256330 20120929172624
+96.22.48.31 0 4 33428 
+150.70.172.202 4 5 185330 20120917143958
+83.153.149.62 4 142 2988946 20120929124637
+75.158.106.136 3 247 5155798 20120928011756
+82.231.8.112 3 42 1004705 20120910140729
+74.125.186.47 0 7 154469 
+24.202.236.155 18 793 14296573 20120916110042
+128.79.49.135 3 18 335823 20120924111651
+206.125.165.247 6 254 5678836 20120914112819
+80.214.0.223 0 1 20813 
+74.125.186.19 0 4 73014 
+193.106.136.48 2 2 13927 20120925173502
+72.53.129.12 8 261 6214319 20120915101458
+76.216.52.31 1 100 2105251 20120917204705
+184.160.163.159 0 1 13906 
+66.130.196.143 25 524 12375657 20120909175420
+82.246.61.223 3 101 1962014 20120910123731
+88.190.211.67 1 1 45408 20120920103156
+166.181.3.97 0 1 5676 
+95.136.160.55 3 20 444717 20120929052727
+70.83.187.45 3 242 5059084 20120913081106
+81.66.91.224 3 193 4037244 20120922163221
+166.181.3.150 0 1 613 
+173.178.115.225 0 1 34166 
+107.20.51.126 0 8 183446 
+69.196.133.134 3 8 4458 20120910120813
+37.160.1.1 3 61 1115864 20120913110851
+159.253.145.183 6 30 948164 20120901184537
+24.200.61.111 5 23 846549 20120910211310
+209.129.243.5 3 247 5155804 20120926122034
+166.181.3.212 0 1 9637 
+88.186.69.200 4 159 3708014 20120928075719
+83.153.39.7 4 258 5661042 20120921055116
+90.53.128.220 8 268 5227435 20120908090926
+72.166.224.192 3 247 5155803 20120926141117
+195.221.123.215 5 77 1512509 20120919111744
+24.200.49.99 5 246 5132064 20120902220841
+74.125.186.29 0 9 94621 
+69.50.234.132 8 8 366076 20120917001840
+80.214.0.125 0 1 9956 
+86.71.188.9 3 247 5155777 20120926143101
+82.243.92.175 3 176 3558980 20120915102202
+95.168.172.156 26 26 183873 20120919141702
+80.217.157.169 4 31 977492 20120903182941
+209.202.2.154 1 35 452700 20120918180701
+207.253.225.18 13 262 6170950 20120911104451
+89.86.112.14 5 174 3845172 20120922154657
+64.229.75.165 6 494 10311635 20120930074323
+80.214.0.192 0 1 13583 
+166.181.3.145 0 1 14611 
+166.181.3.213 0 1 62747 
+84.100.218.140 1 27 445895 20120923183026
+220.181.51.78 1 1 9857 20120920025432
+193.106.136.60 10 10 70562 20120917055251
+70.66.221.14 3 25 444283 20120907173134
+216.7.233.160 5 35 700935 20120918075343
+84.97.178.43 3 45 1019868 20120926154605
+174.141.208.101 3 19 316264 20120928011432
+166.181.3.92 0 1 2637 
+82.245.114.115 3 34 705291 20120924051000
+74.125.186.22 0 6 83619 
+174.141.208.108 1 24 595152 20120907220506
+66.192.111.82 8 262 5887941 20120916014619
+80.119.63.11 3 27 498493 20120913034840
+74.125.183.18 0 1 22260 
+203.177.87.51 15 316 7399360 20120905114851
+178.137.129.141 8 8 55904 20120915171119
+66.131.232.124 10 515 10673548 20120927091344
+74.125.186.20 0 6 127022 
+135.19.211.119 16 635 12881336 20120916041404
+80.214.0.239 0 1 13573 
+76.171.166.235 4 102 2211421 20120908022737
+204.19.80.254 8 354 7349372 20120917141332
+24.202.228.11 25 273 6211629 20120904131304
+24.201.109.184 4 241 5498249 20120906073708
+50.16.121.242 0 4 105804 
+216.218.29.254 5 156 3188842 20120920202507
+166.181.3.183 0 1 24592 
+69.196.162.227 3 8 4458 20120918190255
+82.233.74.130 3 249 5590136 20120923184911
+82.224.235.199 3 72 1621753 20120925142153
+74.57.42.4 18 584 13293858 20120918163904
+130.104.120.160 3 172 3603377 20120910113830
+78.223.214.203 5 243 5441274 20120925130250
+166.181.3.20 0 1 18703 
+81.251.4.85 5 70 1814185 20120921152952
+107.20.109.148 0 7 98528 
+166.181.3.214 0 1 18007 
+65.52.111.73 1 7 75264 20120919170434
+96.22.61.124 6 249 5610528 20120903214045
+80.214.0.169 0 3 20730 
+23.23.18.14 0 7 151307 
+74.59.231.34 22 753 6826432 20120930201026
+74.125.186.46 0 5 74207 
+169.139.222.5 10 78 1574120 20120924171333
+174.252.3.71 3 11 328369 20120929225654
+65.52.111.143 1 7 73284 20120923035054
+178.137.5.125 2 2 14016 20120907195225
+97.100.210.15 3 94 1883548 20120916221010
+174.141.208.115 0 21 313558 
+24.157.211.99 3 243 5077174 20120917172826
+38.100.21.65 8 11 187952 20120915003635
+109.12.80.209 3 46 843589 20120929173316
+80.214.0.100 0 1 18703 
+69.165.138.206 6 16 8916 20120901151642
+80.214.0.82 0 2 38661 
+98.139.241.252 0 1 40489 
+38.104.230.210 3 243 5077134 20120921120540
+150.70.172.101 7 9 439983 20120921121002
+86.69.218.8 3 243 5077151 20120921143440
+90.3.204.108 1 70 1398949 20120910163117
+193.106.136.55 2 2 14011 20120924000023
+208.54.94.84 2 123 2701667 20120913074809
+92.90.21.4 0 2 35178 
+178.137.128.6 8 8 57298 20120913154922
+74.61.174.207 1 85 1716149 20120906183539
+166.181.3.169 0 1 29085 
+184.73.112.142 0 4 61831 
+70.80.73.139 4 243 5069045 20120913131850
+166.181.3.26 0 1 9969 
+74.125.187.31 0 2 40389 
+166.181.3.17 0 1 8003 
+166.181.3.178 0 1 22066 
+204.236.249.12 0 12 208392 
+166.181.3.245 0 2 58014 
+166.181.3.51 0 1 19835 
+80.214.0.199 0 1 19145 
+166.181.3.45 0 1 27186 
+90.16.159.23 3 247 5155781 20120928071257
+83.198.80.144 3 67 1248552 20120918150131
+37.8.160.104 1 1 9865 20120918173212
+67.244.105.61 11 254 5620980 20120903092515
+174.141.208.109 0 30 869900 
+74.125.186.25 0 7 112010 
+76.10.142.244 3 8 4458 20120902001327
+174.94.80.182 10 268 6323021 20120925093936
+150.70.75.163 4 6 361519 20120917232109
+80.214.0.133 0 1 3479 
+80.214.0.131 0 1 38598 
+80.214.0.14 0 1 11865 
+96.20.157.70 3 25 444283 20120927175702
+83.193.122.47 5 63 1011393 20120915043618
+193.106.136.41 4 4 28581 20120920042921
+80.214.0.204 0 1 22635 
+216.40.252.90 0 1 25748 
+82.240.9.191 3 40 907613 20120902062516
+74.125.187.33 0 2 42953 
+93.10.106.117 4 123 2480768 20120916013225
+166.181.3.225 0 1 25953 
+206.225.86.78 1 1 9851 20120914132030
+88.177.220.42 7 253 5037991 20120926045228
+74.125.186.16 0 4 65942 
+89.93.133.149 5 251 5188518 20120929104121
+89.86.203.219 1 125 2498890 20120906010636
+107.20.37.147 0 7 123967 
+66.130.228.96 8 416 8718866 20120923141306
+166.181.3.126 0 2 13645 
+109.215.219.47 7 184 3971105 20120920081615
+166.181.3.132 0 1 13573 
+166.181.3.162 0 1 14017 
+98.139.241.242 0 3 52340 
+79.93.237.250 2 2 7324 20120903135844
+74.125.187.27 0 1 43013 
+220.181.51.74 2 2 19603 20120923060430
+174.141.208.100 0 28 539582 
+173.179.26.110 5 241 5030095 20120903205857
+166.181.3.143 0 2 74927 
+75.119.252.182 5 29 946706 20120909151810
+92.90.16.33 3 209 4482353 20120918043512
+78.250.208.169 1 34 536219 20120918164008
+109.213.166.43 4 94 2153135 20120929172634
+86.73.163.201 1 18 271616 20120906160110
+74.58.243.220 8 258 5673560 20120912122621
+70.30.254.221 3 25 444283 20120919192503
+89.202.163.174 5 242 5508040 20120903091135
+174.92.202.149 5 243 5020657 20120912125143
+173.206.27.231 5 250 5185895 20120925204156
+76.65.63.38 4 28 1375215 20120910085014
+109.14.157.101 4 245 5122773 20120910052336
+50.63.173.142 3 3 102761 20120923203111
+142.213.36.254 9 253 5977938 20120907154355
+72.11.169.145 3 238 5000029 20120901143821
+174.129.130.93 0 15 350387 
+74.125.183.28 1 1 15097 20120915014304
+109.212.0.37 3 71 1566898 20120920155743
+80.214.0.22 0 1 25953 
+113.110.220.67 2 2 56431 20120918110220
+80.214.0.157 0 1 14219 
+122.49.201.117 3 238 5000049 20120904080050
+80.214.0.97 0 2 36274 
+83.115.219.116 4 121 2392773 20120924102002
+70.83.36.5 14 308 7552238 20120929113753
+81.65.79.197 1 12 311265 20120908070745
+79.90.70.115 3 243 5077154 20120916063238
+94.23.220.161 1 1 10793 20120926120321
+92.90.23.41 4 70 1786894 20120921094035
+98.139.241.249 0 1 13127 
+173.178.139.9 5 250 5620417 20120920133827
+174.141.208.97 0 27 587507 
+180.253.119.30 1 140 3014709 20120915070343
+82.233.3.62 3 74 1360074 20120918034740
+80.214.0.177 0 1 9978 
+78.220.165.4 3 41 834632 20120910123735
+80.214.0.225 0 1 12303 
+79.91.0.110 1 5 15943 20120901030338
+98.139.241.250 0 1 25748 
+80.214.0.148 0 1 14477 
+77.195.35.149 1 1 45754 20120916040717
+150.70.172.204 6 8 399904 20120922002950
+74.125.186.32 0 6 144895 
+208.54.39.206 3 43 942301 20120921140757
+23.22.18.215 1 1 9852 20120919144240
+92.144.84.150 3 83 1496280 20120929134520
+89.84.37.26 3 242 5076731 20120914161419
+166.181.3.110 0 1 15223 
+68.171.231.81 0 71 1259239 
+69.165.201.162 3 150 3144104 20120929171615
+78.250.133.70 3 38 852665 20120926011256
+213.110.133.221 10 10 72710 20120917152822
+178.32.173.52 2 2 19952 20120928120738
+74.125.186.27 0 7 136001 
+166.181.3.95 0 1 16923 
+184.148.253.119 0 5 106584 
+37.59.225.33 2 2 19897 20120926052754
+207.134.250.140 8 33 977362 20120911130635
+80.238.181.67 3 21 841590 20120905020419
+109.209.189.155 3 40 927473 20120906133142
+208.54.83.203 3 244 5083539 20120924105905
+37.160.47.191 1 2 12349 20120901095450
+92.151.135.254 3 112 2423759 20120919154510
+86.217.98.118 3 43 977162 20120912160749
+204.101.11.5 5 249 5110810 20120919171310
+109.20.225.111 3 63 1269296 20120915181703
+80.214.0.163 0 1 14920 
+80.214.0.30 0 2 30528 
+107.22.122.144 0 7 132058 
+74.69.54.221 9 258 6156513 20120909121117
+24.201.240.36 13 20 650393 20120929153353
+83.156.113.23 5 104 2063927 20120913081005
+69.156.213.101 3 242 5076766 20120919190508
+176.9.111.204 1 1 45064 20120911043035
+150.70.172.236 1 1 6904 20120917231932
+68.171.231.83 3 65 1277266 20120921182121
+159.33.64.216 15 432 9301329 20120928164415
+75.156.86.93 5 86 1850392 20120919235931
+174.89.182.210 3 25 444283 20120911201609
+93.25.106.210 3 80 1578194 20120923162228
+38.127.64.140 6 252 5616363 20120918110243
+74.221.23.93 5 242 5039685 20120909191249
+124.197.200.31 10 49 874136 20120918030942
+74.125.186.37 0 10 138626 
+89.93.30.84 3 243 5077141 20120919161415
+188.165.230.147 3 3 136962 20120928225038
+79.158.60.77 6 25 874136 20120914152623
+80.185.104.15 4 103 2381997 20120910130638
+72.52.94.234 3 240 5016061 20120906160645
+24.202.221.91 6 261 5581678 20120906120831
+184.151.114.130 3 169 3593788 20120917150415
+80.214.0.60 0 1 17286 
+132.204.202.66 4 249 5610360 20120914145433
+80.14.90.236 5 241 5022113 20120911093144
+174.141.208.113 1 26 473414 20120918141845
+80.214.0.8 0 1 0 
+166.181.3.207 0 1 28515 
+2.5.112.180 3 82 1860023 20120919115818
+166.181.3.197 0 5 99858 
+90.56.118.71 3 26 559375 20120906164147
+89.81.148.52 4 197 3981424 20120929171154
+86.202.126.54 2 12 225458 20120930115403
+80.214.0.197 0 3 31434 
+80.214.0.186 0 3 105188 
+74.58.80.133 6 453 9567801 20120922083704
+109.206.181.132 1 1 46120 20120925235350
+69.157.135.204 3 86 1820654 20120915224110
+80.214.0.146 0 2 44935 
+80.214.0.28 0 1 34726 
+74.125.183.22 0 2 15729 
+99.165.237.115 3 242 5059057 20120912094155
+216.94.112.40 6 247 5556245 20120906130717
+174.141.213.50 0 1 24592 
+150.70.172.108 3 7 320990 20120918205934
+66.131.41.6 5 253 5676736 20120915231118
+84.101.238.157 1 97 1889187 20120922072035
+82.228.142.66 3 56 1203556 20120919112738
+74.125.186.23 0 10 221798 
+81.65.7.119 3 99 2203056 20120908063109
+96.22.238.42 9 175 4071283 20120916182706
+80.214.0.59 0 2 28354 
+74.125.186.18 0 8 164461 
+166.181.3.176 0 1 17775 
+166.181.3.28 0 1 29182 
+80.214.0.84 0 1 14488 
+166.181.3.224 0 1 41044 
+174.129.58.29 1 1 10003 20120914111159
+54.242.63.135 3 9 110571 20120926174340
+166.181.3.78 0 2 42344 
+80.214.0.12 0 2 19835 
+37.59.48.227 2 2 91487 20120926113549
+78.234.10.81 0 1 489370 
+109.10.241.119 3 185 3927037 20120905142925
+77.206.222.60 9 130 2868608 20120905113318
+166.181.3.216 0 3 36400 
+89.84.205.26 5 243 5517650 20120911014045
+80.214.0.218 0 2 3489 
+173.194.99.19 1 35 913063 20120901083626
+69.58.178.57 11 11 239306 20120907054522
+76.10.141.135 7 17 13374 20120907022605
+174.141.213.33 0 2 47774 
+80.214.0.5 0 1 206837 
+93.28.242.209 5 132 2621040 20120924104936
+90.38.131.210 1 31 556138 20120926035023
+89.170.26.7 1 6 46449 20120902084346
+92.146.143.179 3 116 2500158 20120902061439
+78.234.103.182 12 232 5479203 20120918163646
+80.214.0.159 0 1 23930 
+208.54.44.237 1 3 68244 20120913160939
+178.137.128.51 6 6 42624 20120906205500
+71.225.2.131 1 89 1869759 20120914202731
+24.201.24.31 3 227 4858404 20120926211520
+174.141.208.98 0 17 330598 
+65.52.111.218 1 7 72853 20120926055212
+166.181.3.87 0 3 43817 
+174.141.213.8 0 1 29182 
+90.54.130.176 3 58 967111 20120911141929
+166.181.3.171 0 2 27998 
+66.130.175.101 15 268 6237909 20120921123153
+80.214.0.247 0 3 75533 
+166.181.3.57 0 1 22740 
+80.214.0.75 0 1 613 
+80.214.0.45 0 2 44115 
+94.23.225.68 2 3 118327 20120906082054
+24.160.198.96 15 317 7274215 20120907203310
+173.194.99.20 0 22 443921 
+69.171.178.28 3 239 5006454 20120904165239
+82.242.106.208 3 239 5002392 20120907160246
+174.141.213.21 0 1 25748 
+96.22.246.99 7 502 10418957 20120930195350
+166.181.3.164 0 1 12292 
+70.83.239.253 3 243 5077166 20120918215232
+82.233.247.107 4 201 4043856 20120917071955
+88.180.11.56 7 31 950211 20120928071419
+166.181.3.140 0 1 28827 
+78.125.193.193 6 111 2198764 20120916201315
+96.21.101.100 4 62 1633756 20120903215028
+78.234.68.251 3 126 2738034 20120914151835
+166.181.3.160 0 1 20730 
+82.245.79.97 3 239 5009637 20120911143935
+173.178.224.20 10 380 8028295 20120905153249
+174.141.213.41 0 1 17228 
+78.250.195.80 4 50 652237 20120906114130
+207.219.69.180 3 21 841593 20120915161853
+174.254.52.182 3 27 501440 20120919014825
+150.70.75.33 5 6 175792 20120922002957
+184.72.76.73 0 7 118559 
+24.200.41.170 6 254 5596157 20120908161732
+23.21.9.210 1 1 46381 20120928123902
+23.20.143.95 0 4 68657 
+74.56.157.13 0 1 27517 
+64.91.232.42 1 1 9990 20120927085240
+88.161.172.121 1 8 288043 20120929150324
+98.139.241.244 0 1 22066 
+74.125.187.16 0 2 58570 
+24.201.85.27 10 267 6319781 20120930230251
+74.125.183.27 0 1 22832 
+70.48.132.88 3 104 2182068 20120915120155
+72.10.150.163 20 507 6235597 20120906134056
+184.170.141.66 3 9 110288 20120904151648
+77.126.197.192 5 153 3626014 20120926184947
+74.125.187.29 0 2 20145 
+76.65.66.191 1 43 765171 20120922214728
+222.158.59.135 5 24 871658 20120917231634
+166.181.3.149 0 2 21239 
+166.181.3.109 1 1 9836 20120918192325
+198.103.140.249 19 313 7431388 20120919133235
+193.106.136.37 2 2 14025 20120907060949
+69.171.187.21 3 56 1126453 20120907182104
+190.156.183.17 3 60 1250278 20120904215810
+166.147.120.149 1 140 2801798 20120930015735
+80.214.0.18 0 1 12240 
+166.181.3.130 0 1 14900 
+80.214.0.51 0 1 41044 
+108.211.69.64 5 27 906626 20120925220643
+80.214.0.47 0 1 9969 
+178.137.128.232 4 4 29411 20120903111609
+80.214.0.165 0 1 23592 
+135.19.208.155 12 76 208433 20120905172909
+96.20.148.164 8 502 10849065 20120928043457
+80.214.0.150 0 1 16939 
+82.238.206.26 1 98 2064675 20120919113503
+80.214.0.220 0 1 33685 
+184.145.169.232 7 34 986447 20120917104113
+79.93.237.55 5 26 883926 20120928085913
+77.79.9.250 1 1 46865 20120930073440
+80.214.0.24 0 1 24592 
+24.37.35.18 3 242 5059105 20120912141649
+173.2.233.215 4 246 5575420 20120923224614
+74.125.186.44 0 7 190984 
+128.67.241.131 0 1 16923 
+184.151.63.235 3 64 1320034 20120914223409
+166.181.3.251 0 1 27005 
+64.131.189.174 4 31 977492 20120915062015
+89.93.90.34 3 60 1333875 20120909030229
+41.96.98.151 1 6 59375 20120927062232
+108.107.92.47 2 108 2328286 20120913154245
+24.201.210.95 3 247 5155808 20120927194612
+207.219.69.150 3 21 841593 20120913115807
+166.181.3.165 0 1 34726 
+68.46.152.85 11 270 6327582 20120925205750
+66.130.99.68 8 260 5771611 20120928102052
+74.125.183.23 0 1 3527 
+80.214.0.195 0 1 43239 
+80.214.0.3 0 1 20525 
+166.181.3.68 0 1 19789 
+85.170.192.244 3 84 1776781 20120922093152
+207.134.126.139 12 266 6227164 20120919083716
+24.212.31.174 6 246 5562664 20120904113436
+50.100.166.180 0 2 19912 
+23.20.254.83 1 1 9830 20120912125550
+142.162.77.78 3 26 450676 20120923111234
+174.141.213.22 0 2 48776 
+166.181.3.144 0 1 16789 
+78.235.80.11 6 118 2452885 20120904023544
+198.228.216.24 3 46 915230 20120915033750
+74.125.183.17 0 2 9614 
+166.181.3.61 0 2 53291 
+178.137.128.204 8 8 56079 20120918164838
+80.214.0.104 0 1 14093 
+78.213.236.142 1 108 2412142 20120918173638
+50.16.68.134 0 5 150781 
+80.214.0.42 0 1 21100 
+24.200.113.69 13 266 6239063 20120919115227
+74.125.186.43 0 9 206756 
+80.214.0.135 0 1 17228 
+195.132.44.209 4 241 5025780 20120910170635
+80.118.33.228 9 79 1971027 20120906044619
+174.141.213.29 0 1 14705 
+93.13.4.238 1 25 593612 20120926140213
+107.21.72.194 0 7 141792 
+88.169.144.202 5 246 5107257 20120915062248
+76.69.238.18 3 23 377583 20120913204132
+74.125.186.21 0 7 160946 
+80.214.0.227 0 1 12137 
+80.198.37.6 1 1 46199 20120924105319
+90.56.61.144 3 55 952656 20120925170802
+72.242.22.194 1 1 9969 20120928082813
+24.200.138.148 12 267 6278911 20120906163333
+166.181.3.32 0 1 16939 
+90.44.110.249 3 80 1762167 20120926104052
+74.125.186.30 0 9 149245 
+193.106.136.45 2 2 14695 20120929082825
+209.131.39.48 2 2 89935 20120910231116
+80.214.0.121 0 1 40791 
+77.194.56.28 10 181 4604598 20120910120958
+184.72.167.28 0 6 130538 
+173.176.25.8 16 639 15269852 20120914150611
+174.90.120.228 4 22 844068 20120911133358
+88.172.74.102 3 52 991744 20120929173247
+78.224.8.47 8 471 9891808 20120928085247
+174.141.213.34 0 1 14095 
+174.89.187.234 10 264 6222394 20120914163115
+80.214.0.230 0 2 506551 
+80.214.0.173 0 2 47577 
+41.83.44.195 5 246 5107209 20120917111704
+74.56.100.151 4 244 5533234 20120903130032
+166.181.3.180 0 1 31677 
+77.37.255.159 0 1 23592 
+166.181.3.195 0 1 14477 
+166.181.3.220 0 2 48793 
+166.181.3.91 0 1 13478 
+166.181.3.221 0 3 79578 
+109.62.67.177 3 18 359507 20120911125715
+80.214.0.249 0 1 899 
+80.214.0.167 0 1 15878 
+219.144.168.239 1 1 9982 20120929115142
+109.9.11.228 3 144 3084455 20120904081834
+68.83.126.178 3 248 5162221 20120926222405
+93.186.16.243 0 1 46643 
+80.214.0.229 1 1 15097 20120925104104
+166.181.3.247 0 1 27513 
+81.57.32.241 3 81 1469604 20120924091540
+82.227.23.42 1 6 80146 20120919163142
+183.60.212.154 1 12 23686 20120915164831
+82.241.28.80 10 263 6232761 20120917084116
+88.162.252.4 5 42 838318 20120926065950
+184.162.240.159 0 1 28515 
+166.181.3.103 0 1 12979 
+80.214.0.11 0 4 83833 
+80.214.0.78 0 1 0 
+74.125.183.31 0 3 19469 
+24.37.63.166 3 239 5006435 20120903230058
+174.141.208.102 0 33 827370 
+208.80.194.145 1 1 45408 20120918113029
+166.181.3.157 0 1 3434 
+108.196.17.75 11 605 12570449 20120917215726
+142.243.254.209 4 244 5079893 20120918163741
+166.181.3.47 0 1 43420 
+78.237.56.182 1 35 782403 20120919165433
+174.141.208.118 0 22 466013 
+78.234.8.124 3 238 5000053 20120902080811
+37.160.1.181 1 17 163452 20120911104556
+219.144.180.124 1 1 9865 20120921114050
+96.21.245.58 3 25 444283 20120923141422
+174.141.208.111 0 23 536698 
+78.251.197.64 6 243 5509840 20120905115122
+174.141.213.35 0 2 43756 
+166.181.3.75 0 2 29292 
+76.65.187.195 3 3 11424 20120928100040
+173.194.99.23 0 20 470019 
+166.181.3.69 0 1 16029 
+135.19.30.12 6 247 5117409 20120917220953
+80.214.0.1 0 1 25748 
+166.181.3.85 0 2 46430 
+88.141.136.74 3 117 2235517 20120902083714
+68.171.231.85 1 37 980162 20120921182117
+107.22.13.130 0 7 116690 
+166.181.3.189 0 2 32959 
+74.125.187.21 0 1 23685 
+80.214.0.234 0 1 16923 
+89.85.45.135 11 263 6211517 20120912110903
+80.214.0.243 0 1 39086 
+64.6.161.82 7 479 10029012 20120911110646
+78.210.202.11 3 70 1354014 20120919084823
+24.202.208.74 4 242 5507850 20120911195741
+70.53.151.211 9 269 5844464 20120914172750
+65.52.111.136 1 7 74988 20120910102628
+166.181.3.167 0 3 97649 
+74.56.48.86 3 244 5083540 20120918152735
+80.214.0.215 1 1 9977 20120925104349
+195.238.92.184 5 23 846366 20120911110006
+83.198.91.98 9 493 11153287 20120922134248
+166.181.3.30 0 1 19579 
+74.125.186.38 0 7 130754 
+83.200.71.118 3 74 1386152 20120915072003
+174.141.213.23 0 2 31649 
+90.10.2.42 7 114 2220117 20120916164134
+108.21.152.159 13 137 3427944 20120904022852
+75.101.206.200 0 8 221737 
+81.80.11.61 3 247 5155799 20120925095404
+166.147.72.156 3 239 5009592 20120906234333
+66.46.93.226 3 109 2292816 20120904172315
+84.102.27.161 3 105 2128348 20120918085032
+184.162.132.190 10 258 6165227 20120905143829
+90.41.239.15 3 77 1713048 20120918101750
+79.88.49.129 4 152 3507862 20120908042603
+166.181.3.72 0 1 27023 
+74.125.183.21 0 1 10944 
+87.100.72.123 1 54 1105746 20120920171747
+173.176.21.236 7 255 6142134 20120903223801
+166.181.3.107 0 4 67646 
+79.93.165.176 7 256 5293263 20120904120900
+69.165.159.86 3 21 841593 20120910205529
+69.165.143.191 3 8 4458 20120907135057
+154.5.188.104 4 78 1554881 20120909185915
+85.170.42.24 7 152 3627218 20120921033009
+96.22.210.89 4 131 3051733 20120925164341
+67.217.114.1 20 63 1239156 20120910195118
+81.53.31.127 3 170 3470592 20120911102643
+24.202.237.53 3 24 876561 20120928162300
+90.0.116.234 6 98 1732107 20120924111241
+174.92.225.231 7 262 5793262 20120928111751
+203.80.236.98 0 1 489370 
+166.181.3.153 0 1 22092 
+69.70.248.142 6 481 10048814 20120917113610
+50.98.36.197 3 157 3347101 20120917214849
+67.82.114.164 3 136 2799183 20120917193235
+166.181.3.41 0 1 18458 
+74.125.183.19 0 1 832 
+80.214.0.126 1 2 43013 20120925104243
+166.181.3.24 0 1 28941 
+70.28.31.127 6 196 4543209 20120919114400
+79.82.74.89 3 125 2597390 20120914165553
+209.131.39.62 1 1 46396 20120925100408
+67.68.103.92 7 260 6219415 20120916182033
+92.131.189.72 11 254 5628309 20120902065235
+220.181.51.79 1 1 9730 20120906233244
+74.235.17.248 2 30 641781 20120914221850
+68.50.39.190 5 245 5089190 20120913213351
+23.20.246.212 0 8 146197 
+174.141.208.107 0 26 500817 
+95.136.149.53 3 167 3420305 20120914163921
+209.87.236.58 7 34 989477 20120910104225
+209.156.249.193 3 25 444283 20120921153355
+166.181.3.105 0 2 51991 
+135.19.212.10 12 61 2397413 20120923151231
+96.21.214.40 5 253 5676362 20120915141932
+74.198.164.129 3 25 444559 20120911011517
+80.214.0.201 0 1 14953 
+99.254.24.126 13 170 4487946 20120917093022
+216.147.138.180 1 73 1448733 20120912122943
+93.186.16.246 1 3 12880 20120921175810
+80.214.0.76 0 2 44634 
+109.13.171.230 6 251 5116369 20120908085408
+208.84.104.146 1 21 288717 20120908171828
+199.192.232.206 5 29 945271 20120914183343
+150.70.64.197 1 2 221366 20120918210002
+166.181.3.244 0 1 14920 
+74.125.187.25 0 2 42892 
+70.82.242.169 4 240 5019378 20120907114711
+174.141.208.104 1 21 410091 20120928011429
+88.171.67.110 3 164 3535286 20120910163210
+80.214.0.83 0 1 0 
+174.141.213.7 0 1 7207 
+80.214.0.80 0 1 15213 
+86.214.252.55 2 144 2899017 20120924142619
+98.139.241.240 1 3 90039 20120918221809
+93.121.181.199 3 43 952398 20120904214527
+31.33.40.59 4 90 2331798 20120909024244
+174.89.184.123 6 185 4235571 20120912135527
+80.214.0.154 0 1 11548 
+78.69.247.161 6 25 874136 20120908090324
+71.21.180.38 1 43 769385 20120911220450
+74.198.164.153 3 81 1595177 20120927181233
+216.252.92.13 6 70 1260811 20120926145347
+23.20.186.212 0 8 151159 
+109.8.53.250 1 6 80119 20120920174727
+80.214.0.71 0 1 19674 
+166.181.3.179 0 2 14617 
+80.214.0.140 0 2 60007 
+207.253.250.210 19 515 11371985 20120919084026
+24.61.204.114 3 155 3209581 20120919144430
+109.8.71.75 3 30 669619 20120922135844
+80.214.0.178 0 1 26958 
+173.194.99.16 0 30 743256 
+184.163.255.155 12 492 5080296 20120924231341
+174.141.208.116 0 27 489506 
+80.214.0.193 0 1 6393 
+80.214.0.168 0 2 26182 
+74.125.186.35 0 7 144492 
+109.223.55.155 3 90 1766876 20120926053323
+82.225.179.223 3 19 346244 20120906063820
+81.51.129.62 3 238 5000042 20120902091622
+198.228.201.157 1 29 645556 20120916175329
+174.141.213.48 0 2 55782 
+72.28.80.14 15 100 2649163 20120928145646
+78.46.99.133 1 1 45774 20120921200559
+89.91.226.68 3 37 953934 20120922093514
+150.70.75.31 0 2 115094 
+68.6.64.55 0 1 489370 
+166.181.3.52 0 1 28407 
+88.140.66.66 3 24 486991 20120928093723
+86.207.16.141 3 21 480149 20120924094931
+90.30.74.85 1 1 9980 20120929135453
+74.125.187.34 0 1 13893 
+199.255.30.30 3 107 2230486 20120909184539
+195.242.218.133 8 8 57424 20120915083415
+63.246.61.86 1 29 415780 20120911002949
+2.11.161.106 3 44 990000 20120928171243
+74.125.186.41 0 3 62878 
+219.144.154.109 1 1 44857 20120905115024
+166.181.3.83 0 2 38236 
+92.146.72.101 8 296 7078818 20120922181242
+184.73.30.53 1 1 9807 20120913233310
+166.181.3.37 0 3 67392 
+69.231.59.16 3 118 2572712 20120909170617
+2.88.68.253 4 41 968783 20120921083037
+119.160.211.46 3 14 645801 20120919122117
+80.214.0.232 0 1 42367 
+80.214.0.94 0 1 27005 
+166.181.3.235 0 1 18032 
+80.214.0.36 0 1 4074 
+166.181.3.159 0 2 29354 
+80.214.0.20 0 1 356 
+23.20.91.13 1 1 9821 20120912125553
+66.176.142.40 3 167 3545350 20120912183330
+196.215.19.182 5 110 2587114 20120912143815
+184.151.127.153 8 153 3473063 20120927185546
+166.181.3.230 0 2 37144 
+157.55.16.95 1 4 262604 20120927113804
+70.82.159.47 10 56 948696 20120918203712
+80.214.0.245 0 2 49172 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 30
+20120901 57 1353 28693873 24
+20120902 135 3592 71839140 32
+20120903 87 2264 49634284 23
+20120904 129 2930 64403858 26
+20120905 119 3609 70236858 32
+20120906 180 4882 95132463 42
+20120907 114 3309 71381743 29
+20120908 120 3400 71502130 28
+20120909 143 3641 81088425 27
+20120910 157 2822 63885446 39
+20120911 199 4250 87410578 45
+20120912 120 3634 79252023 28
+20120913 166 4701 100422603 42
+20120914 173 5498 114725787 46
+20120915 365 3567 83788739 59
+20120916 180 2585 57223685 56
+20120917 238 5078 113064231 60
+20120918 205 4740 102277034 70
+20120919 308 5283 118836656 71
+20120920 161 1650 32763697 48
+20120921 106 3463 74496583 32
+20120922 70 2910 62754497 24
+20120923 73 2119 45897473 21
+20120924 145 4756 66854032 28
+20120925 130 3117 68972511 34
+20120926 125 3684 77345501 41
+20120927 76 1533 33538614 19
+20120928 151 4035 89166455 41
+20120929 122 3133 65937052 36
+20120930 65 2658 57791532 19
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 40
+5mn-15mn 36
+0s-30s 810
+30s-2mn 105
+15mn-30mn 31
+2mn-5mn 52
+30mn-1h 48
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 22
+/ 1399 39641784 805 337
+/font/big_noodle_titling.ttf 699 9302604 12 66
+/font/big_noodle_titling_oblique.ttf 676 9462494 9 273
+/en/studio 347 1553608 100 127
+/en/engineers 192 862779 67 33
+/font/big_noodle_titling.eot 141 1838223 3 20
+/en/contact 132 529260 13 48
+/en/mastering 132 376664 3 27
+/font/big_noodle_titling_oblique.eot 127 1727660 2 42
+/en/ 99 1327902 21 37
+/fr/studio 51 130705 11 11
+/fr/lab 29 62273 1 2
+/fr/ 91 1122593 24 25
+/en/lab 81 182496 4 15
+/fr/contact 45 171927 8 20
+/news.htm 1 14132 0 0
+/contact.php 1 10686 0 1
+/fr/e-mastering/login 7 14896 0 2
+/fr/engineers 91 413298 36 20
+/actions/sendBooking.php 18 4892 0 3
+/en/e-mastering/login 27 63646 2 9
+/fr/mastering 33 100299 1 4
+END_SIDER

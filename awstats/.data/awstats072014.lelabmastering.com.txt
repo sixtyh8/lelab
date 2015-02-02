@@ -1,0 +1,260 @@
+AWSTATS DATA FILE 6.95 (build 1.943)
+# If you remove this file, all statistics for date 201407 will be lost/reset.
+# Last config file used to build this data file was /home/lelab/domains/lelabmastering.com/awstats/.data/awstats.lelabmastering.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2004                
+POS_TIME 2683                
+POS_VISITOR 6344                
+POS_DAY 6684                
+POS_DOMAIN 3207                
+POS_LOGIN 3436                
+POS_ROBOT 3591                
+POS_WORMS 3907                
+POS_EMAILSENDER 4038                
+POS_EMAILRECEIVER 4181                
+POS_SESSION 6766                
+POS_SIDER 6912                
+POS_FILETYPES 4316                
+POS_OS 4520                
+POS_BROWSER 4612                
+POS_SCREENSIZE 4739                
+POS_UNKNOWNREFERER 4813                
+POS_UNKNOWNREFERERBROWSER 4900                
+POS_ORIGIN 4982                
+POS_SEREFERRALS 5114                
+POS_PAGEREFS 5258                
+POS_SEARCHWORDS 5514                
+POS_KEYWORDS 5666                
+POS_MISC 2347                
+POS_ERRORS 5725                
+POS_CLUSTER 3292                
+POS_SIDER_404 5811                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20140701042932 56 13222 10789486870516
+FirstTime 20140701000019
+LastTime 20140701034244
+LastUpdate 20140701044640 56 0 56 0 0
+TotalVisits 6                   
+TotalUnique 6                   
+MonthHostsKnown 0                   
+MonthHostsUnknown 6                   
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 2 187 1878770 2 4 44546
+1 2 128 1357921 5 6 51837
+2 4 33 610296 2 4 8323
+3 6 6 289080 3 3 25726
+4 0 0 0 9 9 138627
+5 0 0 0 0 0 0
+6 0 0 0 0 0 0
+7 0 0 0 0 0 0
+8 0 0 0 0 0 0
+9 0 0 0 0 0 0
+10 0 0 0 0 0 0
+11 0 0 0 0 0 0
+12 0 0 0 0 0 0
+13 0 0 0 0 0 0
+14 0 0 0 0 0 0
+15 0 0 0 0 0 0
+16 0 0 0 0 0 0
+17 0 0 0 0 0 0
+18 0 0 0 0 0 0
+19 0 0 0 0 0 0
+20 0 0 0 0 0 0
+21 0 0 0 0 0 0
+22 0 0 0 0 0 0
+23 0 0 0 0 0 0
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 14 354 4136067
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 5
+yandex 14 189476 20140701042301 0
+bot[\s_+:,\.\;\/\\-] 3 29180 20140701035335 0
+googlebot 1 20752 20140701010350 0
+favicon 1 20603 20140701001004 0
+baiduspider 1 5795 20140701042932 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 9
+css 16 40856 0 0
+php 9 475445 0 0
+png 22 120128 0 0
+ttf 2 29389 0 0
+jpg 275 3146366 0 0
+js 20 292592 0 0
+jpeg 1 6737 0 0
+Unknown 3 22216 0 0
+gif 6 2338 0 0
+END_FILETYPES
+
+# OS ID - Hits
+BEGIN_OS 5
+macosx 315
+linuxandroid 32
+winxp 3
+win2000 3
+linux 1
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 6
+iphone 187
+safari7.0 128
+msie6.0 3
+chrome21.0.1180.75 1
+msie7.0 3
+android 32
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 2 2
+From1 0 0
+From2 0 0
+From3 7 7
+From4 5 345
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 3
+http://sk.golden-praga.ru 3 3
+http://ufa-medosmotr.ru 3 3
+http://googleads.g.doubleclick.net/pagead/ads 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 1
+404 5 3253
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 4
+/wp-login.php 1 -
+/robots.txt 2 -
+//RK=0 1 -
+/system/fckeditor/editor/filemanager/browser/default/connectors/test.html 1 http://www.lelabmastering.com/system/fckeditor/editor/filemanager/browser/default/connectors/test.html
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 6
+195.242.218.133 3 3 144540 20140701034244 20140701034242 /
+46.119.115.144 3 3 144540 20140701030041
+207.244.65.196 3 32 465096 20140701025436
+92.149.213.233 2 187 1878770 20140701000047
+78.212.204.49 2 128 1357921 20140701014524
+54.85.94.195 1 1 145200 20140701024735
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 1
+20140701 14 354 4136067 6
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 1
+0s-30s 5
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 6
+/ 9 475445 5 2
+/img/credits/thumb_309-andre-fortin---a-coeur-ouvert-les-yeux-fermejpg 1 8294 0 1
+/font/big_noodle_titling.ttf 1 14286 0 0
+/img/credits/thumb_312-navertjpg 1 7558 0 1
+/img/credits/thumb_313-clement-jacques---live-a-la-place-des-artsjpg 1 6364 1 0
+/font/big_noodle_titling_oblique.ttf 1 15103 0 1
+END_SIDER

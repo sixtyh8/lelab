@@ -1,0 +1,8 @@
+#ErrorDocument 404 /404.php
+#ErrorDocument 500 /500.php
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^(en|fr)/$ index.php?lang=$1
+RewriteRule ^(en|fr)/e-mastering/$ e-mastering/index.php?lang=$1
+RewriteRule ^(en|fr)/e-mastering/(error|success)$ e-mastering/index.php?lang=$1&$2
+RewriteRule ^(en|fr)/(.*)$ $2.php?lang=$1

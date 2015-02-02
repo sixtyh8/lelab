@@ -1,0 +1,41 @@
+<div ng-controller="WhitepapersCtrl.List" cg-busy="whitepapersPromise">
+
+    <div class="well">
+        <form class="form-inline" ng-submit="searchWhitepapers()">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="searchTerm" placeholder="Keyword">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <table class="table table-striped" ng-show="whitepapers.list.length">
+    	<thead>
+    		<tr>
+    			<th class="whitepaper-id" style="width:60px">ID</th>
+    			<th class="whitepaper-title" style="min-width:575px">Whitepaper</th>
+    			<th class="actions-th" style="min-width:120px"></th>
+    		</tr>
+    	</thead>
+    	<tbody>
+        	<tr ng-repeat="whitepaper in whitepapers.list track by whitepaper.id">
+        			<td class="whitepaper-id">
+        				{{ whitepaper.id }}
+        			</td>
+        			<td>
+                        <h2 style="margin-top:0">Whitepaper Title: {{ whitepaper.title }}</h2>
+                        <p class="text-muted"><strong>created:</strong> {{ whitepaper.created_at }} <span ng-show="whitepaper.updated_at">| <strong>last updated:</strong> {{ whitepaper.updated_at }}</span></p>
+                        <p class="text-centered" ng-show="false"><button class="btn btn-link btn-block" ng-click="!contentShown">Show Content</button></p>
+                        <div ng-show="true" style="padding-top:10px; border-top:1px solid #eee" ng-bind-html="whitepaper.body"></div>
+                    </td>
+        			<td>
+        				<a href="#" ui-sref="whitepapers.edit({ whitepaperId: whitepaper.id })" role="button" class="edit-whitepaper btn btn-default btn-sm btn-block"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+        				<button class="btn btn-danger btn-sm btn-block" confirm-click="deleteWhitepaper(whitepaper.id, $index)" confirm-message="Are you sure?"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+        			</td>
+        		</tr>
+    	</tbody>
+    </table>
+    <div class="well" ng-hide="whitepapers.list.length">
+        <h3>No Whitepaper</h3>
+    </div>
+</div>

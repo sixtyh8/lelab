@@ -1,0 +1,16 @@
+<div id="settings" ng-controller="WhitepapersCtrl">
+	<div class="row">
+		<div class="col-md-6">
+			<h2 style="margin:0 0 20px 0">Whitepapers</h2>
+		</div>
+		<div class="col-md-6">
+			<a ng-show="$state.includes('whitepapers.list')" href="#" class="btn btn-primary pull-right" ui-sref="whitepapers.new"><span class="glyphicon glyphicon-plus"></span> Add Whitepaper</a>
+			<a ng-hide="$state.includes('whitepapers.list')" href="#" class="btn btn-default pull-right" ui-sref="whitepapers.list"><span class="glyphicon glyphicon-arrow-left"></span> Go Back</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div ui-view="whitepapers" autoscroll="false" class="ui-view-container" ng-class="fader-animation"></div>
+		</div>
+	</div>
+</div>

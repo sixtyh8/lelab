@@ -1,0 +1,35 @@
+<div id="settings" ng-controller="TagsCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Tags</h2>
+            <div cg-busy="tagsPromise">
+                <table class="table table-striped" id="tags-table" ng-if="tags.length">
+                    <thead>
+                        <tr>
+                            <th style="width:60px">ID</th>
+                            <th class="table-list-name-column">Tag - Click to edit</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="tag in tags track by tag.id">
+                            <td>{{ tag.id }}</td>
+                            <td><a href="#" editable-text="tag.name" onbeforesave="saveTag($data, tag.id)">{{ tag.name }}</a></td>
+                            <td><button class="btn btn-sm btn-danger pull-right" confirm-click="deleteTag(tag.id, $index)" confirm-message="Are you sure?"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="well">
+                    <h3 ng-hide="tags.length" style="margin-top:0">No Tags</h3>
+                    <h3 ng-show="tags.length" style="margin-top:0">Add Tag</h3>
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" ng-model="newTag.name" placeholder="Enter tag">
+                        </div>
+                        <button class="btn btn-primary" ng-click="addTag()">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

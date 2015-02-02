@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family:"Big Noodle Titling";
+    src: url(../font/big_noodle_titling.ttf);
+}
+@font-face {
+    font-family:"Big Noodle Titling Oblique";
+    src: url(../font/big_noodle_titling_oblique.ttf);
+}
+
+
+/* reset */
+html, body, p, a, ul, ol, li, h1, h2, h3, h4, h5, img, input, label{margin:0;padding:0;border:none;text-decoration:none;}
+ul, ol, li{list-style:none;}
+
+html, body{background-color:#000;color:#fff;font-family:Tahoma, Geneva, sans-serif;font-size:13px;}
+html{height:100%;}
+body{background:url(../img/body-bg.jpg) top center no-repeat;min-height:100%;}
+div{position:relative;}
+h1, h3, h4{font-family:"Big Noodle Titling"; font-weight:normal;}
+h1{height:124px;width:200px;display:block;float:left;position:relative;left:-10px;}
+h2{font-family:"Big Noodle Titling Oblique"; font-weight:normal;}
+h2{font-size:30px;margin-bottom:20px;}
+h3{font-size:24px;clear:both;}
+h4{font-size:18px;color:#2d4887;padding-bottom:4px;}
+p, ul{color:#bdbdbd;padding-bottom:15px;}
+#login-bar{height:28px;background:url(../img/login-bar-bg.gif) top left repeat-x;border-bottom:1px solid #222;}
+#login-bar-content{width:920px;padding:0 20px;margin:0 auto;}
+#option-bar, #login-bar-content input, #login-bar-content label{float:right;font-family:"Big Noodle Titling";font-size:14px;}
+#login-bar-content label{height:18px;line-height:18px;padding:0 5px;margin:5px 0;}
+#login-bar-content label{color:#454545;}
+#login-bar-content input{width:84px;height:14px;background:url(../img/login-input-bg.gif) top center no-repeat;border:1px solid #333;margin:6px 0;}
+#login-bar-content .submit{width:16px;height:16px;background:url(../img/login-go-btn.png) top center no-repeat;border:none;color:transparent;cursor:pointer;margin-left:5px;}
+#option-wrapper{position:absolute;top:4px;right:20px;display:block;overflow:hidden;}
+#option-wrapper img#mastered-for-itunes{height:40px;float:left;margin-right: 5px;}
+#option-bar{float:left;margin-top:12px;font-size:16px;}
+#option-bar li{float:left;border-left:2px solid #333;padding:0 4px;}
+#option-bar a{color:#fff;}
+#option-bar a:hover{color:#454545;}
+#wraper{width:920px;margin:0 auto;position:relative;padding:5px 20px 0;}
+#logo{/*position:absolute;top:6px;left:12px;*/}
+#main-menu{font-family:"Big Noodle Titling";font-size:24px;height:58px;display:block;position:relative;margin-left:518px;margin-top:70px;}
+#main-menu li{float:left;margin-right:2px;border-right:2px solid #333;padding-right:2px;height:24px;line-height:24px;}
+#main-menu a{color:#fff;text-decoration:none;display:block;height:57px;padding:0 4px;}
+#main-menu a:hover, #main-menu a.selected{background:url(../img/main-menu-hover.gif) top center repeat-x;}
+#contacts{font-family:"Big Noodle Titling";font-size:24px;position:absolute;top:15px;right:20px;}
+#contacts li{height:24px;text-align:right;}
+#social-networks{position:relative;float:right;overflow:auto;}
+#social-networks li{float:left;list-style:none;}
+#social-networks img{margin-left:6px;}
+#social-networks strong{line-height:30px;font-size:14px;padding-right:10px;}
+#slider{position:relative;height:185px;margin-bottom:20px;border:2px solid #333;background-color:#000;}
+#slider-prev{position:absolute;top:75px;left:-20px;display:block;width:39px;height:39px;color:transparent;z-index:200;}
+#slider-next{position:absolute;top:75px;right:-20px;display:block;width:39px;height:39px;color:transparent;z-index:200;}
+#view{position:relative;height:340px;margin-bottom:20px;}
+#content{position:relative;}
+.left-box{width:608px;margin-bottom:20px;}
+.left-box-top, .left-box-bottom{height:16px;}
+.left-box-top{background:url(../img/left-box-top.png) top center no-repeat;}
+.left-box-bottom{background:url(../img/left-box-bottom.png) bottom center no-repeat;}
+.left-box-content{background-color:#000;min-height:200px;padding:0 16px;}
+.left-box-content p, .left-box-content img{padding-bottom:16px;}
+#right-col{width:291px;position:absolute;top:0;right:0;}
+.right-box{width:291px;margin-bottom:20px;}
+.right-box-top{height:10px;background:url(../img/right-box-top.png) top center no-repeat;}
+.right-box-bottom{height:10px;background:url(../img/right-box-bottom.png) top center no-repeat;}
+.right-box-content{position:relative;min-height:50px;background-color:#000;padding:0 15px 8px;}
+.right-box p{padding-bottom:10px;}
+.full-box{width:920px;margin-bottom:20px;}
+.full-box-top{height:16px;background:url(../img/full-box-top.png) top center no-repeat;}
+.full-box-bottom{height:16px;background:url(../img/full-box-bottom.png) top center no-repeat;}
+.full-box-content{overflow:auto;min-height:340px;background:#000 url(../img/full-box-content-bg.jpg) top left no-repeat;padding:0 20px;}
+.column{width:176px;float:left;}
+.column ul{padding-bottom:20px;}
+.column li{line-height:18px;}
+.row{position:relative;overflow:auto;}
+.half-box.left{margin-right:18px;}
+.half-box{position:relative;width:451px;margin-top:20px;float:left;}
+.half-box h4{position:relative;bottom:6px;}
+.half-box-content{position:relative;background:url(../img/half-box-top.png) top center no-repeat;min-height:470px;padding:20px 20px 0;}
+.half-box-content img{float:left;margin:0 20px 0 0;}
+.half-box-content p{padding-bottom:14px;}
+.half-box-bottom{height:16px;background:url(../img/half-box-bottom.png) top center no-repeat;}
+.half-box-content ul{clear:both;padding-bottom:10px;}
+.half-box-content li{padding:4px 0;list-style:disc;}
+#got-your-access{background:#000 url(../img/got-your-access-bg.jpg) 160px 10px no-repeat;}
+#got-your-access p{width:50%;}
+#got-your-access img{padding-top:10px;}
+#book-a-session img{position:absolute;top:-12px;left:15px;}
+#stay-connected input{height:27px;width:220px;}
+#stay-connected .submit{width:27px;background:url(../img/stay-connected-btn.png) top center no-repeat;color:transparent;cursor:pointer;margin-left:8px;}
+.contact-box{position:relative;height:200px;margin-bottom:40px;}
+.contact-box img{float:left;margin-right:20px;}
+.contact-info{position:relative;}
+.contact-info p{padding:0;}
+.contact-info a{text-decoration:underline;}
+.contact-info a:hover{color:#666;}
+.contact-phone{font-family:"Big Noodle Titling";font-size:18px;margin-top:10px;}
+.contact-hours th{font-family:"Big Noodle Titling";font-size:18px;color:#2d4887;text-align:left;width:150px;font-weight:normal;}
+.contact-hours td{height:20px;}
+.contact-box .day{color:#848484;width:40px;float:left;}
+#booking p{padding:0;overflow:hidden;}
+
+#footer{margin:0 0 50px;position:relative;}
+#footer-menu{height:25px;width:584px;position:relative;text-transform:uppercase;background:url(../img/footer-menu-bg.png) top left no-repeat;padding:0 12px;}
+#footer-menu li{float:left;height:15px;padding:5px 0;background-color:#000;}
+#footer-menu a{font-size:12px;lin-height:15px;color:#6d6d6d;display:block;height:15px;padding-right:6px;margin-right:6px;border-right:1px solid #203257;}
+#footer-menu a:hover, #footer-menu a.selected{color:#fff;}
+#footer-logo{display:block;width:106px;height:61px;position:absolute;top:0;right:10px;}
+#footer-container{overflow:auto;padding:20px 0;}
+#legal{padding-bottom:115px;text-align:center;color:#454545;}
+#legal a{color:#454545;text-decoration:underline;}
+#legal a:hover{color:#fff;}
+
+/* engineers */
+
+.engineers h2{margin-bottom:4px;}
+
+/* mastering */
+.mastering .full-box-content ul{padding-bottom:10px;margin-left:20px;}
+.mastering .full-box-content li{padding:4px 0;list-style:disc;}
+
+/* lab */
+#twitter-feed{
+	margin:20px 0;
+}
+
+/* e-mastering */
+#e-mastering-box{margin:100px auto;}
+#e-mastering-box h2{margin-bottom:10px;}
+#e-mastering-box label, #booking label{width:70px;height:17px;line-height:17px;float:left;display:block;}
+#e-mastering-box input, #booking input{width:174px;height:15px;border:1px solid #a5a5a5;float:right;}
+#e-mastering-box input, #e-mastering-box label, #booking label, #booking input{margin-bottom:10px;}
+#e-mastering-box .submit, #booking .submit{background:none;border:none;border-left:2px solid #3e3e3e;border-right:2px solid #3e3e3e;color:#fff;font-family:"Big Noodle Titling";font-size:14px;width:auto;padding:0 4px;cursor:pointer;}
+#e-mastering-box .submit:hover, #booking .submit:hover{color:#3e3e3e;}
+#e-mastering-box p, #booking p{position:relative;}
+#e-mastering-upload input.file{background-color:#fff;height:auto;width:auto;}
+
+#booking textarea, #booking select{width:174px; float:right; padding:0; margin:0;}
+#booking .message{height:80px;}
+#booking .message textarea{height:70px;}
+.booking-error{background-color:#FC9; color:#F00;}
+#booking-alert{font-size:14px;}
+#booking input.phone-field{width:45px;}
+span.phone-field{float:right;padding:0 4px;}
+
+.booking-alert-error{color:#F00;}
+.booking-alert-success{color:#2d4887;}
+
+.contact #right-col h3{margin-bottom:6px;}
+.right-box-content{overflow:hidden;}
+#webcargo{
+	display:inline-block;
+	padding:5px 15px;
+	color:white;
+	font-weight:bold;
+	border-radius: 3px;
+	border:1px solid rgba(30,30,30,1);
+	background: rgb(69,72,77); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.google-map{width:300;float:left;margin-right:20px;}
+
+/* special classes */
+
+.blue{color:#2d4887;}
+.no-background{background-image:none;}
+.no-minheight{min-height:0;}
+.no-border, #option-bar .no-border, #main-menu .no-border{border:none;}
+.overflow-auto{overflow:auto;}
+
+#e-mastering-box p#loader{display:none;height:auto;margin-top:30px;}
+
+#option-wrapper img#mastered-for-itunes {
+height: 40px;
+float: left;
+margin-right: 5px;
+}

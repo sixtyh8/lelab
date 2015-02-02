@@ -1,0 +1,23 @@
+<div id="settings" ng-controller="GenresCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Genres</h2>
+            <div cg-busy="genresPromise">
+                <table class="table table-striped" id="genres-table">
+                    <thead>
+                        <tr>
+                            <th class="table-list-name-column">Genre - Click to edit</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="genre in genres track by genre.id">
+                            <td><a href="#" editable-text="genre.name" onbeforesave="saveGenre($data, genre.id)">{{ genre.name }}</a></td>
+                            <td><button class="btn btn-sm btn-danger pull-right" confirm-click="deleteGenre(genre.id, $index)" confirm-message="Are you sure?"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

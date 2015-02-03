@@ -77,6 +77,7 @@ Class Credit {
 	public function listCredits($limit, $offset){
 		$lab = new lelabDB();
 		$query = "select * from $this->tableName order by id DESC LIMIT '$offset', '$limit'";
+		// $query = "select * from $this->tableName ORDER BY 'id' DESC";
 		$result = $lab->getArray($query);
 		return $result;
 	}
@@ -89,6 +90,7 @@ Class Credit {
 		return $result;
 	}
 
+	// List all the credits for a given engineer
 	public function listEngineerCredits($engineer_id){
 		$lab = new lelabDB();
 		$query = "select * from $this->tableName where engineer_id = '$engineer_id' order by year, id";
@@ -96,6 +98,7 @@ Class Credit {
 		return $result;
 	}
 
+	// Get total number of credits
 	public function getTotal(){
 		$lab = new lelabDB();
 		$query = "select COUNT(*) from $this->tableName";
@@ -111,6 +114,7 @@ Class Credit {
 		return $result;
 	}
 
+	// Count albums for a given year
 	public function countAlbums($year){
 		$lab = new lelabDB();
 		$query = "select * from $this->tableName where year like '$year'";
@@ -118,6 +122,7 @@ Class Credit {
 		return $result;
 	}
 
+	// Create the credits JSON file to be used on the homepage slider
 	public function createJson($credits){
 
 		// JSON filename
@@ -127,6 +132,11 @@ Class Credit {
 
 		// Insert each in the array
 		foreach ($credits as $credit){
+
+			// If the credit shouldn't be displayed on the homepage, return
+			if($credit['homepage_flag'] != 1){
+				return;
+			}
 
 			$img = new CreditImage();
 			$currentImage = $img->getImageName($credit['image']);
@@ -149,9 +159,7 @@ Class Credit {
 				$tempArray['engineer'] = $currentEngineer[0]['name'];
 			}
 
-			if($credit['homepage_flag'] == 1){
-				array_push($jsonData, $tempArray);
-			}
+			array_push($jsonData, $tempArray);
 
 		}
 
@@ -201,6 +209,17 @@ Class Credit {
 		fwrite($fp, $years_array);
 		fclose($fp);
 
+	}
+
+	public function removeAccents($term){
+		// Define unwanted accents
+		$unwanted_array = array('Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E', 'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',	'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c', 'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o', 'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
+		
+		// Replace it in the string
+		$str = strtr( $term, $unwanted_array );
+
+		// Return
+		return $str;
 	}
 
 }

@@ -3,14 +3,14 @@
         <div class="col-md-12">
             <h2>Tags</h2>
             <div class="well well-sm" >
-                    <h3 ng-hide="tags.length" style="margin-top:0;">No Tags</h3>
-                    <form class="form-inline" role="form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" ng-model="newTag.label" placeholder="Add a Tag">
-                        </div>
-                        <button class="btn btn-primary" ng-click="addTag()">Add</button>
-                    </form>
-                </div>
+                <h3 ng-hide="tags.length" style="margin-top:0;">No Tags</h3>
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newTag.label" placeholder="Add a Tag">
+                    </div>
+                    <button class="btn btn-primary" ng-click="addTag()">Add</button>
+                </form>
+            </div>
             <div cg-busy="tagsPromise">
                 <table class="table table-striped" id="tags-table" ng-if="tags.length">
                     <thead>

@@ -9,6 +9,7 @@ function cleanString($string){
         chr(0xe2) . chr(0x80) . chr(0x93),
         chr(0xe2) . chr(0x80) . chr(0x94)
     );     
+    
     $replace = array(
         '&lsquo;',
         '&rsquo;',                    
@@ -27,7 +28,8 @@ function doubleQuotes($string){
 }
 
 function removeQuotes($string){
-	$search = array(
+	
+    $search = array(
         chr(0xe2) . chr(0x80) . chr(0x98),
         chr(0xe2) . chr(0x80) . chr(0x99),
         chr(0xe2) . chr(0x80) . chr(0x9c),
@@ -38,6 +40,6 @@ function removeQuotes($string){
         '"'
     );
 
-    return str_replace($search, "", $string); 
+    return str_replace($search, "", $string);
 }
 ?>

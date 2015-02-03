@@ -31,13 +31,6 @@ Class Credit {
 		$this->createTimeline();
 	}
 
-	public function importCredit($creditObj){
-		$lab = new lelabDB();
-		$query = "insert or ignore into $this->tableName (album_name, artist_name, image) values ('$creditObj.album-name', '$creditObj.artist-name', '$creditObj.image-id')";
-		$result = $lab->queryDB($query);
-		return $result;
-	}
-
 	// Return one credit
 	public function getOneCredit($creditID){
 		$lab = new lelabDB();
@@ -77,7 +70,6 @@ Class Credit {
 	public function listCredits($limit, $offset){
 		$lab = new lelabDB();
 		$query = "select * from $this->tableName order by id DESC LIMIT '$offset', '$limit'";
-		// $query = "select * from $this->tableName ORDER BY 'id' DESC";
 		$result = $lab->getArray($query);
 		return $result;
 	}

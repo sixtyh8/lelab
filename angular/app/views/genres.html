@@ -2,6 +2,14 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Genres</h2>
+            <div class="well well-sm" >
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="newGenre.label" placeholder="Add a Genre">
+                    </div>
+                    <button class="btn btn-primary" ng-click="addGenre()">Add</button>
+                </form>
+            </div>
             <div cg-busy="genresPromise">
                 <table class="table table-striped" id="genres-table">
                     <thead>

@@ -7,11 +7,19 @@ Flight::route('GET /genres', function(){
     return Flight::json($result);
 });
 
-Flight::route('POST /genres', function($name){
-	$obj = new Genre();
-	$result = $obj->addGenre($name);
+Flight::route('POST /genres', function(){
+	
+	$string = Flight::request()->body;
+	$genre = json_decode($string);
+	$data = $genre->data;
 
-	return Flight::json($result);
+	$obj = new Genre();
+	$result = $obj->addGenre($data);
+
+	$genre->id = $result;
+	$genre->name = $data;
+
+	return Flight::json($genre);
 });
 
 Flight::route('DELETE /genres/@id', function($id){

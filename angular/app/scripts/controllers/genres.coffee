@@ -2,6 +2,8 @@
 
 angular.module('leLabApp').controller 'GenresCtrl', ($scope, Genres, notify) ->
 
+    $scope.newGenre = {}
+    
     $scope.genresPromise = Genres.list().then (data) ->
         $scope.genres = data
 
@@ -9,6 +11,14 @@ angular.module('leLabApp').controller 'GenresCtrl', ($scope, Genres, notify) ->
         Genres.delete(id).then (data) ->
             $scope.genres.splice(index, 1)
             notify('Genre deleted!')
+
+    $scope.addGenre = ->
+        if $scope.newGenre.label?
+            Genres.add($scope.newGenre.label).then (data) ->
+                $scope.newGenre.label = null
+                # Add the tag to the scope
+                $scope.genres.push(data)
+                notify('Genre added!')
 
     $scope.search = (keyword) ->
         Genres.search(keyword).then (data) ->

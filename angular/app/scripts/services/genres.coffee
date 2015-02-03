@@ -10,13 +10,15 @@ angular.module('leLabApp').service 'Genres', (Restangular, $q) ->
 
     	deferred.promise
 
+
     add: (name) ->
         deferred = $q.defer()
 
-        Restangular.all("genres").post(name).then (results) ->
+        Restangular.all("genres").post({ 'data': name }).then (results) ->
             deferred.resolve results
 
         deferred.promise
+
 
     update: (id, name) ->
         deferred = $q.defer()
@@ -28,12 +30,14 @@ angular.module('leLabApp').service 'Genres', (Restangular, $q) ->
 
         deferred.promise
 
+
     delete: (id) ->
         deferred = $q.defer()
 
         genre = Restangular.one("genres", id)
         genre.remove().then (data) ->
             deferred.resolve data
+
 
     search: (term) ->
         deferred = $q.defer()

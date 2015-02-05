@@ -34,7 +34,7 @@
                                     <div class="col-lg-8">
                                         <p class="text-left"><strong>{{ user.username }}</strong></p>
                                         <p class="text-left small">{{ user.email }}</p>
-                                        <p class="text-left small">{{ user.admin }}</p>
+                                        <p class="text-left small" ng-if="user.admin">Admin</p>
                                         <p class="text-left">
                                             <a href="#" ui-sref="change-password" class="btn btn-primary btn-block btn-sm">Change Password</a>
                                         </p>

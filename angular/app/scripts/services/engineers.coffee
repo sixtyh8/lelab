@@ -13,7 +13,7 @@ angular.module('leLabApp').service 'Engineers', (Restangular, $q) ->
     add: (name) ->
         deferred = $q.defer()
 
-        Restangular.all("engineers").post(name).then (results) ->
+        Restangular.all("engineers").post({ 'data': name }).then (results) ->
             deferred.resolve results
 
         deferred.promise

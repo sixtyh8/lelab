@@ -5,9 +5,11 @@ Class Engineer {
 
 	// Create an engineer
 	public function createEngineer($name){
+		$name = ucwords($name);
 		$lab = new lelabDB();
-		$query = "insert into $this->tableName (name) values ('$name')";
-		$lab->execQuery($query);	
+		$query = "insert or ignore into $this->tableName (name) values ('$name')";
+		$result = $lab->execQuery($query);
+		return $result;
 	}
 
 	// Update an engineer

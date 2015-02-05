@@ -8,11 +8,19 @@ Flight::route('GET /engineers', function(){
 });
 
 // Add engineer
-Flight::route('POST /engineers', function($name){
-	$obj = new Engineer();
-	$result = $obj->createEngineer($name);
+Flight::route('POST /engineers', function(){
 
-	return Flight::json($result);
+	$string = Flight::request()->body;
+	$engineer = json_decode($string);
+	$data = $engineer->data;
+
+	$obj = new Engineer();
+	$result = $obj->createEngineer($data);
+
+	$engineer->id = $result;
+	$engineer->name = $data;
+
+	return Flight::json($engineer);
 });
 
 // Get engineer name
@@ -36,9 +44,9 @@ Flight::route('PUT /engineers', function(){
 });
 
 // Delete engineer
-Flight::route('DELETE /engineers', function($id){
+Flight::route('DELETE /engineers/@id', function($id){
 	$obj = new Engineer();
-	$result = $obj->getEngineerName($id);
+	$result = $obj->deleteEngineer($id);
 
 	return Flight::json($result);
 });

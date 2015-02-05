@@ -6,7 +6,7 @@ angular.module('leLabApp').controller 'CreditsCtrl', ($scope) ->
 
 angular.module('leLabApp').controller 'CreditsCtrl.List', ($scope, $state, $filter, $timeout, Credits, ngDialog, notify) ->
 
-    $scope.limit = 50
+    $scope.limit = 40
     $scope.offset = 0
     $scope.loader =
         busy : false

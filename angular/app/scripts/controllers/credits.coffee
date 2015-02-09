@@ -78,10 +78,12 @@ angular.module('leLabApp').controller 'CreditsCtrl.Edit', ($scope, $state, $stat
 
 
     $scope.saveCredit = ->
-        
-        Credits.update($scope.credit).then (data) ->
-            notify('Credit updated!')
-            $state.go('credits')
+        if $scope.credit_form.$valid
+            Credits.update($scope.credit).then (data) ->
+                notify('Credit updated!')
+                $state.go('credits')
+        else
+            console.log "Invalid form!"
 
 
 angular.module('leLabApp').controller 'CreditsCtrl.New', ($scope, $state, Credits, Engineers, Genres, Images, notify) ->
@@ -96,6 +98,9 @@ angular.module('leLabApp').controller 'CreditsCtrl.New', ($scope, $state, Credit
         homepage_flag: 1
 
     $scope.saveCredit = ->
-        Credits.save($scope.credit).then (data) ->
-            notify('Credit saved!')
-            $state.go('credits')
+        if $scope.credit_form.$valid
+            Credits.save($scope.credit).then (data) ->
+                notify('Credit saved!')
+                $state.go('credits')
+        else
+            console.log "Invalid form!"

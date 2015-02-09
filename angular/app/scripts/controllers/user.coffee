@@ -43,9 +43,11 @@ angular.module('leLabApp').controller 'UsersCtrl', ($scope, $filter, User, Sessi
             notify('User deleted!')
 
     $scope.saveUser = (data, id) ->
-        User.update(id, data).then (data) ->
-            notify('User updated!')
-            return true
+        return User.update(id, data)
+        
+        # User.update(id, data).then (data) ->
+        #     notify('User updated!')
+        #     return true
 
     setUser()
 

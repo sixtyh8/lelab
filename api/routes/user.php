@@ -65,7 +65,7 @@ Flight::route('POST /users', function(){
     return Flight::json($latestUser[0]);
 });
 
-Flight::route('PUT /users', function(){
+Flight::route('PUT /users/@id', function($id){
     $body = Flight::request()->body;
 
     $data = json_decode($body);

@@ -28,10 +28,11 @@ Class Tag {
 	}
 
 	// Update a Tag
-	public function update($tag){
+	public function update($tagObj){
 		$lab = new lelabDB();
-		$query = "update $this->tableName set name='".$tag->name."' where id='".$tag->id."'";
-		$lab->execQuery($query);
+		$query = "update $this->tableName set name='".$tagObj->name."' where id='".$tagObj->id."'";
+		$result = $lab->queryDB($query);
+		return $result;
 	}
 
 	// Get total
@@ -46,7 +47,8 @@ Class Tag {
 	public function delete($id){
 		$lab = new lelabDB();
 		$query = "delete from $this->tableName where id='$id'";
-		$lab->execQuery($query);
+		$result = $lab->doDelete($query);
+		return $result;
 	}
 
 	// Return list of all Tags

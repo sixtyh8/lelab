@@ -287,7 +287,6 @@ module.exports = function (grunt) {
 						'*.{ico,png,txt}',
 						'.htaccess',
 						'i18n/*',
-						'bower_components/**/*',
 						'images/{,*/}*.{gif,webp,png,jpg,jpeg}',
 						'fonts/*',
 						'views/**/*',
@@ -300,7 +299,16 @@ module.exports = function (grunt) {
 					src: [
 						'generated/*'
 					]
-				}]
+				},{
+					expand: true,
+					dot: true,
+					cwd: '.',
+					dest: '<%= config.www %>',
+					src: [
+						'bower_components/**/*'
+					]
+				}
+				]
 			},
 			html: {
     			files: [{
@@ -494,6 +502,19 @@ module.exports = function (grunt) {
 	    'uglify',
 	    'usemin',
 		'replace:dev'
+	]);
+
+	// Build Task
+	// usage: 'grunt deploy'
+	grunt.registerTask('deploy', [
+		'clean:dev',
+		'replace:prod',
+	    'compass:dev',
+	    'copy:dev',
+	    'copy:devstyles',
+	    'coffee:dist',
+	    'replace:dev',
+        'concurrent:dev'
 	]);
 
 	grunt.registerTask('dev', [

@@ -5,7 +5,7 @@ angular.module('leLabApp').config ($routeProvider, RestangularProvider, $locatio
     #$locationProvider.html5Mode(true)
 
     RestangularProvider.setBaseUrl('http://api.lelab.local/')
-    # RestangularProvider.setBaseUrl('http://api.lelabmastering.com/')
+    # RestangularProvider.setBaseUrl('http://api.lelab.local/')
     # RestangularProvider.setRestangularFields({ id: "_id" })
 
 angular.module('leLabApp').constant 'APP_CONFIG',

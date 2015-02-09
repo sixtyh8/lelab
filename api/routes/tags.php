@@ -41,12 +41,14 @@ Flight::route('POST /tags', function(){
 
 // Update tag
 Flight::route('PUT /tags', function(){
+	
 	$string = Flight::request()->body;
 
 	$tag = json_decode($string);
+	$tagObj = $tag[0];
 
 	$obj = new Tag();
-	$result = $obj->update($tag[0]);
+	$result = $obj->update($tagObj);
 
 	return Flight::json($result);
 });

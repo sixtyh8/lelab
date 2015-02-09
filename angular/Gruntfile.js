@@ -519,6 +519,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('dev', [
 	    'clean:dev',
+	    'replace:dev',
 	    'compass:dev',
 	    'copy:dev',
 	    'copy:devstyles',

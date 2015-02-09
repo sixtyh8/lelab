@@ -58,7 +58,7 @@ angular.module('leLabApp').service 'Credits', (Restangular, $q, DSCacheFactory) 
         console.log obj
 
         credit = Restangular.one('credits', id).get().then (result) ->
-            result = obj
+            result[0] = obj
             result.put().then (results) ->
                 deferred.resolve results
 

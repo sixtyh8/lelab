@@ -7,9 +7,9 @@
             <image-upload credit="credit"></image-upload>
         </div>
     </div>
-    <div class="row">
+    <div class="row" ng-show="false">
         <div class="col-xs-4 col-xs-offset-2">
-            <button type="button" class="btn btn-primary" ng-click="saveCredit()">Submit</button>
+            <button type="button" class="btn btn-primary" ng-click="saveCredit()" ng-disabled="credit_form.$invalid || credit_form.genre.$pristine">Submit</button>
         </div>
     </div>
 </div>

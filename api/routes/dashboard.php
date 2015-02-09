@@ -26,10 +26,10 @@ Flight::route('GET /dashboard', function(){
 	// Build response object
 	$response = new stdClass();
 	$response->count = new stdClass();
-	$response->count->credits = $credTotal[0][0];
-	$response->count->genres = $gTotal[0][0];
-	$response->count->tags = $tTotal[0][0];
-	$response->count->whitepapers = $wTotal[0][0];
+	$response->count->credits = $credTotal[0];
+	$response->count->genres = $gTotal[0];
+	$response->count->tags = $tTotal[0];
+	$response->count->whitepapers = $wTotal[0];
 	$response->credit = $formattedCredit[0];
 	if($latestW){
 		$response->whitepaper = $latestW[0];

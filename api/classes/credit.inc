@@ -6,6 +6,7 @@ Class Credit {
 	// Create a credit
 	public function createCredit($creditObj){
 		$lab = new lelabDB();
+		
 		$query = "insert into $this->tableName
 			(album_name,
 			artist_name,
@@ -26,6 +27,7 @@ Class Credit {
 			'".stripslashes(SQLite3::escapeString($creditObj->engineer_id))."',
 			'".stripslashes(SQLite3::escapeString($creditObj->bandcamp_url))."',
 			'".stripslashes(SQLite3::escapeString($creditObj->homepage_flag))."')";
+
 		$lab->execQuery($query);
 		$this->createJson($this->all());
 		$this->createTimeline();
@@ -94,7 +96,7 @@ Class Credit {
 	public function getTotal(){
 		$lab = new lelabDB();
 		$query = "select COUNT(*) from $this->tableName";
-		$result = $lab->getArray($query);
+		$result = $lab->count($query);
 		return $result;
 	}
 

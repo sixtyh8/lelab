@@ -5,7 +5,7 @@ Class CreditImage{
 
 	public function writeToDB($image_name, $thumb_name, $small_name){
 		$lab = new lelabDB();
-		$query = "insert or ignore into  $this->tableName (image_name, thumb_name, small_name) values ('$image_name', '$thumb_name', '$small_name')";
+		$query = "insert or ignore into $this->tableName (image_name, thumb_name, small_name) values ('$image_name', '$thumb_name', '$small_name')";
 		$id = $lab->execQuery($query);
 		return $id;
 	}

@@ -39,7 +39,7 @@ Class Tag {
 	public function getTotal(){
 		$lab = new lelabDB();
 		$query = "select COUNT(*) from $this->tableName";
-		$result = $lab->getArray($query);
+		$result = $lab->count($query);
 		return $result;
 	}
 

@@ -1,12 +1,14 @@
 'use strict'
 
-angular.module('leLabApp').directive 'imageUpload', ($upload, $timeout, Images, $rootScope) ->
+angular.module('leLabApp').directive 'imageUpload', ($upload, $timeout, Images, $rootScope, APP_CONFIG) ->
     scope: {credit: '='}
     restrict: 'AE'
     templateUrl: 'views/directives/imageUpload.html'
     link: (scope, element, attrs) ->
 
         scope.cdnUrl = $rootScope.cdnUrl
+        scope.environment = APP_CONFIG.ENV
+        scope.uploadUrl = APP_CONFIG[scope.environment].IMG_UPLOAD_URL
 
         $timeout( () ->
 
@@ -52,19 +54,10 @@ angular.module('leLabApp').directive 'imageUpload', ($upload, $timeout, Images, 
 
             file = scope.selectedFiles[0]
 
-            # $upload.upload({
-            #     url: 'http://api.lelab.local/images/upload',
-            #     file: file
-            # })
-
             $upload.upload({
-                url: 'http://api.lelabmastering.com/images/upload',
+                url: scope.uploadUrl,
                 file: file
             })
-
-            # .progress( (evt) ->
-            #     console.log 'percent: ' + parseInt(100.0 * evt.loaded / evt.total)
-            # )
 
             .success( (data, status, headers, config) ->    
                 scope.credit.image_id = data.imageID

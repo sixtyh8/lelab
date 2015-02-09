@@ -52,7 +52,7 @@ Flight::route('POST /credits', function(){
 	}
 
 	//Add genre to genre DB if doesn't exist
-	if(property_exists($data, "genre")){
+	if(property_exists($data, "genre") && $data->genreName[0]->name != ''){
 		// Initialize the new Genre object
 		$genre = new Genre();
 		//$genreName = cleanString($data->genre);
@@ -117,7 +117,7 @@ Flight::route('GET /credits/@id', function($id){
 });
 
 // Update credit
-Flight::route('PUT /credits', function(){
+Flight::route('PUT /credits/@id', function($id){
 	// Initialize the new Credit object
 	$obj = new Credit();
 

@@ -225,8 +225,12 @@ Flight::map('cropImage', function($CurWidth,$CurHeight,$iSize,$DestFolder,$SrcIm
             default:
                 return false;
         }
+    
     //Destroy image, frees up memory
-    if(is_resource($NewCanves)) {imagedestroy($NewCanves);}
+    if(is_resource($NewCanves)) {
+        imagedestroy($NewCanves);
+    }
+    
     return true;
 
     }

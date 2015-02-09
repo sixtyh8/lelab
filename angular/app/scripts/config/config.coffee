@@ -12,6 +12,8 @@ angular.module('leLabApp').constant 'APP_CONFIG',
     ENV: 'DEV'
     DEV:
         CDN_URL: 'http://cdn.lelab.local'
+        IMG_UPLOAD_URL: 'http://api.lelab.local/images/upload'
     PROD:
         CDN_URL: 'http://lelabmastering.com/cdn'
+        IMG_UPLOAD_URL: 'http://api.lelab.local/images/upload'
 

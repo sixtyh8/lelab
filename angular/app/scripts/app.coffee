@@ -60,7 +60,12 @@ angular.module('leLabApp', [
 
     # xEditable Theme
     # set to bootstrap3 theme. Can be also 'bs2', 'default'
-    editableOptions.theme = 'bs3';
+    editableOptions.theme = 'bs3'
+
+    RestangularProvider.setRequestInterceptor (elem, operation) ->
+        if operation == "delete" or operation == "remove"
+            return undefined
+        return elem
 
   .value 'cgBusyDefaults',
     templateUrl: 'views/directives/loading.html'

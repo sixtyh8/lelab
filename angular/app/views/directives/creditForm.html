@@ -1,4 +1,4 @@
-<form class="form-horizontal" role="form" novalidate name="credit_form" ng-submit="saveCredit()">
+<form class="form-horizontal" role="form" novalidate name="credit_form">
     <div class="form-group">
         <label class="col-sm-4 control-label" for="album-name">Album Name</label>
         <div class="col-sm-8">
@@ -50,11 +50,6 @@
                     Show in homepage carousel.
                 </label>
             </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-4 col-sm-8">
-            <button type="submit" class="btn btn-primary" ng-disabled="credit_form.$invalid || credit_form.genre.$pristine || credit_form.$pristine">Submit</button>
         </div>
     </div>
 </form>

@@ -70,6 +70,30 @@ module.exports = function (grunt) {
 				from: "http://api.lelabmastering.com/",
 				to: "http://api.lelab.local/"
 			}]
+		  },
+		  codeguy: {
+		    src: ['app/scripts/config/config.coffee'],
+		    overwrite: true,
+		    replacements: [{
+		      from: "ENV: 'DEV'",
+		      to: "ENV: 'PROD'"
+		    },
+			{
+				from: "http://api.lelab.local/",
+				to: "http://api.thatcodeguy.com/"
+			}]
+		  },
+		  codeguydev: {
+			src: ['app/scripts/config/config.coffee'],
+			overwrite: true,
+			replacements: [{
+				from: "ENV: 'PROD'",
+				to: "ENV: 'DEV'"
+			},
+			{
+				from: "http://api.thatcodeguy.com/",
+				to: "http://api.lelab.local/"
+			}]
 		  }
 	    },
 
@@ -514,6 +538,19 @@ module.exports = function (grunt) {
 	    'copy:devstyles',
 	    'coffee:dist',
 	    'replace:dev',
+        'concurrent:dev'
+	]);
+	
+	// Build Task
+	// usage: 'grunt deploy'
+	grunt.registerTask('deploy:test', [
+		'clean:dev',
+		'replace:codeguy',
+	    'compass:dev',
+	    'copy:dev',
+	    'copy:devstyles',
+	    'coffee:dist',
+	    'replace:codeguydev',
         'concurrent:dev'
 	]);
 

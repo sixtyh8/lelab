@@ -111,7 +111,7 @@ Flight::route('GET /whitepapers/@id', function($id){
 });
 
 // Update whitepaper
-Flight::route('PUT /whitepapers', function(){
+Flight::route('PUT /whitepapers/@id', function($id){
 	$obj = new Whitepaper();
 	$tagsObj = new Tag();
 	$tagsAssoc = new TagAssoc();

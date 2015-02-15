@@ -46,8 +46,9 @@ Class Tag {
 	// Delete a Tag
 	public function delete($id){
 		$lab = new lelabDB();
-		$query = "delete from $this->tableName where id='$id'";
-		$result = $lab->doDelete($query);
+		// $query = "DELETE FROM $this->tableName WHERE id='$id'";
+		// $result = $lab->doDelete($query);
+		$result = $id;
 		return $result;
 	}
 

@@ -54,6 +54,7 @@ Flight::route('PUT /tags', function(){
 });
 
 Flight::route('DELETE /tags/@id', function($id){
+    
 	$obj = new Tag();
 	$result = $obj->delete($id);
 

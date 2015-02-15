@@ -44,6 +44,16 @@ angular.module('leLabApp', [
     # Check if a user is trying to access a route without being authenticated
     $rootScope.$on "$stateChangeStart", (event, toState, toParams, fromState, fromParams) ->
 
+        console.log toState
+
+        if toState.name == "credits"
+            event.preventDefault()
+            $state.go 'credits.list'
+
+        if toState.name == "whitepapers"
+            event.preventDefault()
+            $state.go 'whitepapers.list'
+
         # if route requires admin
         if routeAdmin(toState.url) and not Session.isAdmin()
             # stop the transition
@@ -62,10 +72,10 @@ angular.module('leLabApp', [
     # set to bootstrap3 theme. Can be also 'bs2', 'default'
     editableOptions.theme = 'bs3'
 
-    RestangularProvider.setRequestInterceptor (elem, operation) ->
-        if operation == "delete" or operation == "remove"
-            return undefined
-        return elem
+    #RestangularProvider.setRequestInterceptor (elem, operation) ->
+    #    if operation == "delete" or operation == "remove"
+    #        return undefined
+    #    return elem
 
   .value 'cgBusyDefaults',
     templateUrl: 'views/directives/loading.html'

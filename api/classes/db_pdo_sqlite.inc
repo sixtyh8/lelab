@@ -31,7 +31,9 @@ Class lelabDB{
 	}
 
     public function doDelete($query){
-        $result = $this->db->exec($query);
+        $stmt = $this->db->prepare($query)
+        // $result = $this->db->exec($query);
+        $result = $stmt->execute();
         $this->disconnect();
         return $result;
     }

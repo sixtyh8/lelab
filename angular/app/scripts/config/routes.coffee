@@ -4,11 +4,6 @@ angular.module('leLabApp').config ($urlRouterProvider, $stateProvider) ->
     # If unmatched URL, redirect to index
     $urlRouterProvider.otherwise "/"
 
-    # Map /credits to /credits/list
-    $urlRouterProvider.when("/credits","/credits/list")
-    $urlRouterProvider.when("/whitepapers", "/whitepapers/list")
-    # $urlRouterProvider.when("/", "/credits/list")
-
     # Index
     $stateProvider.state("index",
         url: "/"

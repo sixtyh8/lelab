@@ -37,22 +37,14 @@ angular.module('leLabApp').service 'User', (Restangular, $q) ->
 
     update: (id, user) ->
         deferred = $q.defer()
-        
-        userObj = Restangular.one("users", id).get().then (results) ->
-            results.update = user
-            results.update.id = id
-            
-            results.put().then (data) ->
-                console.log data
-            # userObj.put(payload)
 
-        # userObj = Restangular.one("users", id).get().then (result) ->
+        userObj = Restangular.one("users", id).get().then (result) ->
 
-        #     result.update = user
-        #     result.update.id = id
+            result.update = user
+            result.update.id = id
 
-        #     result.put().then (data) ->
-        #         deferred.resolve data
+            result.put().then (data) ->
+                deferred.resolve data
 
         deferred.promise
 

@@ -9,18 +9,15 @@ Flight::map('formatCredit', function($result){
 
         // Get image URL
         $imageID = $credit['image'];
-        $imgObj = new CreditImage();
-        $credit['imgName'] = $imgObj->getImageName($imageID);
+        $credit['imgName'] = Flight::get('database')->select('credit_images', '*', array('id' => $imageID));
 
         // Get genre name
         $genreID = $credit['genre'];
-        $genreObj = new Genre();
-        $credit['genreName'] = $genreObj->getGenreName($genreID);
+        $credit['genreName'] = Flight::get('database')->select("genres", "*", array('id' => $genreID));
 
         // Get engineer name
         $engiID = $credit['engineer_id'];
-        $engiObj = new Engineer();
-        $credit['engi'] = $engiObj->getEngineerName($engiID);
+        $credit['engi'] = Flight::get('database')->select("engineers", "*", array('id' => $engiID));
 
         $credit['trClassName'] = "";
 
@@ -125,8 +122,11 @@ Flight::map('treatImage', function($image){
         //echo '<img src="/img/credits/'.$ThumbPrefix.$NewImageName.'" alt="Thumbnail" height="'.$ThumbSquareSize.'" width="'.$ThumbSquareSize.'" />';
 
         // Insert info into database table!
-        $imgObj = new CreditImage();
-        $imageID = $imgObj->writeToDB($NewImageName, $ThumbImageName, $SmallImageName);
+        $imageID = Flight::get('database')->insert('credit_images', array(
+            'image_name' => $NewImageName, 
+            'thumb_name' => $ThumbImageName, 
+            'small_name' => $SmallImageName
+        ));
 
         // If the image wasn't written to DB, get it's ID
         if($imageID == 0){

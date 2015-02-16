@@ -3,33 +3,27 @@
 Flight::route('GET /dashboard', function(){
     
     // Get credits count
-    $cred = new Credit();
-	$credTotal = $cred->getTotal();
-	$lastCred = $cred->getLast();
+	$credTotal = Flight::get('database')->count('credits', '*');
+	$lastCred = Flight::get('database')->select('credits', '*', array('ORDER' => 'id DESC', 'LIMIT' => 1));
 	$formattedCredit = Flight::formatCredit($lastCred);
 
 	// Get genres count
-	$g = new Genre();
-	$gTotal = $g->getTotal();
+	$gTotal = Flight::get('database')->count('genres', '*');
 
 	// Get tags count
-	$t = new Tag();
-	$tTotal = $t->getTotal();
+	$tTotal = Flight::get('database')->count('tags', '*');
 
 	// Get whitepapers count
-	$w = new Whitepaper();
-	$wTotal = $w->getTotal();
-	$latestW = $w->getLast();
-
-	// Get latest credit
+	$wTotal = Flight::get('database')->count('whitepapers', '*');
+	$latestW = Flight::get('database')->get('whitepapers', '*', array('ORDER' => 'id DESC'));
 
 	// Build response object
 	$response = new stdClass();
 	$response->count = new stdClass();
-	$response->count->credits = $credTotal[0];
-	$response->count->genres = $gTotal[0];
-	$response->count->tags = $tTotal[0];
-	$response->count->whitepapers = $wTotal[0];
+	$response->count->credits = $credTotal;
+	$response->count->genres = $gTotal;
+	$response->count->tags = $tTotal;
+	$response->count->whitepapers = $wTotal;
 	$response->credit = $formattedCredit[0];
 	if($latestW){
 		$response->whitepaper = $latestW[0];

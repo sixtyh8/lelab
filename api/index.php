@@ -9,6 +9,14 @@ require 'flight/Flight.php';
 //////////////////
 //require 'classes/classes.inc';
 //include 'classes/db_medoo.inc';
+require 'plugins/medoo.php';
+
+$database = new medoo(array(
+	'database_type' => 'sqlite',
+	'database_file' => 'data/lelab.db'
+));
+
+Flight::set('database', $database);
 
 ///////////////////
 // Require Methods

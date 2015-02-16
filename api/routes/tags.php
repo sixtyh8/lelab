@@ -1,20 +1,22 @@
 <?php
 
+// Get all tags
 Flight::route('GET /tags', function(){
-	$result = $database->select("tags", "*");
+	
+	$result = Flight::get('database')->select("tags", "*");
+	
 	return Flight::json($result);
 });
 
+// Get tag
 Flight::route('GET /tags/@id', function($id){
-	// Initialize the new Tag object
-	$obj = new Tag();
 
-	// Call getOne()
-	$result = $obj->getTag($id);
+	$result = Flight::get('database')->select("tags", "*", array('id' => $id));
 
 	return Flight::json($result);
 });
 
+// Create tag
 Flight::route('POST /tags', function(){
 
 	$string = Flight::request()->body;
@@ -22,11 +24,7 @@ Flight::route('POST /tags', function(){
 	$tag = json_decode($string);
 	$data = $tag->data;
 
-	// Initialize the new Tag object
-	$obj = new Tag();
-
-	// Call create()
-	$result = $obj->create($data);
+	$result = Flight::get('database')->insert("tags", array('name' => $data));
 
 	$tag->id = $result;
 	$tag->name = $data;
@@ -42,16 +40,18 @@ Flight::route('PUT /tags', function(){
 	$tag = json_decode($string);
 	$tagObj = $tag[0];
 
-	$obj = new Tag();
-	$result = $obj->update($tagObj);
+	$name = $tagObj->name;
+	$id = $tagObj->id;
+
+	$result = Flight::get('database')->update('tags', array('name' => $name), array('id' => $id));
 
 	return Flight::json($result);
 });
 
+// Delete tag
 Flight::route('DELETE /tags/@id', function($id){
     
-	$obj = new Tag();
-	$result = $obj->delete($id);
+	$result = Flight::get('database')->delete('tags', array('id' => $id));
 
 	return Flight::json($result);
 });

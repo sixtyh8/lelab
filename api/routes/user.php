@@ -1,8 +1,6 @@
 <?php
 
 Flight::route('POST /auth', function(){
-    // Initialize the new User object
-    $obj = new User();
 
     $string = Flight::request()->body;
 
@@ -10,7 +8,15 @@ Flight::route('POST /auth', function(){
     $username = $data->username;
     $password = $data->password;
 
-    $result = $obj->authenticate($username, $password);
+    $result = Flight::get('database')->select("users", '*', array(
+        'AND' => array(
+            'OR' => array(
+                'username' => $username,
+                'email' => $username
+            ),
+        'password' => $password
+        )
+    ));
 
     $response = new stdClass();
     $response->user = new stdClass();
@@ -39,16 +45,12 @@ Flight::route('POST /auth', function(){
 
 Flight::route('GET /users', function(){
 
-	$obj = new User();
-	$response = $obj->listUsers();
+	$result = Flight::get('database')->select("users", '*');
 
-	return Flight::json($response);
-
+	return Flight::json($result);
 });
 
 Flight::route('POST /users', function(){
-    // Initialize the new User object
-    $obj = new User();
 
     $string = Flight::request()->body;
 
@@ -58,11 +60,16 @@ Flight::route('POST /users', function(){
     $admin = $data->data->admin;
     $email = $data->data->email;
 
-    $response = $obj->create($username, $password, $admin, $email);
+    $result = Flight::get('database')->insert('users', array(
+            'username' => $username,
+            'email' => $email,
+            'password' => $password,
+            'admin' => $admin
+        ));
 
-    $latestUser = $obj->showUser($response);
+    $latestUser = Flight::get('database')->get('users', '*', array('id' => $result));
 
-    return Flight::json($latestUser[0]);
+    return Flight::json($latestUser);
 });
 
 Flight::route('PUT /users/@id', function($id){
@@ -70,8 +77,18 @@ Flight::route('PUT /users/@id', function($id){
 
     $data = json_decode($body);
 
-    $obj = new User();
-    $result = $obj->updateUser($data->update);
+    $username = $data->update->username;
+    $email = $data->update->email;
+    $password = $data->update->password;
+    $admin = $data->update->admin;
+    $id = $data->update->id;
+
+    $result = Flight::get('database')->update('users', array(
+            'username' => $username,
+            'email' => $email,
+            'password' => $password,
+            'admin' => $admin
+        ), array('id' => $id));
 
     return Flight::json($result);
 });
@@ -79,19 +96,15 @@ Flight::route('PUT /users/@id', function($id){
 // Get user by ID
 Flight::route('GET /users/@id', function($id){
 
-    $obj = new User();
-    $result = $obj->showUser($id);
+    $result = Flight::get('database')->select('users', '*', array('id' => $id));
 
     return Flight::json($result[0]);
-
 });
 
-// Delete credit
+// Delete user
 Flight::route('DELETE /users/@id', function($id){
-    
-    $obj = new User();
-    $result = $obj->deleteUser($id);
 
+    $result = Flight::get('database')->delete('users', array('id' => $id));
 
     return Flight::json($result);
 });

@@ -3,7 +3,7 @@
 date_default_timezone_set("America/Montreal");
 
 // Include DB Class
-require_once 'db_pdo_sqlite.inc';
+require_once 'db_medoo.inc';
 require_once 'clean-string.php';
 
 // Album Credits Class

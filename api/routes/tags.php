@@ -1,12 +1,7 @@
 <?php
 
 Flight::route('GET /tags', function(){
-	// Initialize the new Tag object
-	$obj = new Tag();
-
-	// Call listCategories()
-	$result = $obj->listTags();
-
+	$result = $database->select("tags", "*");
 	return Flight::json($result);
 });
 

@@ -54,9 +54,7 @@ Class Tag {
 
 	// Return list of all Tags
 	public function listTags(){
-		$lab = new lelabDB();
-		$query = "select * from $this->tableName order by id";
-		$result = $lab->getArray($query);
+    	$result = $database->select("tags", "*");
 		return $result;
 	}
 

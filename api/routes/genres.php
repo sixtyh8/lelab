@@ -1,10 +1,16 @@
 <?php
+    
+require 'medoo.php';
+
+// Or via independent configuration
+$database = new medoo(array(
+	'database_type' => 'sqlite',
+	'database_file' => 'classes/lelab.db'
+));
 
 Flight::route('GET /genres', function(){
-	$obj = new Genre();
-    $result = $obj->listGenres();
-
-    return Flight::json($result);
+	$result = $database->select("genres", "*");
+	return Flight::json($result);
 });
 
 Flight::route('POST /genres', function(){

@@ -1,52 +1,53 @@
 <?php
-
+// List Engineers
 Flight::route('GET /engineers', function(){
-	$obj = new Engineer();
-	$result = $obj->listEngineers();
+
+	$result = Flight::get('database')->select('engineers', '*');
 
 	return Flight::json($result);
 });
 
-// Add engineer
+// Add/Update/Delete Engineer
 Flight::route('POST /engineers', function(){
 
 	$string = Flight::request()->body;
 	$engineer = json_decode($string);
 	$data = $engineer->data;
+	$id = $engineer->id;
+	$action = $engineer->action;
 
-	$obj = new Engineer();
-	$result = $obj->createEngineer($data);
+	if($action == 'POST'){
 
-	$engineer->id = $result;
-	$engineer->name = $data;
+		$result = Flight::get('database')->insert('engineers', array('name' => $data));
 
-	return Flight::json($engineer);
+		$engineer->id = $result;
+		$engineer->name = $data;
+
+		return Flight::json($engineer);
+
+	} else if($action == 'PUT'){
+
+		$name = $data->name;
+
+		$result = Flight::get('database')->update('engineers', array('name' => $name), array('id' => $id));
+
+		return Flight::json($result);
+
+	} else if($action == 'DELETE'){
+
+		$result = Flight::get('database')->delete('engineers', array('id' => $id));
+
+		return Flight::json($result);
+
+	}
+
+	
 });
 
-// Get engineer name
+// Get Engineer Name
 Flight::route('GET /engineers/@id', function($id){
-	$obj = new Engineer();
-	$result = $obj->getEngineerName($id);
-
-	return Flight::json($result);
-});
-
-// Update engineer
-Flight::route('PUT /engineers', function(){
-	$body = Flight::request()->body;
-
-	$data = json_decode($body);
-
-	$obj = new Engineer();
-	$result = $obj->updateEngineer($data[0]);
-
-	return Flight::json($result);
-});
-
-// Delete engineer
-Flight::route('DELETE /engineers/@id', function($id){
-	$obj = new Engineer();
-	$result = $obj->deleteEngineer($id);
+	
+	$result = Flight::get('database')->select('engineers', '*', array('id' => $id));
 
 	return Flight::json($result);
 });

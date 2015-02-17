@@ -70,11 +70,8 @@ angular.module('leLabApp').controller 'CreditsCtrl.Edit', ($scope, $state, $stat
             $scope.selectedGenre = data.genreName[0]
             $scope.credit = credit
         else
-            $scope.credit =
-                genreName : [
-                    { name : "" , id: ""}
-                ] 
-            $scope.credit = _.extend($scope.credit, credit)
+            $scope.credit = credit
+            $scope.credit.genreName = { name : "" , id: "" }
 
 
     $scope.saveCredit = ->

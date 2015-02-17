@@ -44,8 +44,6 @@ angular.module('leLabApp', [
     # Check if a user is trying to access a route without being authenticated
     $rootScope.$on "$stateChangeStart", (event, toState, toParams, fromState, fromParams) ->
 
-        console.log toState
-
         if toState.name == "credits"
             event.preventDefault()
             $state.go 'credits.list'

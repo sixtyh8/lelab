@@ -39,7 +39,7 @@ angular.module('leLabApp').service 'Credits', (Restangular, $q, DSCacheFactory) 
 
         credit.genre = credit.genreName[0].name
 
-        credits.post({ 'data': credit }).then (results) ->
+        credits.post({ 'data': credit, 'id': null, 'action': 'POST' }).then (results) ->
             deferred.resolve results
 
         deferred.promise
@@ -49,18 +49,14 @@ angular.module('leLabApp').service 'Credits', (Restangular, $q, DSCacheFactory) 
         deferred = $q.defer()
         id = obj.id
 
-        if obj.genreName[0].name
-            obj.genre = obj.genreName[0].name
+        if obj.genreName.name
+            obj.genre = obj.genreName.name
         else
-            obj.genre = obj.genreName[0]
+            obj.genre = obj.genreName
 
-        console.log "Update:"
-        console.log obj
 
-        credit = Restangular.one('credits', id).get().then (result) ->
-            result[0] = obj
-            result.put().then (results) ->
-                deferred.resolve results
+        credits.post({ 'data': obj, 'id': id, 'action': 'PUT' }).then (results) ->
+            deferred.resolve results
 
         deferred.promise
 
@@ -68,7 +64,7 @@ angular.module('leLabApp').service 'Credits', (Restangular, $q, DSCacheFactory) 
     delete: (id) ->
         deferred = $q.defer()
 
-        Restangular.one('credits', id).remove().then (results) ->
+        credits.post({ 'data': null, 'id': id, 'action': 'DELETE' }).then (results) ->
             deferred.resolve results
 
         deferred.promise

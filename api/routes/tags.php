@@ -22,38 +22,32 @@ Flight::route('POST /tags', function(){
 	$string = Flight::request()->body;
 
 	$tag = json_decode($string);
-	$data = $tag->data;
+	$action = $tag->action;
 
-	$result = Flight::get('database')->insert("tags", array('name' => $data));
+	if($action == 'POST'){
+		$data = $tag->data;
 
-	$tag->id = $result;
-	$tag->name = $data;
+		$result = Flight::get('database')->insert("tags", array('name' => $data));
 
-	return Flight::json($tag);
-});
+		$tag->id = $result;
+		$tag->name = $data;
 
-// Update tag
-Flight::route('PUT /tags', function(){
+		return Flight::json($tag);
+	} else if($action == 'PUT'){
+		$name = $tag->data;
+		$id = $tag->id;
+
+		$result = Flight::get('database')->update('tags', array('name' => $name), array('id' => $id));
+
+		return Flight::json($result);
+	} else if($action == 'DELETE'){
+		$id = $tag->id;
+		
+		$result = Flight::get('database')->delete('tags', array('id' => $id));
+
+		return Flight::json($result);
+	}
 	
-	$string = Flight::request()->body;
-
-	$tag = json_decode($string);
-	$tagObj = $tag[0];
-
-	$name = $tagObj->name;
-	$id = $tagObj->id;
-
-	$result = Flight::get('database')->update('tags', array('name' => $name), array('id' => $id));
-
-	return Flight::json($result);
-});
-
-// Delete tag
-Flight::route('DELETE /tags/@id', function($id){
-    
-	$result = Flight::get('database')->delete('tags', array('id' => $id));
-
-	return Flight::json($result);
 });
 
 ?>

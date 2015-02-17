@@ -21,7 +21,7 @@ angular.module('leLabApp').service 'User', (Restangular, $q) ->
     create: (user) ->
         deferred = $q.defer()
 
-        Restangular.all("users").post({ 'data': user }).then (results) ->
+        Restangular.all("users").post({ 'data': user, 'id': null, 'action': 'POST' }).then (results) ->
             deferred.resolve results
 
         deferred.promise
@@ -29,22 +29,16 @@ angular.module('leLabApp').service 'User', (Restangular, $q) ->
     delete: (id) ->
         deferred = $q.defer()
 
-        user = Restangular.one("users", id)
-        user.remove().then (data) ->
-            deferred.resolve data
+        Restangular.all("users").post({ 'data': null, 'id': id, 'action': 'DELETE' }).then (results) ->
+            deferred.resolve results
 
         deferred.promise
 
     update: (id, user) ->
         deferred = $q.defer()
 
-        userObj = Restangular.one("users", id).get().then (result) ->
-
-            result.update = user
-            result.update.id = id
-
-            result.put().then (data) ->
-                deferred.resolve data
+        Restangular.all("users").post({ 'data': user, 'id': id, 'action': 'PUT' }).then (results) ->
+            deferred.resolve results
 
         deferred.promise
 

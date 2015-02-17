@@ -13,7 +13,7 @@ angular.module('leLabApp').service 'Engineers', (Restangular, $q) ->
     add: (name) ->
         deferred = $q.defer()
 
-        Restangular.all("engineers").post({ 'data': name }).then (results) ->
+        Restangular.all("engineers").post({ 'data': name, 'id': null, 'action': 'POST' }).then (results) ->
             deferred.resolve results
 
         deferred.promise
@@ -21,16 +21,15 @@ angular.module('leLabApp').service 'Engineers', (Restangular, $q) ->
     update: (id, name) ->
         deferred = $q.defer()
 
-        engi = Restangular.one("engineers", id).get().then (result) ->
-            result[0].name = name
-            result.put().then (data) ->
-                deferred.resolve data
+        Restangular.all("engineers").post({ 'data': name, 'id': id, 'action': 'PUT' }).then (results) ->
+            deferred.resolve results
 
         deferred.promise
 
     delete: (id) ->
         deferred = $q.defer()
 
-        engi = Restangular.one("engineers", id)
-        engi.remove().then (data) ->
-            deferred.resolve data
+        Restangular.all("engineers").post({ 'data': null, 'id': id, 'action': 'DELETE' }).then (results) ->
+            deferred.resolve results
+
+        deferred.promise

@@ -34,7 +34,7 @@ Flight::route('GET /whitepapers', function(){
 Flight::route('GET /whitepapers/search', function(){
 	$keyword =  Flight::request()->query->keyword;
 
-	$result = Flight::get('database')->select('whitepapers', '*', array('OR' => array('title' => $keyword, 'body' => $keyword)));
+	$result = Flight::get('database')->select('whitepapers', '*', array('OR' => array('title[~]' => $keyword, 'body[~]' => $keyword)));
 
     return Flight::json($result);
 });
@@ -49,10 +49,10 @@ Flight::route('POST /whitepapers', function(){
 	$whitepaper = json_decode($string);
 	$data = $whitepaper->data;
 
-	$title => $data->title;
-	$body => $data->body;
-	$created_at => $data->created_at;
-	$updated_at => null;
+	$title = $data->title;
+	$body = $data->body;
+	$created_at = $data->created_at;
+	$updated_at = null;
 
 	$whitepaperId = $database->insert('whitepapers', array(
 			'title' => $title,
@@ -95,10 +95,6 @@ Flight::route('GET /whitepapers/@id', function($id){
 
 	$database = Flight::get('database');
 
-	$obj = new Whitepaper();
-	$tagsObj = new Tag();
-	$tagsAssoc = new TagAssoc();
-
 	$response = $database->get('whitepapers', '*', array('id' => $id));
 
 	$tags = array();
@@ -116,32 +112,34 @@ Flight::route('GET /whitepapers/@id', function($id){
 
 // Update whitepaper
 Flight::route('PUT /whitepapers/@id', function($id){
-	$obj = new Whitepaper();
-	$tagsObj = new Tag();
-	$tagsAssoc = new TagAssoc();
+
+	$database = Flight::get('database');
 
 	$string = Flight::request()->body;
 
 	$whitepaper = json_decode($string);
 	$whitepaperId = $whitepaper->id;
+	$title = $whitepaper->title;
+	$body = $whitepaper->body;
+	$updated_at = $whitepaper->updated_at;
 
 	// Update the whitepaper
-	$result = $obj->update($whitepaper);
+	$result = $database->update('whitepapers', array('title' => $title, 'body' => $body, 'updated_at' => $updated_at), array('id' => $whitepaperId));
 
 	// Check if tags is empty
 	if($whitepaper->tags != ""){
 		$tags = $whitepaper->tags;
 
 		// Get all the tags associated with the whitepaper in the db
-		$assocsInDB = $tagsAssoc->getArticleTags($whitepaperId);
+		$assocsInDB = $database->select('tags_assoc', '*', array('article_id' => $whitepaperId));
 
 		foreach($assocsInDB as $assoc){
 			// Get tag name
-			$tagInDBName = $tagsObj->getTag($assoc['tag_id']);
+			$tagInDBName = $database->select('tags', '*', array('id' => $assoc['tag_id']));
 
 			// Check if the tag is in the tags submitted and remove the assoc if not
 			if(!in_array($tagInDBName, $tags)){
-				$tagsAssoc->deleteByID($assoc['id']);
+				$database->delete('tags_assoc', array('id' => $assoc['id']));
 			}
 		}
 
@@ -153,23 +151,23 @@ Flight::route('PUT /whitepapers/@id', function($id){
 				$tagName = $value;
 			}
 
-			$tagId = $tagsObj->checkTag($tagName);
+			$tagId = $database->get('tags', '*', array('name' => $tagName));
 
 			if(!$tagId){
 				// Add tags to tags table if it doesn't exist
-				$tagId = $tagsObj->create($value);
+				$tagId = $database->insert('tags', array('name' => $tagName));
 			}
 
 			if(is_array($tagId)){
-				$tagId = $tagId[0]['id'];
+				$tagId = $tagId['id'];
 			}
 
 			// Check if assoc exists
-			$hasAssoc = $tagsAssoc->checkAssoc($tagId, $whitepaperId);
+			$hasAssoc = $database->has('tags_assoc', array('AND' => array('tag_id' => $tagId, 'article_id' => $whitepaperId)));
 
 			if(!$hasAssoc){
 				// Add tag to article relationship to tags_assoc table
-				$tagsAssoc->create($tagId, $whitepaperId);
+				$database->insert('tags_assoc', array('tag_id' => $tagId, 'article_id' => $whitepaperId));
 			}
 		}
 
@@ -180,9 +178,8 @@ Flight::route('PUT /whitepapers/@id', function($id){
 
 // Delete whitepaper
 Flight::route('DELETE /whitepapers/@id', function($id){
-	$obj = new Whitepaper();
 
-	$result = $obj->delete($id);
+	$result = Flight::get('database')->delete('whitepapers', array('id' => $id));
 
 	return Flight::json($result);
 });

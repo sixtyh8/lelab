@@ -54,59 +54,61 @@ Flight::route('POST /users', function(){
 
     $string = Flight::request()->body;
 
-    $data = json_decode($string);
-    $username = $data->data->username;
-    $password = $data->data->password;
-    $admin = $data->data->admin;
-    $email = $data->data->email;
+    $user = json_decode($string);
+    $action = $user->action;
+    $data = $user->data;
+    $id = $user->id;
 
-    $result = Flight::get('database')->insert('users', array(
-            'username' => $username,
-            'email' => $email,
-            'password' => $password,
-            'admin' => $admin
-        ));
+    if($action == "POST"){
+        
+        $username = $data->username;
+        $password = $data->password;
+        $admin = $data->admin;
+        $email = $data->email;
 
-    $latestUser = Flight::get('database')->get('users', '*', array('id' => $result));
+        $result = Flight::get('database')->insert('users', array(
+                'username' => $username,
+                'email' => $email,
+                'password' => $password,
+                'admin' => $admin
+            ));
 
-    return Flight::json($latestUser);
-});
+        $latestUser = Flight::get('database')->get('users', '*', array('id' => $result));
 
-Flight::route('PUT /users/@id', function($id){
-    $body = Flight::request()->body;
+        return Flight::json($latestUser);
 
-    $data = json_decode($body);
+    } else if($action == "PUT"){
+        
+        $username = $data->username;
+        $password = $data->password;
+        $admin = $data->admin;
+        $email = $data->email;
 
-    $username = $data->update->username;
-    $email = $data->update->email;
-    $password = $data->update->password;
-    $admin = $data->update->admin;
-    $id = $data->update->id;
-
-    $result = Flight::get('database')->update('users', array(
+        $result = Flight::get('database')->update('users', array(
             'username' => $username,
             'email' => $email,
             'password' => $password,
             'admin' => $admin
         ), array('id' => $id));
 
-    return Flight::json($result);
+        return Flight::json($result);
+
+    } else if($action == "DELETE"){
+        
+        $result = Flight::get('database')->delete('users', array('id' => $id));
+        
+        return Flight::json($result);
+
+    }
 });
 
 // Get user by ID
 Flight::route('GET /users/@id', function($id){
 
     $result = Flight::get('database')->select('users', '*', array('id' => $id));
-
+    
     return Flight::json($result[0]);
-});
 
-// Delete user
-Flight::route('DELETE /users/@id', function($id){
-
-    $result = Flight::get('database')->delete('users', array('id' => $id));
-
-    return Flight::json($result);
 });
 
 ?>

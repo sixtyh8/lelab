@@ -14,7 +14,7 @@ angular.module('leLabApp').service 'Genres', (Restangular, $q) ->
     add: (name) ->
         deferred = $q.defer()
 
-        Restangular.all("genres").post({ 'data': name }).then (results) ->
+        Restangular.all("genres").post({ 'data': name, 'id': null, 'action': 'POST' }).then (results) ->
             deferred.resolve results
 
         deferred.promise
@@ -23,10 +23,8 @@ angular.module('leLabApp').service 'Genres', (Restangular, $q) ->
     update: (id, name) ->
         deferred = $q.defer()
 
-        genre = Restangular.one("genres", id).get().then (result) ->
-            result[0].name = name
-            result.put().then (data) ->
-                deferred.resolve data
+        Restangular.all("genres").post({ 'data': name, 'id': id, 'action': 'PUT' }).then (results) ->
+            deferred.resolve results
 
         deferred.promise
 
@@ -34,9 +32,10 @@ angular.module('leLabApp').service 'Genres', (Restangular, $q) ->
     delete: (id) ->
         deferred = $q.defer()
 
-        genre = Restangular.one("genres", id)
-        genre.remove().then (data) ->
-            deferred.resolve data
+        Restangular.all("genres").post({ 'data': null, 'id': id, 'action': 'DELETE' }).then (results) ->
+            deferred.resolve results
+
+        deferred.promise
 
 
     search: (term) ->

@@ -122,11 +122,18 @@ Flight::route('POST /credits', function(){
 
 	    $response = Flight::formatCredit($creditList);
 
+	    Flight::createCreditsJson();
+	    Flight::createTimelineJson();
+
 	    return Flight::json($response);
 
 	} else if($action == 'DELETE'){
 
 		$result = $database->delete('credits', array('id' => $id));
+
+		Flight::createCreditsJson();
+	    Flight::createTimelineJson();
+	    
 		return Flight::json($result);
 
 	}

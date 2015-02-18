@@ -1,5 +1,4 @@
 <?php
-require_once "api/classes/classes.inc";
 
 $metaTITLE['fr'] = 'Whitepapers';
 $metaTITLE['en'] = 'Whitepapers';

@@ -236,4 +236,110 @@ Flight::map('cropImage', function($CurWidth,$CurHeight,$iSize,$DestFolder,$SrcIm
     }
 });
 
+Flight::map('createCreditsJson', function(){
+
+    // JSON filename
+    $jsonFilename = "credits.json";
+    $dest = $jsonFilename;
+    $jsonData = array();
+    $database = Flight::get('database');
+
+    $credits = $database->select('credits', '*');
+
+    // Insert each in the array
+    foreach ($credits as $credit){
+
+        // If the credit shouldn't be displayed on the homepage, return
+        if($credit['homepage_flag'] != 1){
+            return;
+        }
+
+        $currentImage = $database->select('images', '*', array('id' => $credit['image']));
+        $currentEngineer = $database->select('engineers', '*', array('id' => $credit['engineer_id']));
+
+        $tempArray = array(
+            'image' => $currentImage,
+            'album' => $credit['album_name'],
+            'artist' => $credit['artist_name'],
+            'genre' => $credit['genre'],
+            'year' => $credit['year'],
+            'credit' => $credit['credit'],
+            'engineer' => "",
+            'bandcamp_url' => $credit['bandcamp_url']
+        );
+
+        if($currentEngineer){
+            $tempArray['engineer'] = $currentEngineer[0]['name'];
+        }
+
+        array_push($jsonData, $tempArray);
+
+    }
+
+    // Encode the array to json
+    $jsonData = json_encode($jsonData);
+
+    // Write the file
+    $fp = fopen($dest, 'w');
+    fwrite($fp, $jsonData);
+    fclose($fp);
+});
+
+Flight::map('createTimelineJson', function(){
+    
+    // JSON filename
+    $jsonFilename = "timeline.json";
+    $dest = $jsonFilename;
+
+    $start_year = "2000";
+    $year_pointer = $start_year;
+    $curr_year = date("Y");
+    $curr_year = strval($curr_year);
+    $years_array = array();
+
+    while($year_pointer <= $curr_year){
+
+        $num = Flight::get('database')->count('credits', array('year' => $year_pointer));
+
+        $tempArray = array(
+            'year' => $year_pointer,
+            'album-count' => $num
+        );
+
+        array_push($years_array, $tempArray);
+
+        $year_pointer++;
+    }
+
+    // Encode the array to json
+    $years_array = json_encode($years_array);
+
+    // Write the file
+    $fp = fopen($dest, 'w');
+    fwrite($fp, $years_array);
+    fclose($fp);
+
+});
+
+Flight::map('createGenreJson', function(){
+    
+    $jsonFilename = "genres.json";
+    $jsonData = array();
+    $genres = Flight::get('database')->select('genres', '*', array('ORDER' => 'name'));
+
+    // Insert each in the array
+    foreach ($genres as $genre){
+        array_push($jsonData, $genre['name']);
+    }
+
+    // Encode the array to json
+    $jsonData = json_encode($jsonData);
+
+    // Write the file
+    $fp = fopen($jsonFilename, 'w');
+    fwrite($fp, $jsonData);
+    fclose($fp);
+
+});
+
 ?>

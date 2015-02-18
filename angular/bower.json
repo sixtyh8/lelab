@@ -23,7 +23,7 @@
     "angular-bindonce": "~0.3.3",
     "angular-ui-bootstrap": "~0.11.0",
     "angular-webstorage": "~0.10.3",
-    "bootswatch-scss": "~3.0.3",
+    "bootswatch-scss": "latest",
     "angular-cache": "~3.0.3",
     "textAngular": "~1.2.1",
     "ngInfiniteScroll": "~1.1.2",
@@ -49,6 +49,7 @@
     "angular-ui-bootstrap-bower": "~0.11.0",
     "gsap": "~1.12.0",
     "bootstrap-css": "~3.1.1",
-    "bootstrap-sass-official": "~3.1.1+2"
+    "bootstrap-sass-official": "~3.2.0",
+    "bootswatch-scss": "~3.2.0"
   }
 }

@@ -2,7 +2,7 @@
 
 Flight::route('GET /genres', function(){
 
-	$result = Flight::get('database')->select("genres", "*");
+	$result = Flight::get('database')->select("genres", "*", array('ORDER' => 'name'));
 	
 	return Flight::json($result);
 
@@ -19,12 +19,14 @@ Flight::route('POST /genres', function(){
 
 	if($action == 'POST'){
 
-		$genreName = ucword($data);
+		$genreName = ucwords($data);
 
 		$result = Flight::get('database')->insert("genres", array('name' => $genreName));
 
 		$genre->id = $result;
 		$genre->name = $data;
+
+		Flight::createGenreJson();
 
 		return Flight::json($genre);
 
@@ -34,11 +36,15 @@ Flight::route('POST /genres', function(){
 
 		$result = Flight::get('database')->update("genres", array('name' => $name), array('id' => $id));
 
+		Flight::createGenreJson();
+
 		return Flight::json($result);
 
 	} else if($action == 'DELETE') {
 		
 		$result = Flight::get('database')->delete("genres", array('id' => $id));
+
+		Flight::createGenreJson();
 	
 		return Flight::json($result);
 

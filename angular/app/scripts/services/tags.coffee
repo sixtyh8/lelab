@@ -29,7 +29,7 @@ angular.module('leLabApp').service 'Tags', (Restangular, $q) ->
     delete: (id) ->
         deferred = $q.defer()
 
-        Restangular.all("tags").post({ 'id': id, 'action': 'DELETE' }).then (results) ->
+        Restangular.all("tags").post({ 'data': null, 'id': id, 'action': 'DELETE' }).then (results) ->
             deferred.resolve results
 
         deferred.promise

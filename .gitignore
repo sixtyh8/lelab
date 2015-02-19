@@ -1,6 +1,7 @@
 /angular/node_modules/*
 /angular/bower_components/*
 /angular/app/bower_components/*
+/angular/.sass-cache/*
 /angular/dist/*
 /angular/www/*
 /awstats/*

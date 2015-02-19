@@ -32,9 +32,9 @@ Flight::route('POST /genres', function(){
 
 	} else if($action == 'PUT'){
 
-		$name = $data->name;
+		$genreName = ucwords($data);
 
-		$result = Flight::get('database')->update("genres", array('name' => $name), array('id' => $id));
+		$result = Flight::get('database')->update("genres", array('name' => $genreName), array('id' => $id));
 
 		Flight::createGenreJson();
 

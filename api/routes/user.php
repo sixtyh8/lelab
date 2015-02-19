@@ -54,6 +54,8 @@ Flight::route('POST /users', function(){
 
     $string = Flight::request()->body;
 
+    $database = Flight::get('database');
+    
     $user = json_decode($string);
     $action = $user->action;
     $data = $user->data;
@@ -66,14 +68,14 @@ Flight::route('POST /users', function(){
         $admin = $data->admin;
         $email = $data->email;
 
-        $result = Flight::get('database')->insert('users', array(
+        $result = $database->insert('users', array(
                 'username' => $username,
                 'email' => $email,
                 'password' => $password,
                 'admin' => $admin
             ));
 
-        $latestUser = Flight::get('database')->get('users', '*', array('id' => $result));
+        $latestUser = $database->get('users', '*', array('id' => $result));
 
         return Flight::json($latestUser);
 
@@ -84,7 +86,7 @@ Flight::route('POST /users', function(){
         $admin = $data->admin;
         $email = $data->email;
 
-        $result = Flight::get('database')->update('users', array(
+        $result = $database->update('users', array(
             'username' => $username,
             'email' => $email,
             'password' => $password,
@@ -95,7 +97,7 @@ Flight::route('POST /users', function(){
 
     } else if($action == "DELETE"){
         
-        $result = Flight::get('database')->delete('users', array('id' => $id));
+        $result = $database->delete('users', array('id' => $id));
         
         return Flight::json($result);
 

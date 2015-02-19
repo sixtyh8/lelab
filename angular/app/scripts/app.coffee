@@ -5,6 +5,7 @@ angular.module('leLabApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ngAnimate',
   'restangular',
   'ui.router',
   'cgBusy',

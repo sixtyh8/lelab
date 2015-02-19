@@ -6,6 +6,7 @@ Flight::route('GET /tags', function(){
 	$result = Flight::get('database')->select("tags", "*");
 	
 	return Flight::json($result);
+	
 });
 
 // Get tag
@@ -14,6 +15,7 @@ Flight::route('GET /tags/@id', function($id){
 	$result = Flight::get('database')->select("tags", "*", array('id' => $id));
 
 	return Flight::json($result);
+
 });
 
 // Create tag

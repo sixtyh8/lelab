@@ -1,7 +1,5 @@
-//$icon-font-path: "/bower_components/bootstrap-sass-official/assets/bootstrap/fonts/";
-
-@import "bootswatch-scss/paper/variables";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "bootswatch-scss/paper/variables";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "bootswatch-scss/paper/bootswatch";
 
@@ -12,10 +10,20 @@
     padding: 0.2em 0;
 }
 
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
+
 /* Space out content a bit */
 body {
     padding-top: 80px;
     padding-bottom: 20px;
+}
+
+input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    background-color: rgb(255, 255, 255) !important;
 }
 
 label{
@@ -354,4 +362,47 @@ overflow: hidden;
 // Form validation
 input.ng-invalid {
     // border: 1px solid red;
+}
+
+// Animation
+.ui-view-container {
+  position: relative;
+}
+
+div#content [ui-view].ng-enter, div#content [ui-view].ng-leave {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+}
+
+div#content [ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform:scale3d(0.5, 0.5, 0.5);
+  -moz-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);
+}
+
+div#content [ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform:scale3d(1, 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+
+div#content [ui-view].ng-leave {
+  opacity: 1;
+  -webkit-transform:scale3d(1, 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+
+div#content [ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-transform:scale3d(0, 0, 0);
+  -moz-transform:scale3d(0, 0, 0);
+  transform:scale3d(0, 0, 0);
 }

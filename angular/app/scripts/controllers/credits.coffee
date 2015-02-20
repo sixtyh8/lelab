@@ -66,13 +66,17 @@ angular.module('leLabApp').controller 'CreditsCtrl.Edit', ($scope, $state, $stat
 
         credit = data
     
-        if data.genre.length and data.genreName?
-            $scope.selectedGenre = data.genreName[0]
+        if data.genre.length and data.genreName isnt undefined
             $scope.credit = credit
+            $scope.credit.selectedGenre = data.genreName
         else
             $scope.credit = credit
-            $scope.credit.genreName = { name : "" , id: "" }
+            $scope.credit.selectedGenre = undefined
+            $scope.credit.genreName = [
+                { name : "" , id: "" }
+            ]
 
+        console.log $scope.credit.selectedGenre
 
     $scope.saveCredit = ->
         Credits.update($scope.credit).then (data) ->

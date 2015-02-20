@@ -10,7 +10,7 @@
                 <img ng-show="dataUrls[0]" ng-src="{{ dataUrls[0] }}" height="150" width="150">
             </div>
             <div ng-if="imageAlreadyExists" ng-hide="selectedFiles != null">
-                <img ng-src="{{ $root.cdnUrl }}/images/credits/{{ credit.imgName[0].image_name }}" height="150" width="150">
+                <img ng-src="{{ $root.cdnUrl }}/images/credits/{{ credit.imgName.image_name }}" height="150" width="150">
             </div>
             <div ng-show="!imageAlreadyExists && selectedFiles == null">
                 <img ng-src="{{ $root.cdnUrl }}/images/no_image.gif">
@@ -24,7 +24,7 @@
         </ul>
 
         <ul class="list-group" ng-hide="selectedFiles != null || !imageAlreadyExists">
-            <li class="list-group-item" style="overflow:hidden;"><span class="label label-default pull-left">Filename:</span> <small class="pull-right">{{ credit.imgName[0].image_name }}</small></li>
+            <li class="list-group-item" style="overflow:hidden;"><span class="label label-default pull-left">Filename:</span> <small class="pull-right">{{ credit.imgName.image_name }}</small></li>
         </ul>
 
         <div class="panel-footer">

@@ -70,13 +70,13 @@ Flight::route('POST /credits', function(){
 		$homepage_flag = $data->homepage_flag;
 
 		//Add genre to genre DB if doesn't exist
-		if(property_exists($data, "genre") && $data->genreName->name != ''){
+		if(property_exists($data, "genre") && $data->genreName != ''){
 
-			$result = $database->has('genres', array('name' => $data->genreName->name));
+			$result = $database->has('genres', array('name' => $data->genreName));
 
 			// If it exists, get it's ID
 			if($result){
-				$data->genre_id = $data->genreName->id;
+				$data->genre_id = $database->get('genres', 'id', array('name' => $data->genreName));
 			} else {
 				$lastID = $database->insert('genres', array('name' => $data->genreName->name));
 				$data->genre_id = $lastID;
@@ -149,13 +149,13 @@ Flight::route('GET /credits/@id', function($id){
 	// Get image URL
 	if($result['image']){
 		$imageID = $result['image'];
-		$result['imgName'] = $database->get('images', '*', array('id' => $imageID));
+		$result['imgName'] = $database->get('credit_images', '*', array('id' => $imageID));
 	}
 
 	// Get genre name
 	if($result['genre']){
 		$genreID = $result['genre'];
-		$result['genreName'] = $database->get('genres', '*', array('id' => $genreID));
+		$result['genreName'] = $database->get('genres', 'name', array('id' => $genreID));
 	}
 
 	// Get engineer name

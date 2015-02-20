@@ -13,3 +13,4 @@ angular.module('leLabApp').directive 'creditForm', (Genres, Engineers) ->
         # Get engineers
         Engineers.list().then (data) ->
             scope.engineers = data
+

@@ -1,7 +1,8 @@
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
-@import "bootswatch-scss/paper/variables";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
-@import "bootswatch-scss/paper/bootswatch";
+
+// @import "bootswatch-scss/spacelab/variables";
+// @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+// @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+// @import "bootswatch-scss/spacelab/bootswatch";
 
 .browsehappy {
     margin: 0.2em 0;
@@ -264,23 +265,27 @@ label{
     padding: 15px;
     padding-bottom:0px;
 }
+
 .navbar-content:before, .navbar-content:after
 {
     display: table;
     content: "";
     line-height: 0;
 }
+
 .navbar-nav.navbar-right:last-child {
-margin-right: 15px !important;
+    margin-right: 15px !important;
 }
+
 .navbar-footer
 {
     background-color:#DDD;
 }
+
 .navbar-footer-content { padding:15px 15px 15px 15px; }
 .dropdown-menu {
-padding: 0px;
-overflow: hidden;
+    padding: 0px;
+    overflow: hidden;
 }
 
 .ta-editor {
@@ -340,9 +345,10 @@ overflow: hidden;
         background: linear-gradient(transparent, whitesmoke);
     }
 }
+
 .navbar-login
 {
-    width: 400px;
+    width: 300px;
     padding: 10px;
     padding-bottom: 0px;
 }

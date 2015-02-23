@@ -26,7 +26,7 @@ Flight::route('GET /dashboard', function(){
 	$response->count->whitepapers = $wTotal;
 	$response->credit = $formattedCredit[0];
 	if($latestW){
-		$response->whitepaper = $latestW[0];
+		$response->whitepaper = $latestW;
 	}
 
 	return Flight::json($response);

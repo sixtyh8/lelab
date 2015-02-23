@@ -27,11 +27,11 @@ angular.module('leLabApp').controller 'WhitepapersCtrl.Edit', ($scope, $state, $
 
     Whitepapers.get($stateParams.whitepaperId).then (data) ->
         $scope.whitepaper = data
-        $scope.whitepaper.tags = []
+        $scope.whitepaper.tagsList = []
 
         # Add each tag to the tags array of the scope
-        for tag in data.tagsList
-            $scope.whitepaper.tags.push(tag[0].name)
+        for tag in data.tags
+            $scope.whitepaper.tagsList.push(tag[0].name)
 
     $scope.saveWhitepaper = ->
         newDate = new Date()

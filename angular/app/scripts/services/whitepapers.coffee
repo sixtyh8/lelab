@@ -29,20 +29,18 @@ angular.module('leLabApp').service 'Whitepapers', (Restangular, $q) ->
     save: (whitepaper) ->
         deferred = $q.defer()
 
-        whitepapers.post({ 'data': whitepaper }).then (results) ->
+        whitepapers.post({ 'data': whitepaper, 'id': null, 'action': 'POST' }).then (results) ->
             deferred.resolve results
 
         deferred.promise
 
     # Works
-    update: (obj) ->
+    update: (whitepaper) ->
         deferred = $q.defer()
-        id = obj.id
+        id = whitepaper.id
 
-        Restangular.one('whitepapers', id).get().then (result) ->
-            result = obj
-            result.put().then (data) ->
-                deferred.resolve data
+        whitepapers.post({ 'data': whitepaper, 'id': id, 'action': 'PUT' }).then (results) ->
+            deferred.resolve results
 
         deferred.promise
 
@@ -50,7 +48,7 @@ angular.module('leLabApp').service 'Whitepapers', (Restangular, $q) ->
     delete: (id) ->
         deferred = $q.defer()
 
-        Restangular.one('whitepapers', id).remove().then (results) ->
+        whitepapers.post({ 'data': null, 'id': id, 'action': 'DELETE' }).then (results) ->
             deferred.resolve results
 
         deferred.promise

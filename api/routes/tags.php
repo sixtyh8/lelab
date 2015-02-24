@@ -38,8 +38,8 @@ Flight::route('POST /tags', function(){
 		return Flight::json($tag);
 		
 	} else if($action == 'PUT'){
-
-		$id = $tag->id;
+    	
+    	$id = $tag->id;
 
 		$result = $database->update('tags', array('name' => $data), array('id' => $id));
 

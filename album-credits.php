@@ -1,5 +1,10 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']."/api/classes/classes.inc";
+require $_SERVER['DOCUMENT_ROOT']."/api/plugins/medoo.php";
+
+$database = new medoo(array(
+	'database_type' => 'sqlite',
+	'database_file' => $_SERVER['DOCUMENT_ROOT'].'/api/data/lelab.db'
+));
 
 $showName = true;
 
@@ -9,16 +14,12 @@ if(isset($_GET['engineer-id'])){
 	$engineerID = false;
 }
 
-// Get the credits
-$obj = new Credit();
-
 if($engineerID){
 	$showName = false;
-	$result = $obj->listEngineerCredits($engineerID);
-	$engiObj = new Engineer();
-	$engiName = $engiObj->getEngineerName($engineerID);
+	$result = $database->select('credits', '*', array('engineer_id' => $engineerID, 'ORDER' => array('year DESC', 'id')));
+	$engiName = $database->select('engineers', '*', array('id' => $engineerID));
 } else {
-	$result = $obj->all();
+	$result = $database->select('credits', '*');
 }
 
 $metaTITLE['fr'] = 'Crédit d\'album';
@@ -54,19 +55,16 @@ if($result){
 
 		// Get image path
 		$imageID = $credit['image'];
-		$imgObj = new CreditImage();
-		$img = $imgObj->getImageName($imageID);
+		$img = $database->select('images', '*', array('id' => $imageID));
 
 		// Get genre name
 		$genreID = $credit['genre'];
-		$genreObj = new Genre();
-		$genre = $genreObj->getGenreName($genreID);
+		$genre = $database->select('genres', '*', array('id' => $genreID));
 		
 		if($showName){
 			// Get engineer name
 			$engiID = $credit['engineer_id'];
-			$engiObj = new Engineer();
-			$engi = $engiObj->getEngineerName($engiID);
+			$engi = $database->select('engineers', '*', array('id' => $engiID));
 		}
 		
 	?>

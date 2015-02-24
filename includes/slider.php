@@ -18,7 +18,7 @@
 		$slides .= "<ul class='list'>";
 		$slidesData = array();
 		foreach($covers as $key => $cover) {
-			$slides .= '<li class="cover"><span class="title">'.$cover['album'].'<br /><span class="artist">'.$cover['artist'].'</span><br /><span class="year">'.$cover['year'].'</span></span><img class="lazy" src="../img/grey.gif" data-original="/cdn/images/credits/'.$cover['image'][0]['thumb_name'].'" width="155" height="155" /></li>';
+			$slides .= '<li class="cover"><span class="title">'.$cover['album'].'<br /><span class="artist">'.$cover['artist'].'</span><br /><span class="year">'.$cover['year'].'</span></span><img class="lazy" src="../img/grey.gif" data-original="/cdn/images/credits/'.$cover['image']['thumb_name'].'" width="155" height="155" /></li>';
 		}
 		$slides .= "</ul>";
 		?>

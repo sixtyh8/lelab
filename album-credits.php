@@ -55,16 +55,16 @@ if($result){
 
 		// Get image path
 		$imageID = $credit['image'];
-		$img = $database->select('images', '*', array('id' => $imageID));
+		$img = $database->get('credit_images', '*', array('id' => $imageID));
 
 		// Get genre name
 		$genreID = $credit['genre'];
-		$genre = $database->select('genres', '*', array('id' => $genreID));
+		$genre = $database->get('genres', '*', array('id' => $genreID));
 		
 		if($showName){
 			// Get engineer name
 			$engiID = $credit['engineer_id'];
-			$engi = $database->select('engineers', '*', array('id' => $engiID));
+			$engi = $database->get('engineers', '*', array('id' => $engiID));
 		}
 		
 	?>
@@ -78,7 +78,7 @@ if($result){
 			<?php if($credit['bandcamp_url']){ ?>
 			<a href="<?php echo $credit['bandcamp_url']; ?>">
 			<?php } ?>
-			<img class="lazy" src="/cdn/images/credits/<?php echo $img[0]['small_name']; ?>" alt="<?php echo $credit['album_name']; ?>" />
+			<img class="lazy" src="/cdn/images/credits/<?php echo $img['small_name']; ?>" alt="<?php echo $credit['album_name']; ?>" />
 			<?php } ?>
 			<?php if($credit['bandcamp_url']){ ?>
 			</a>
@@ -90,7 +90,7 @@ if($result){
 			
 		</td>
 		<td>
-			<?php if($genre){ echo $genre[0]['name']; } ?>
+			<?php if($genre){ echo $genre['name']; } ?>
 		</td>
 		<td class="year">
 			<?php echo $credit['year']; ?>
@@ -99,7 +99,7 @@ if($result){
 		<td>
 			<?php 
 			if($showName && $engi){
-				echo $engi[0]['name']."<br />"; 
+				echo $engi['name']."<br />"; 
 			} 
 			?>
 			<?php echo $credit['credit']; ?>

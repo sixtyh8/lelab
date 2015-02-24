@@ -130,8 +130,8 @@ Flight::map('treatImage', function($image){
 
         // If the image wasn't written to DB, get it's ID
         if($imageID == 0){
-            $id = $imgObj->checkImage($NewImageName);
-            $imageID = $id[0]['id'];
+            $id = Flight::get('database')->get('credit_images', '*', array('image_name' => $NewImageName));
+            $imageID = $id['id'];
         }
 
         $response['image'] = $ThumbImageName;
@@ -254,8 +254,8 @@ Flight::map('createCreditsJson', function(){
             return;
         }
 
-        $currentImage = $database->select('images', '*', array('id' => $credit['image']));
-        $currentEngineer = $database->select('engineers', '*', array('id' => $credit['engineer_id']));
+        $currentImage = $database->get('credit_images', '*', array('id' => $credit['image']));
+        $currentEngineer = $database->get('engineers', '*', array('id' => $credit['engineer_id']));
 
         $tempArray = array(
             'image' => $currentImage,
@@ -269,7 +269,7 @@ Flight::map('createCreditsJson', function(){
         );
 
         if($currentEngineer){
-            $tempArray['engineer'] = $currentEngineer[0]['name'];
+            $tempArray['engineer'] = $currentEngineer['name'];
         }
 
         array_push($jsonData, $tempArray);

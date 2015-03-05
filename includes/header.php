@@ -24,7 +24,7 @@
 <script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>js/jquery-ui-1.7.3.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>js/jquery.carouFredSel-6.2.1-packed.js"></script>
 <script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>js/jquery.lazyload.js"></script>
-<script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>admin/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>js/timeline.js"></script>
 <script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>js/jquery.tooltipster.min.js"></script>
 <script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>js/main.js"></script>
@@ -80,7 +80,7 @@
     <li><a href="<?php echo $_conf['path']['base_url'].$_conf['translation']['lang'].'/'; ?>engineers" <?php if($bodyClass == 'engineers') echo 'class="selected"'?>><?php echo MAIN_MENU_ENGINEERS; ?></a></li>
     <li><a href="<?php echo $_conf['path']['base_url'].$_conf['translation']['lang'].'/'; ?>mastering" <?php if($bodyClass == 'mastering') echo 'class="selected"'?>><?php echo MAIN_MENU_MASTERING; ?></a></li>
     <li><a href="/album-credits.php" <?php if($bodyClass == 'credits') echo 'class="selected"'?>>Credits</a></li>
-    <li><a href="/whitepapers.php" <?php if($bodyClass == 'whitepapers') echo 'class="selected"'?>>Whitepapers</a></li>
+    <li style="display:none;"><a href="/whitepapers.php" <?php if($bodyClass == 'whitepapers') echo 'class="selected"'?>>Whitepapers</a></li>
     <li class="no-border"><a href="<?php echo $_conf['path']['base_url'].$_conf['translation']['lang'].'/'; ?>contact" <?php if($bodyClass == 'contact') echo 'class="selected"'?>><?php echo MAIN_MENU_CONTACT; ?></a></li>
 </ul>
 <?php

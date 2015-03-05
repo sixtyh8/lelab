@@ -244,7 +244,7 @@ Flight::map('createCreditsJson', function(){
     $jsonData = array();
     $database = Flight::get('database');
 
-    $credits = $database->select('credits', '*');
+    $credits = $database->select('credits', '*', array('ORDER' => 'year DESC'));
 
     // Insert each in the array
     foreach ($credits as $credit){

@@ -1,10 +1,32 @@
 <?php
-// Filename
-$file = $_SERVER['DOCUMENT_ROOT']."/api/timeline.json";
-		
-// Read JSON file
-$content = utf8_encode(file_get_contents($file, FILE_USE_INCLUDE_PATH));
-$timeline_data = json_decode($content, true);
+
+// Query the DB for timeline
+$start_year = "2000";
+$year_pointer = $start_year;
+$curr_year = date("Y");
+$curr_year = strval($curr_year);
+$years_array = array();
+
+while($year_pointer <= $curr_year){
+
+    $num = $database->count('credits', array('year' => $year_pointer));
+
+    $tempArray = array(
+        'year' => $year_pointer,
+        'album-count' => $num
+    );
+
+    array_push($years_array, $tempArray);
+
+    $year_pointer++;
+}
+
+// Encode the array to json
+// $years_array = json_encode($years_array);
+
+
+$timeline_data = $years_array;
+
 
 $timeline_count = count($timeline_data);
 $fullTimelineDelimiters = $timeline_count % 5;

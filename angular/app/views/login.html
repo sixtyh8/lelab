@@ -3,6 +3,8 @@
         <div class="panel panel-default">
             <div class="panel-heading"><h3 class="panel-title"><strong>Sign in </strong></h3></div>
             <div class="panel-body">
+                <div class="alert alert-danger" ng-show="loginError">Invalid username/email or password</div>
+
                 <form role="form" ng-submit="login()">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Username or Email</label>

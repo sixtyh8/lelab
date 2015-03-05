@@ -4,12 +4,12 @@
 		<div class="row">
 			<div class="col-sm-3">
 	    	    <div class="hero-widget well well-sm">
-	                <div class="icon">
+	                <div class="icon" ng-click="$state.go('credits')" style="cursor:pointer;">
 	                     <i class="glyphicon glyphicon-music"></i>
 	                </div>
-	                <div class="text">
-	                    <var>{{ data.count.credits }}</var>
-	                    <label class="text-muted">credits</label>
+	                <div class="text" ng-click="$state.go('credits')" style="cursor:pointer;">
+		                <var>{{ data.count.credits }}</var>
+		                <label class="text-muted">credits</label>
 	                </div>
 	                <div class="options">
 	                    <a href="#" class="btn btn-default btn-lg" ui-sref="credits.new"><i class="glyphicon glyphicon-plus"></i> Add Credit</a>
@@ -18,12 +18,12 @@
 			</div>
 			<div class="col-sm-3">
 	            <div class="hero-widget well well-sm">
-	                <div class="icon">
+	                <div class="icon" ng-click="$state.go('whitepapers')" style="cursor:pointer;">
 	                     <i class="glyphicon glyphicon-file"></i>
 	                </div>
-	                <div class="text">
-	                    <var>{{ data.count.whitepapers }}</var>
-	                    <label class="text-muted">whitepapers</label>
+	                <div class="text" ng-click="$state.go('whitepapers')" style="cursor:pointer;">
+                    	<var>{{ data.count.whitepapers }}</var>
+                    	<label class="text-muted">whitepapers</label>
 	                </div>
 	                <div class="options">
 	                    <a href="#" class="btn btn-default btn-lg" ui-sref="whitepapers.new"><i class="glyphicon glyphicon-plus"></i> Add Whitepaper</a>

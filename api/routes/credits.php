@@ -59,6 +59,10 @@ Flight::route('POST /credits', function(){
 			$data->genre_id = null;
 		}
 
+		if(!property_exists($data, "genre")){
+			$data->genre = null;
+		}
+
 		$album_name = $data->album_name;
 		$artist_name = $data->artist_name;
 		$genre = $data->genre;
@@ -123,7 +127,6 @@ Flight::route('POST /credits', function(){
 	    $response = Flight::formatCredit($creditList);
 
 	    Flight::createCreditsJson();
-	    Flight::createTimelineJson();
 
 	    return Flight::json($response);
 
@@ -132,7 +135,6 @@ Flight::route('POST /credits', function(){
 		$result = $database->delete('credits', array('id' => $id));
 
 		Flight::createCreditsJson();
-	    Flight::createTimelineJson();
 	    
 		return Flight::json($result);
 

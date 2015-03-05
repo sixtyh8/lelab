@@ -16,10 +16,10 @@ if(isset($_GET['engineer-id'])){
 
 if($engineerID){
 	$showName = false;
-	$result = $database->select('credits', '*', array('engineer_id' => $engineerID, 'ORDER' => array('year DESC', 'id')));
+	$result = $database->select('credits', '*', array('engineer_id' => $engineerID, 'ORDER' => array('year DESC', 'id DESC')));
 	$engiName = $database->select('engineers', '*', array('id' => $engineerID));
 } else {
-	$result = $database->select('credits', '*');
+	$result = $database->select('credits', '*', array('ORDER' => array('year DESC', 'id ASC')));
 }
 
 $metaTITLE['fr'] = 'Crédit d\'album';
@@ -31,11 +31,12 @@ include 'includes/header.php';
 <?php 
 	if($showName){
 		include 'includes/timeline.php';
-	} 
+	}
 ?>
 <?php					
 if($result){
 ?>
+
 <?php if(!$showName){ ?>
 	<div class="caption"><?php echo $engiName[0]['name']; ?>'s Album Credits</div>
 <?php } ?>
@@ -115,11 +116,20 @@ if($result){
 <script>
 	$(function(){
 		$('.credits-table').dataTable({
-			"aoColumnDefs": [
-	      		{ "bSearchable": false, "bVisible": false, "aTargets": [ 0 ] }
-	    	],
-	    	"aaSorting": [[ 3, "desc" ], [0, "desc"]],
-	    	"sPaginationType": "full_numbers"
+			"columnDefs": [
+	            {
+	                "targets": [ 0 ],
+	                "visible": false,
+	                "searchable": false
+	            }
+	        ],
+			// "aoColumnDefs": [
+	  //     		{ "bSearchable": false, "bVisible": false, "aTargets": [ 0 ] }
+	  //   	],
+	    	"order": [[ 3, "desc" ], [0, "desc"]],
+	    	"deferRender": true
+	    	//"ordering": true,
+	    	//"sPaginationType": "full_numbers"
 		});
 	});
 </script>

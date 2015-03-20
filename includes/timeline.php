@@ -7,6 +7,12 @@ $curr_year = date("Y");
 $curr_year = strval($curr_year);
 $years_array = array();
 
+// If the current year is divisible by 5, add 4 to have the laste section
+// of the timeline be the same size as the others and not just 1 year wide
+if($curr_year % 5 == 0){
+	$curr_year = $curr_year + 4;
+}
+
 while($year_pointer <= $curr_year){
 
     $num = $database->count('credits', array('year' => $year_pointer));
@@ -26,13 +32,14 @@ while($year_pointer <= $curr_year){
 
 
 $timeline_data = $years_array;
-
-
 $timeline_count = count($timeline_data);
+
 $fullTimelineDelimiters = $timeline_count % 5;
+
 if($fullTimelineDelimiters == 0){
 	$fullTimelineDelimiters = $timeline_count / 5;
 }
+
 $numExtraYears = $timeline_count - ($fullTimelineDelimiters * 5);
 $fullDelimitersCounter = 0;
 

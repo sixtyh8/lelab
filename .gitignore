@@ -5,3 +5,6 @@
 /angular/dist/*
 /angular/www/*
 /awstats/*
+angular/app/scripts/controllers/sails-todo.sublime-project
+
+*.sublime-workspace

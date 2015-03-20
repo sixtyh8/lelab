@@ -17,12 +17,23 @@ Flight::route('GET /credits', function(){
 	    	$response->total = $total;
 	    }
 	} else {
-		$result = $database->select('credits', '*');
+		$result = $database->select('credits', '*', array('ORDER' => 'year,id DESC'));
 	    $response = Flight::formatCredit($result);
 	}
 
     return Flight::json($response);
 });
+
+
+Flight::route('GET /credits/list', function(){
+	$database = Flight::get('database');
+
+	$result = $database->select('credits', '*', array('ORDER' => 'year,id DESC'));
+	$response = Flight::formatCredit($result);
+
+    return Flight::json($response);
+});
+
 
 Flight::route('GET /credits/search', function(){
 	
@@ -61,6 +72,14 @@ Flight::route('POST /credits', function(){
 
 		if(!property_exists($data, "genre")){
 			$data->genre = null;
+		}
+
+		if(!property_exists($data, "extra_credit")){
+			$data->extra_credit = null;
+		}
+
+		if(!property_exists($data, "extra_credit_engineer_id")){
+			$data->extra_credit_engineer_id = null;
 		}
 
 		$album_name = $data->album_name;

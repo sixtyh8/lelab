@@ -19,7 +19,7 @@ if($engineerID){
 	$result = $database->select('credits', '*', array('engineer_id' => $engineerID, 'ORDER' => array('year DESC', 'id DESC')));
 	$engiName = $database->select('engineers', '*', array('id' => $engineerID));
 } else {
-	$result = $database->select('credits', '*', array('ORDER' => array('year DESC', 'id ASC')));
+	$result = $database->select('credits', '*', array('ORDER' => array('year DESC', 'id DESC')));
 }
 
 $metaTITLE['fr'] = 'Crédit d\'album';

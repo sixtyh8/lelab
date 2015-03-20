@@ -4,20 +4,27 @@ Flight::map('formatCredit', function($result){
 
     $cleanResults = array();
 
+    $database = Flight::get('database');
 
     foreach ($result as $credit) {
 
         // Get image URL
         $imageID = $credit['image'];
-        $credit['imgName'] = Flight::get('database')->select('credit_images', '*', array('id' => $imageID));
+        $credit['imgName'] = $database->select('credit_images', '*', array('id' => $imageID));
 
         // Get genre name
         $genreID = $credit['genre'];
-        $credit['genreName'] = Flight::get('database')->select("genres", "*", array('id' => $genreID));
+        $credit['genreName'] = $database->select("genres", "*", array('id' => $genreID));
 
         // Get engineer name
         $engiID = $credit['engineer_id'];
-        $credit['engi'] = Flight::get('database')->select("engineers", "*", array('id' => $engiID));
+        $credit['engi'] = $database->select("engineers", "*", array('id' => $engiID));
+
+        // Get extra credit engineer name
+        if($credit['extra_credit_engineer_id']){
+            $extraEngiID = $credit['extra_credit_engineer_id'];
+            $credit['extra_credit_engi'] = $database->select("engineers", "*", array('id' => $extraEngiID));
+        }
 
         $credit['trClassName'] = "";
 

@@ -82,6 +82,14 @@ Flight::route('POST /credits', function(){
 			$data->extra_credit_engineer_id = null;
 		}
 
+		if(!property_exists($data, "trophy")){
+			$data->trophy = null;
+		}
+
+		if(!property_exists($data, "trophy_year")){
+			$data->trophy_year = null;
+		}
+
 		$album_name = $data->album_name;
 		$artist_name = $data->artist_name;
 		$genre = $data->genre;

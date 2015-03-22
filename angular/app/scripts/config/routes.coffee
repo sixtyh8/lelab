@@ -88,6 +88,15 @@ angular.module('leLabApp').config ($urlRouterProvider, $stateProvider) ->
           main:
             templateUrl: "views/genres.html"
 
+    # Trophies
+    ).state("trophies"
+        url: "/trophies"
+        views:
+          header:
+            templateUrl: "views/partials/header.auth.html"
+          main:
+            templateUrl: "views/trophies.html"
+
     # Tags
     ).state("tags"
         url: "/tags"

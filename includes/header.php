@@ -15,6 +15,7 @@
 <link type="text/css" rel="stylesheet" href="<?php echo $_conf['path']['base_url']; ?>css/jquery-ui.css" media="screen" />
 <link type="text/css" rel="stylesheet" href="<?php echo $_conf['path']['base_url']; ?>css/timeline.css" media="screen" />
 <link type="text/css" rel="stylesheet" href="<?php echo $_conf['path']['base_url']; ?>css/timeline-custom.css" media="screen" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!--[if IE]>
 <link type="text/css" rel="stylesheet" href="<?php echo $_conf['path']['base_url']; ?>css/ie.css" media="screen" />
 <![endif]-->

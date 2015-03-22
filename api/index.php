@@ -63,6 +63,11 @@ require 'routes/dashboard.php';
 /////////////////
 require 'routes/images.php';
 
+//////////////////
+// Trophies Routes
+//////////////////
+require 'routes/trophies.php';
+
 
 Flight::route('OPTIONS /*', function(){
 	return Flight::json(array('status' => '200'));

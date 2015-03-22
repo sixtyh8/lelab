@@ -17,9 +17,19 @@
 		$slides = "";
 		$slides .= "<ul class='list'>";
 		$slidesData = array();
+		
+		// Loop through each cover
 		foreach($covers as $key => $cover) {
-			$slides .= '<li class="cover"><span class="title">'.$cover['album'].'<br /><span class="artist">'.$cover['artist'].'</span><br /><span class="year">'.$cover['year'].'</span></span><img class="lazy" src="../img/grey.gif" data-original="/cdn/images/credits/'.$cover['image']['thumb_name'].'" width="155" height="155" /></li>';
+
+			$slides .= '<li class="cover"><span class="title">'.$cover['album'].'<br /><span class="artist">'.$cover['artist'].'</span><br /><span class="year">'.$cover['year'].'</span></span>';
+			
+			if(array_key_exists('trophy', $cover)){
+				$slides .= '<div class="award"><i class="fa fa-trophy"></i> '. $cover['trophy'] .' - '. $cover['trophy_year'] .'</div>';
+			}
+
+			$slides .= '<img class="lazy" src="../img/grey.gif" data-original="/cdn/images/credits/'.$cover['image']['thumb_name'].'" width="155" height="155" /></li>';
 		}
+
 		$slides .= "</ul>";
 		?>
 

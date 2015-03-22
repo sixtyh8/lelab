@@ -26,6 +26,8 @@ Flight::map('formatCredit', function($result){
             $credit['extra_credit_engi'] = $database->select("engineers", "*", array('id' => $extraEngiID));
         }
 
+        // Get 
+
         $credit['trClassName'] = "";
 
         if($credit['homepage_flag'] != 1){
@@ -271,6 +273,7 @@ Flight::map('createCreditsJson', function(){
             'genre' => $credit['genre'],
             'year' => $credit['year'],
             'credit' => $credit['credit'],
+            'trophy_year' => $credit['trophy_year'],
             'engineer' => "",
             'bandcamp_url' => $credit['bandcamp_url']
         );
@@ -279,6 +282,12 @@ Flight::map('createCreditsJson', function(){
             $tempArray['engineer'] = $currentEngineer['name'];
         }
 
+        // If the credit has a trophy, get it's name
+        if($credit['trophy']){
+            $trophyName = $database->get('trophies', '*', array('id' => $credit['trophy'])); 
+            $tempArray['trophy'] = $trophyName;
+        }
+        
         array_push($jsonData, $tempArray);
 
     }

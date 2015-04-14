@@ -253,42 +253,50 @@ Flight::map('createCreditsJson', function(){
     $jsonData = array();
     $database = Flight::get('database');
 
-    $credits = $database->select('credits', '*', array('ORDER' => 'year DESC'));
+    // $credits = $database->select('credits', '*', array('ORDER' => 'year DESC'));
+    $credits = $database->select('credits', 
+        array(
+            '[>]credit_images' => array('image' => 'id'),
+            '[>]trophies' => array('trophy' => 'trophy_id')
+        ),
+        '*',
+        array('ORDER' => 'year DESC')
+    );
 
     // Insert each in the array
     foreach ($credits as $credit){
 
-        // If the credit shouldn't be displayed on the homepage, return
+        // If the credit shouldn't be displayed on the homepage, skip and return
         if($credit['homepage_flag'] != 1){
             return;
         }
 
-        $currentImage = $database->get('credit_images', '*', array('id' => $credit['image']));
-        $currentEngineer = $database->get('engineers', '*', array('id' => $credit['engineer_id']));
+        // $currentImage = $database->get('credit_images', '*', array('id' => $credit['image']));
+        // $currentEngineer = $database->get('engineers', '*', array('id' => $credit['engineer_id']));
 
-        $tempArray = array(
-            'image' => $currentImage,
-            'album' => $credit['album_name'],
-            'artist' => $credit['artist_name'],
-            'genre' => $credit['genre'],
-            'year' => $credit['year'],
-            'credit' => $credit['credit'],
-            'trophy_year' => $credit['trophy_year'],
-            'engineer' => "",
-            'bandcamp_url' => $credit['bandcamp_url']
-        );
+        // $tempArray = array(
+        //     'image' => $currentImage,
+        //     'album' => $credit['album_name'],
+        //     'artist' => $credit['artist_name'],
+        //     'genre' => $credit['genre'],
+        //     'year' => $credit['year'],
+        //     'credit' => $credit['credit'],
+        //     'trophy_year' => $credit['trophy_year'],
+        //     'engineer' => "",
+        //     'bandcamp_url' => $credit['bandcamp_url']
+        // );
 
-        if($currentEngineer){
-            $tempArray['engineer'] = $currentEngineer['name'];
-        }
+        // if($currentEngineer){
+        //     $tempArray['engineer'] = $currentEngineer['name'];
+        // }
 
         // If the credit has a trophy, get it's name
-        if($credit['trophy']){
-            $trophyName = $database->get('trophies', '*', array('id' => $credit['trophy'])); 
-            $tempArray['trophy'] = $trophyName;
-        }
+        // if($credit['trophy']){
+        //     $trophyName = $database->get('trophies', '*', array('id' => $credit['trophy'])); 
+        //     $tempArray['trophy'] = $trophyName;
+        // }
         
-        array_push($jsonData, $tempArray);
+        array_push($jsonData, $credit);
 
     }
 

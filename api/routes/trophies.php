@@ -25,7 +25,7 @@ Flight::route('POST /trophies', function(){
 		$trophyName = ucwords($name);
 
 
-		$result = Flight::get('database')->insert("trophies", array('name' => $trophyName, 'type' => $type, 'description' => $description));
+		$result = Flight::get('database')->insert("trophies", array('trophy_name' => $trophyName, 'trophy_type' => $type, 'trophy_description' => $description));
 
 		// $genre->id = $result;
 		// $genre->name = $data;
@@ -36,13 +36,13 @@ Flight::route('POST /trophies', function(){
 
 		$trophyName = ucwords($name);
 
-		$result = Flight::get('database')->update("trophies", array('name' => $trophyName, 'type' => $type, 'description' => $description), array('id' => $id));
+		$result = Flight::get('database')->update("trophies", array('trophy_name' => $trophyName, 'trophy_type' => $type, 'trophy_description' => $description), array('id' => $id));
 
 		return Flight::json($result);
 
 	} else if($action == 'DELETE') {
 		
-		$result = Flight::get('database')->delete("trophies", array('id' => $id));
+		$result = Flight::get('database')->delete("trophies", array('trophy_id' => $id));
 	
 		return Flight::json($result);
 
@@ -52,7 +52,7 @@ Flight::route('POST /trophies', function(){
 
 Flight::route('GET /trophies/@id', function($id){
 	
-	$result = Flight::get('database')->select("trophies", "*", array('id' => $id));
+	$result = Flight::get('database')->select("trophies", "*", array('trophy_id' => $id));
 	
 	return Flight::json($result);
 });

@@ -99,6 +99,8 @@ Flight::route('POST /credits', function(){
 		$engineer_id = $data->engineer_id;
 		$bandcamp_url = $data->bandcamp_url;
 		$homepage_flag = $data->homepage_flag;
+		$trophy = $data->trophy;
+		$trophy_year = $data->trophy_year;
 
 		//Add genre to genre DB if doesn't exist
 		if(property_exists($data, "genre") && $data->genreName != ''){
@@ -126,7 +128,9 @@ Flight::route('POST /credits', function(){
 					'image' => $image,
 					'engineer_id' => $engineer_id,
 					'bandcamp_url' => $bandcamp_url,
-					'homepage_flag' => $homepage_flag
+					'homepage_flag' => $homepage_flag,
+					'trophy' => $trophy,
+					'trophy_year' => $trophy_year
 				)
 			);
 
@@ -143,7 +147,9 @@ Flight::route('POST /credits', function(){
 					'image' => $image,
 					'engineer_id' => $engineer_id,
 					'bandcamp_url' => $bandcamp_url,
-					'homepage_flag' => $homepage_flag
+					'homepage_flag' => $homepage_flag,
+					'trophy' => $trophy,
+					'trophy_year' => $trophy_year
 				), array('id' => $id)
 			);
 

@@ -1,33 +1,36 @@
 'use strict'
 
-angular.module('leLabApp').controller 'UsersCtrl', ($scope, $filter, Trophy, Session, notify) ->
+angular.module('leLabApp').controller 'UsersCtrl', ($scope, Trophies, notify) ->
 
+    # Set an empty trophy
     setTrophy = ->
         $scope.newTrophy =
             name: ''
             type: ''
             desciption: ''
 
-    $scope.trophiesPromise = Trophy.list().then (data) ->
+    # List trophies
+    $scope.trophiesPromise = Trophies.list().then (data) ->
         $scope.trophies = data
 
+    # Add a trophy
     $scope.addTrophy = ->
-        Trophy.create($scope.newTrophy).then (data) ->
+        Trophies.add($scope.newTrophy).then (data) ->
             $scope.trophies.push(data)
             setTrophy()
             notify('Trophy added!')
 
-
-    # Delete a credit
+    # Delete a trophy
     $scope.deleteTrophy = (trophyId, index) ->
-        Trophy.delete(trophyId).then (data) ->
+        Trophies.delete(trophyId).then (data) ->
             $scope.trophies.splice(index, 1)
             notify('Trophy deleted!')
 
-    $scope.saveTrophy = (data, id) ->
-                
-        Trophy.update(id, data).then (data) ->
+    # Save a trophy
+    $scope.saveTrophy = (data, id) ->  
+        Trophies.update(id, data).then (data) ->
             notify('Trophy updated!')
             return true
 
+    # Init
     setTrophy()

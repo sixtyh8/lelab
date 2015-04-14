@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('leLabApp').directive 'creditForm', (Genres, Engineers) ->
+angular.module('leLabApp').directive 'creditForm', (Genres, Engineers, Trophies) ->
     scope: {credit: '='}
     restrict: 'AE'
     templateUrl: 'views/directives/creditForm.html'
@@ -13,4 +13,10 @@ angular.module('leLabApp').directive 'creditForm', (Genres, Engineers) ->
         # Get engineers
         Engineers.list().then (data) ->
             scope.engineers = data
+
+        # Get trophies
+        Trophies.list().then (data) ->
+            scope.trophies = data
+
+        scope.showExtraCredit = false
 

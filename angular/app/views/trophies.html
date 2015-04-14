@@ -2,12 +2,12 @@
     <div class="row">
         <div class="col-md-12">
             <h2>Trophies</h2>
-            <div class="well well-sm" >
+            <div class="well well-sm" ng-show="false">
                 <form class="form-inline" role="form">
                     <div class="form-group">
                         <input type="text" class="form-control" ng-model="newGenre.label" placeholder="Add a Genre">
                     </div>
-                    <button class="btn btn-primary" ng-click="addGenre()">Add</button>
+                    <button class="btn btn-primary" ng-click="addTrophy()">Add</button>
                 </form>
             </div>
             <div cg-busy="trophiesPromise">

@@ -1,11 +1,25 @@
 <script type="text/javascript">
 		<?php
+		// require $_SERVER['DOCUMENT_ROOT']."/api/plugins/medoo.php";
 
 		$file = $_SERVER['DOCUMENT_ROOT']."/api/credits.json";
 
 		// Read JSON file
 		$string = utf8_encode(file_get_contents($file, FILE_USE_INCLUDE_PATH));
 		$covers = json_decode($string, true);
+
+		// $database = new medoo(array(
+		// 	'database_type' => 'sqlite',
+		// 	'database_file' => $_SERVER['DOCUMENT_ROOT'].'/api/data/lelab.db'
+		// ));
+
+		// $covers = $database->select('credits', 
+		// 	array(
+		// 		'[>]credit_images' => array('image' => 'id'),
+		// 		'[>]trophies' => array('trophy' => 'trophy_id')
+		// 	),
+		// 	'*'
+		// );
 
 		shuffle($covers);
 
@@ -21,13 +35,13 @@
 		// Loop through each cover
 		foreach($covers as $key => $cover) {
 
-			$slides .= '<li class="cover"><span class="title">'.$cover['album'].'<br /><span class="artist">'.$cover['artist'].'</span><br /><span class="year">'.$cover['year'].'</span></span>';
-			
-			if(array_key_exists('trophy', $cover)){
-				$slides .= '<div class="award"><i class="fa fa-trophy"></i> '. $cover['trophy'] .' - '. $cover['trophy_year'] .'</div>';
-			}
+			$slides .= '<li class="cover"><span class="title">'.$cover['album_name'].'<br /><span class="artist">'.$cover['artist_name'].'</span><br /><span class="year">'.$cover['year'].'</span></span>';
 
-			$slides .= '<img class="lazy" src="../img/grey.gif" data-original="/cdn/images/credits/'.$cover['image']['thumb_name'].'" width="155" height="155" /></li>';
+			if($cover['trophy_name']){
+				$slides .= '<div class="award"><i class="fa fa-trophy"></i> '. $cover['trophy_name'] .' - '. $cover['trophy_year'] .'</div>';
+			};
+
+			$slides .= '<img class="lazy" src="/img/grey.gif" data-original="/cdn/images/credits/'.$cover['thumb_name'].'" width="155" height="155" /></li>';
 		}
 
 		$slides .= "</ul>";
@@ -35,10 +49,22 @@
 
 		$(function(){
 
-			$('img.lazy').each(function(){
-				var src = $(this).attr('data-original');
-				$(this).attr("src", src).stop(true,true).hide().fadeIn();
-			});
+			// $('img.lazy').each(function(){
+			// 	var src = $(this).attr('data-original');
+			// 	$(this).attr("src", src).stop(true,true).hide().fadeIn();
+			// });
+
+			var $replaceSrc = function() { 
+			    var $this = $("#slider-lists ul");
+
+			    var items = $this.triggerHandler("currentVisible");
+			    
+			    items.each(function(){
+			    	var src = $(this).children('img').attr('data-original');
+			    	$(this).children('.award').show();
+			    	$(this).children('img').attr("src", src).stop(true,true).hide().fadeIn();
+			    });
+			};
 
 			$("#slider-lists ul").carouFredSel({
 				items: {
@@ -48,8 +74,10 @@
 				scroll: {
 					fx: "crossfade",
 					duration: 1000,
-					pauseOnHover: true
+					pauseOnHover: true,
+					onAfter: $replaceSrc
 				},
+				onCreate: $replaceSrc,
 				auto: 6000,
 				next: {
 					button: "#slider-next",

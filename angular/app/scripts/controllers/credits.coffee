@@ -1,7 +1,10 @@
 'use strict'
 
-angular.module('leLabApp').controller 'CreditsCtrl', ($scope) ->
+angular.module('leLabApp').controller 'CreditsCtrl', ($scope, Trophies) ->
     $scope.currentYear = new Date().getFullYear();
+
+    Trophies.list().then (data) ->
+        $scope.trophies = data
 
 
 angular.module('leLabApp').controller 'CreditsCtrl.List', ($scope, $state, $filter, $timeout, Credits, ngDialog, notify) ->
@@ -16,6 +19,8 @@ angular.module('leLabApp').controller 'CreditsCtrl.List', ($scope, $state, $filt
         $scope.loader.busy = true
 
         Credits.list($scope.limit, $scope.offset).then (data) ->
+
+            console.log data
 
             if data.length
 

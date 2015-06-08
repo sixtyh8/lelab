@@ -5,7 +5,7 @@ angular.module('leLabApp').service 'Trophies', (Restangular, $q) ->
     list: ->
         deferred = $q.defer()
 
-        Restangular.one("trophies").get().then (results) ->
+        Restangular.all("trophies").getList().then (results) ->
             deferred.resolve results
 
         deferred.promise

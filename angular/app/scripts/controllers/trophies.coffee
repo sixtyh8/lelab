@@ -1,13 +1,13 @@
 'use strict'
 
-angular.module('leLabApp').controller 'UsersCtrl', ($scope, Trophies, notify) ->
+angular.module('leLabApp').controller 'TrophiesCtrl', ($scope, Trophies, notify) ->
 
     # Set an empty trophy
     setTrophy = ->
         $scope.newTrophy =
-            name: ''
-            type: ''
-            desciption: ''
+            trophy_name: ''
+            trophy_type: ''
+            trophy_description: ''
 
     # List trophies
     $scope.trophiesPromise = Trophies.list().then (data) ->
@@ -16,7 +16,7 @@ angular.module('leLabApp').controller 'UsersCtrl', ($scope, Trophies, notify) ->
     # Add a trophy
     $scope.addTrophy = ->
         Trophies.add($scope.newTrophy).then (data) ->
-            $scope.trophies.push(data)
+            $scope.trophies.push(angular.copy($scope.newTrophy))
             setTrophy()
             notify('Trophy added!')
 
@@ -27,8 +27,10 @@ angular.module('leLabApp').controller 'UsersCtrl', ($scope, Trophies, notify) ->
             notify('Trophy deleted!')
 
     # Save a trophy
-    $scope.saveTrophy = (data, id) ->  
-        Trophies.update(id, data).then (data) ->
+    $scope.saveTrophy = (data, id) -> 
+        console.log data
+        console.log id 
+        Trophies.update(id, data).then (response) ->
             notify('Trophy updated!')
             return true
 

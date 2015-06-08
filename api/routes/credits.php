@@ -97,6 +97,8 @@ Flight::route('POST /credits', function(){
 		$credit = $data->credit;
 		$image = $data->image;
 		$engineer_id = $data->engineer_id;
+		$extra_credit = $data->extra_credit;
+		$extra_credit_engineer_id = $data->extra_credit_engineer_id;
 		$bandcamp_url = $data->bandcamp_url;
 		$homepage_flag = $data->homepage_flag;
 		$trophy = $data->trophy;
@@ -127,6 +129,8 @@ Flight::route('POST /credits', function(){
 					'credit' => $credit,
 					'image' => $image,
 					'engineer_id' => $engineer_id,
+					'extra_credit' => $extra_credit,
+					'extra_credit_engineer_id' => $extra_credit_engineer_id,
 					'bandcamp_url' => $bandcamp_url,
 					'homepage_flag' => $homepage_flag,
 					'trophy' => $trophy,
@@ -146,6 +150,8 @@ Flight::route('POST /credits', function(){
 					'credit' => $credit,
 					'image' => $image,
 					'engineer_id' => $engineer_id,
+					'extra_credit' => $extra_credit,
+					'extra_credit_engineer_id' => $extra_credit_engineer_id,
 					'bandcamp_url' => $bandcamp_url,
 					'homepage_flag' => $homepage_flag,
 					'trophy' => $trophy,
@@ -179,7 +185,7 @@ Flight::route('POST /credits', function(){
 Flight::route('GET /credits/@id', function($id){
 
 	$database = Flight::get('database');
-	$result = $database->get('credits', '*', array('id' => $id));
+	$result = $database->get('credits', array('[>]trophies' => array('trophy' => 'trophy_id')), '*', array('id' => $id));
 
 	// Get image URL
 	if($result['image']){
@@ -197,6 +203,11 @@ Flight::route('GET /credits/@id', function($id){
 	if($result['engineer_id']){
 		$engiID = $result['engineer_id'];
 		$result['engi'] = $database->get('engineers', '*', array('id' => $engiID));
+	}
+
+	if($result['extra_credit_engineer_id']){
+		$engiID = $result['extra_credit_engineer_id'];
+		$result['extra_credit_engineer_name'] = $database->get('engineers', '*', array('id' => $engiID));
 	}
 
 	return Flight::json($result);

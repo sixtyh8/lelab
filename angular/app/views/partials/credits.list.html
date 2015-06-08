@@ -1,15 +1,15 @@
-<div ng-controller="CreditsCtrl.List" cg-busy="creditsPromise">
+<div ng-controller="CreditsCtrl.List" ng-init="getCredits()">
 
     <div class="well">
-        <form class="form-inline" ng-submit="searchCredits()">
+        <form name="searchForm" class="form-inline" ng-submit="searchCredits()" novalidate>
             <div class="form-group">
-                <input type="text" class="form-control" ng-model="searchTerm" placeholder="Keyword">
+                <input type="text" name="search" class="form-control" ng-model="searchTerm" placeholder="Keyword" required>
             </div>
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="submit" class="btn btn-primary" ng-disabled="searchForm.$invalid">Search</button>
         </form>
     </div>
 
-    <table class="table table-striped" id="credits-table" infinite-scroll="getCredits()" infinite-scroll-disabled="loader.busy" infinite-scroll-distance="5">
+    <table class="table table-striped" id="credits-table">
     	<thead>
     		<tr>
     			<th class="credit-id">ID</th>
@@ -19,11 +19,11 @@
     			<th class="year-th">Year</th>
     			<th class="engineer-th">Engineer</th>
     			<th class="credit-th">Credit</th>
-    			<th class="actions-th" style="min-width:120px;"></th>
+    			<th class="actions-th" style="min-width:110px;"></th>
     		</tr>
     	</thead>
     	<tbody>
-        	<tr ng-repeat="credit in creditsList track by $index">
+        	<tr ng-repeat="credit in creditsList">
     			<td class="credit-id">
     				<div ng-show="credit.homepage_flag != 1" class="homepage-off-message">
     				    <span class="glyphicon glyphicon-eye-close"></span>
@@ -36,8 +36,8 @@
     			<td><span ng-bind="credit.album_name"></span><br /><span ng-bind="credit.artist_name"></span></td>
     			<td ng-bind="credit.genreName[0].name"></td>
     			<td ng-bind="credit.year"></td>
-    			<td ng-bind="credit.engi[0].name"></td>
-    			<td ng-bind="credit.credit"></td>
+    			<td>{{ credit.engi[0].name }} <span ng-if="credit.extra_credit"><br />Extra Credit: {{ credit.extra_credit_engineer_name }}</span></td>
+    			<td>{{ credit.credit }} <span ng-if="credit.extra_credit"><br />Extra Credit: {{ credit.extra_credit }}</span></td>
     			<td>
     				<a href="#" ui-sref="credits.edit({ creditId: credit.id })" role="button" class="edit-credit btn btn-default btn-sm btn-block"><span class="glyphicon glyphicon-edit"></span> Edit</a>
     				<button class="btn btn-danger btn-sm btn-block" ng-click="deleteCredit($index)"><span class="glyphicon glyphicon-trash"></span> Delete</button>

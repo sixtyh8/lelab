@@ -14,9 +14,13 @@ Flight::route('POST /trophies', function(){
 	$trophy = json_decode($string);
 	
 	$data = $trophy->data;
-	$name = $data->name;
-	$type = $data->type;
-	$description = $data->description;
+	
+	if($data){
+		$name = $data->trophy_name;
+		$type = $data->trophy_type;
+		$description = $data->trophy_description;
+	};
+	
 	$id = $trophy->id;
 	$action = $trophy->action;
 
@@ -36,7 +40,7 @@ Flight::route('POST /trophies', function(){
 
 		$trophyName = ucwords($name);
 
-		$result = Flight::get('database')->update("trophies", array('trophy_name' => $trophyName, 'trophy_type' => $type, 'trophy_description' => $description), array('id' => $id));
+		$result = Flight::get('database')->update("trophies", array('trophy_name' => $trophyName, 'trophy_type' => $type, 'trophy_description' => $description), array('trophy_id' => $id));
 
 		return Flight::json($result);
 

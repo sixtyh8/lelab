@@ -70,7 +70,7 @@
         <span class="glyphicon glyphicon-plus-sign" ng-hide="showTrophy" ng-click="showTrophy = !showTrophy"></span>
         </label>
         <div class="col-sm-8" ng-show="showTrophy">
-            <input ng-model="credit.trophy" type="text" class="form-control" name="trophy" id="trophy">
+            <select ng-model="credit.trophy" ng-options="t.trophy_id as t.trophy_name for t in trophies" class="form-control" name="trophy" id="trophy"></select>
         </div>
     </div>
     <div class="form-group" ng-show="showTrophy">

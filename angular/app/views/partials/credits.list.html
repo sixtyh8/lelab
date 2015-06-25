@@ -36,7 +36,7 @@
     			<td><span ng-bind="credit.album_name"></span><br /><span ng-bind="credit.artist_name"></span></td>
     			<td ng-bind="credit.genreName[0].name"></td>
     			<td ng-bind="credit.year"></td>
-    			<td>{{ credit.engi[0].name }} <span ng-if="credit.extra_credit"><br />Extra Credit: {{ credit.extra_credit_engineer_name }}</span></td>
+    			<td>{{ credit.engi[0].name }} <span ng-if="credit.extra_credit"><br />Extra Credit: {{ credit.extra_credit_engi[0].name }}</span></td>
     			<td>{{ credit.credit }} <span ng-if="credit.extra_credit"><br />Extra Credit: {{ credit.extra_credit }}</span></td>
     			<td>
     				<a href="#" ui-sref="credits.edit({ creditId: credit.id })" role="button" class="edit-credit btn btn-default btn-sm btn-block"><span class="glyphicon glyphicon-edit"></span> Edit</a>

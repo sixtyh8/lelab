@@ -37,7 +37,7 @@ angular.module('leLabApp').service 'Credits', (Restangular, $q, DSCacheFactory) 
     save: (credit) ->
         deferred = $q.defer()
 
-        credit.genre = credit.genreName[0].name
+        credit.genre = credit.genreName == undefined ? '' : credit.genreName 
 
         credits.post({ 'data': credit, 'id': null, 'action': 'POST' }).then (results) ->
             deferred.resolve results

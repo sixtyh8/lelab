@@ -77,11 +77,10 @@ angular.module('leLabApp').controller 'CreditsCtrl.Edit', ($scope, $state, $stat
         else
             $scope.credit = credit
             $scope.credit.selectedGenre = undefined
-            $scope.credit.genreName = [
-                { name : "" , id: "" }
-            ]
+            # $scope.credit.genreName = [
+            #     { name : "" , id: "" }
+            # ]
 
-        console.log $scope.credit.selectedGenre
 
     $scope.saveCredit = ->
         Credits.update($scope.credit).then (data) ->
@@ -91,15 +90,15 @@ angular.module('leLabApp').controller 'CreditsCtrl.Edit', ($scope, $state, $stat
 angular.module('leLabApp').controller 'CreditsCtrl.New', ($scope, $state, Credits, Engineers, Genres, Images, notify) ->
 
     $scope.credit =
-        genreName : [
-            { name : "" }
-        ]
+        genreName : undefined
         year: $scope.currentYear
         engineer_id: "1"
         credit: "Mastering"
         homepage_flag: 1
 
     $scope.saveCredit = ->
+        console.log("Save Credit!", $scope.credit)
         Credits.save($scope.credit).then (data) ->
+            console.log data
             notify('Credit saved!')
             $state.go('credits')

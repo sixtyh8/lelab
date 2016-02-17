@@ -19,6 +19,13 @@
 <!--[if IE]>
 <link type="text/css" rel="stylesheet" href="<?php echo $_conf['path']['base_url']; ?>css/ie.css" media="screen" />
 <![endif]-->
+
+<script src="<?php echo $_conf['path']['base_url']; ?>bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<script>
+  window.Polymer = window.Polymer || {};
+  window.Polymer.dom = 'shadow';
+</script>
+
 <script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>js/jquery.js"></script>
 <script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>js/jquery-migrate.js"></script>
 <script type="text/javascript" src="<?php echo $_conf['path']['base_url']; ?>js/jquery.reveal.js"></script>
@@ -40,7 +47,7 @@
     r.parentNode.insertBefore(s, r);
     function f(){ s.parentNode && s.parentNode.removeChild(s); }
     addEventListener('load',f,false);
-    setTimeout(f,3000); 
+    setTimeout(f,3000);
   }
 })();
 </script>
@@ -57,6 +64,9 @@
   })();
 
 </script>
+
+<script src="<?php echo $_conf['path']['base_url']; ?>bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="<?php echo $_conf['path']['base_url']; ?>polymer/elements.html">
 </head>
 
 <body class="">

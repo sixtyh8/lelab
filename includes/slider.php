@@ -2,10 +2,13 @@
 		<?php
 		// require $_SERVER['DOCUMENT_ROOT']."/api/plugins/medoo.php";
 
-		$file = $_SERVER['DOCUMENT_ROOT']."/api/credits.json";
+		$string = file_get_contents("http://api.lelabmastering.com/credits");
+		$string = utf8_encode($string);
+
+		// $file = $_SERVER['DOCUMENT_ROOT']."/api/credits.json";
 
 		// Read JSON file
-		$string = utf8_encode(file_get_contents($file, FILE_USE_INCLUDE_PATH));
+		// $string = utf8_encode(file_get_contents($file, FILE_USE_INCLUDE_PATH));
 		$covers = json_decode($string, true);
 
 		// $database = new medoo(array(

@@ -20,6 +20,19 @@
     "angular-resource": "~1.2.20",
     "angular-sanitize": "~1.2.20",
     "angular-route": "~1.2.20",
-    "angular-animate": "~1.2.20"
+    "angular-animate": "~1.2.20",
+    "polymer": "Polymer/polymer#^1.2.0",
+    "paper-elements": "^1.0.7",
+    "iron-elements": "^1.0.8",
+    "iron-scroll-threshold": "^1.0.2",
+    "paper-datatable": "^0.9.8",
+    "juicy-html": "^1.0.1",
+    "expandjs": "ExpandJS/expandjs#^0.10.0",
+    "mat-elements": "ExpandJS/mat-elements#^0.10.0",
+    "xp-elements": "ExpandJS/xp-elements#^0.10.0"
+  },
+  "resolutions": {
+    "polymer": "^1.2.0",
+    "paper-styles": "^1.1.0"
   }
 }
